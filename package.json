@@ -1,0 +1,30 @@
+{
+  "name": "resin-errors",
+  "version": "1.0.0",
+  "description": "Collection of Resin.io JavaScript errors",
+  "main": "build/errors.js",
+  "homepage": "https://github.com/resin-io/resin-errors",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/resin-io/resin-errors.git"
+  },
+  "keywords": [
+    "resin",
+    "errors"
+  ],
+  "scripts": {
+    "prepublish": "gulp build"
+  },
+  "author": "Juan Cruz Viotti <juanchiviotti@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "~1.8.0",
+    "gulp": "~3.8.10",
+    "gulp-coffee": "~2.2.0",
+    "gulp-coffeelint": "~0.4.0",
+    "gulp-util": "~3.0.1"
+  },
+  "dependencies": {
+    "typed-error": "^0.1.0"
+  }
+}
