@@ -47,6 +47,52 @@ exports.ResinInvalidDeviceType = class ResinInvalidDeviceType extends TypedError
 	exitCode: 1
 
 ###*
+# A malformed token error
+# @class ResinMalformedToken
+#
+# @param {String} token - the invalid token
+###
+exports.ResinMalformedToken = class ResinMalformedToken extends TypedError
+	constructor: (@token) ->
+		###*
+		# @name token
+		# @type String
+		# @memberof ResinMalformedToken
+		# @instance
+		# @constant
+		###
+
+		###*
+		# @name message
+		# @type String
+		# @memberof ResinMalformedToken
+		# @instance
+		# @constant
+		# @default Malformed token: this.token
+		###
+		super("Malformed token: #{@token}")
+
+	###*
+	# @name code
+	# @type String
+	# @memberof ResinMalformedToken
+	# @instance
+	# @constant
+	# @default ResinMalformedToken
+	###
+	code: 'ResinMalformedToken'
+
+	###*
+	# @name exitCode
+	# @type Number
+	# @memberof ResinMalformedToken
+	# @instance
+	# @constant
+	# @default 1
+	###
+	exitCode: 1
+
+###*
 # A missing credential error
 # @class ResinMissingCredential
 #

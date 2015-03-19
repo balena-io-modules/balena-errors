@@ -1,4 +1,4 @@
-var ResinApplicationNotFound, ResinDeviceNotFound, ResinDirectoryNotGitRepository, ResinInvalidApplication, ResinInvalidDataKey, ResinInvalidDeviceType, ResinInvalidOption, ResinInvalidParameter, ResinInvalidPath, ResinKeyNotFound, ResinMissingCredential, ResinMissingDataPrefix, ResinMissingOption, ResinMissingParameter, ResinNoInternetConnection, ResinNoSuchDirectory, ResinNonAllowedOption, ResinNotAny, ResinRequestError, TypedError,
+var ResinApplicationNotFound, ResinDeviceNotFound, ResinDirectoryNotGitRepository, ResinInvalidApplication, ResinInvalidDataKey, ResinInvalidDeviceType, ResinInvalidOption, ResinInvalidParameter, ResinInvalidPath, ResinKeyNotFound, ResinMalformedToken, ResinMissingCredential, ResinMissingDataPrefix, ResinMissingOption, ResinMissingParameter, ResinNoInternetConnection, ResinNoSuchDirectory, ResinNonAllowedOption, ResinNotAny, ResinRequestError, TypedError,
   __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -62,6 +62,67 @@ exports.ResinInvalidDeviceType = ResinInvalidDeviceType = (function(_super) {
   ResinInvalidDeviceType.prototype.exitCode = 1;
 
   return ResinInvalidDeviceType;
+
+})(TypedError);
+
+
+/**
+ * A malformed token error
+ * @class ResinMalformedToken
+ *
+ * @param {String} token - the invalid token
+ */
+
+exports.ResinMalformedToken = ResinMalformedToken = (function(_super) {
+  __extends(ResinMalformedToken, _super);
+
+  function ResinMalformedToken(token) {
+    this.token = token;
+
+    /**
+    		 * @name token
+    		 * @type String
+    		 * @memberof ResinMalformedToken
+    		 * @instance
+    		 * @constant
+     */
+
+    /**
+    		 * @name message
+    		 * @type String
+    		 * @memberof ResinMalformedToken
+    		 * @instance
+    		 * @constant
+    		 * @default Malformed token: this.token
+     */
+    ResinMalformedToken.__super__.constructor.call(this, "Malformed token: " + this.token);
+  }
+
+
+  /**
+  	 * @name code
+  	 * @type String
+  	 * @memberof ResinMalformedToken
+  	 * @instance
+  	 * @constant
+  	 * @default ResinMalformedToken
+   */
+
+  ResinMalformedToken.prototype.code = 'ResinMalformedToken';
+
+
+  /**
+  	 * @name exitCode
+  	 * @type Number
+  	 * @memberof ResinMalformedToken
+  	 * @instance
+  	 * @constant
+  	 * @default 1
+   */
+
+  ResinMalformedToken.prototype.exitCode = 1;
+
+  return ResinMalformedToken;
 
 })(TypedError);
 
