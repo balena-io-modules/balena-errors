@@ -32,6 +32,13 @@ Support
 
 If you're having any problem, please [raise an issue](https://github.com/resin-io/resin-errors/issues/new) on GitHub.
 
+ChangeLog
+---------
+
+### v1.0.1
+
+- Add `ResinMalformedToken` error.
+
 License
 -------
 
