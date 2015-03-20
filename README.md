@@ -35,6 +35,10 @@ If you're having any problem, please [raise an issue](https://github.com/resin-i
 ChangeLog
 ---------
 
+### v1.0.2
+
+- Add `ResinNotLoggedIn` error.
+
 ### v1.0.1
 
 - Add `ResinMalformedToken` error.
