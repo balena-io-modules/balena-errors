@@ -149,3 +149,10 @@ exports.ResinNotAny = class ResinNotAny extends TypedError
 
 	code: 'ResinNotAny'
 	exitCode: 1
+
+exports.ResinNotLoggedIn = class ResinNotLoggedIn extends TypedError
+	constructor: ->
+		super('You have to log in')
+
+	code: 'ResinNotLoggedIn'
+	exitCode: 1

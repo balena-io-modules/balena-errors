@@ -1,4 +1,4 @@
-var ResinApplicationNotFound, ResinDeviceNotFound, ResinDirectoryNotGitRepository, ResinInvalidApplication, ResinInvalidDataKey, ResinInvalidDeviceType, ResinInvalidOption, ResinInvalidParameter, ResinInvalidPath, ResinKeyNotFound, ResinMalformedToken, ResinMissingCredential, ResinMissingDataPrefix, ResinMissingOption, ResinMissingParameter, ResinNoInternetConnection, ResinNoSuchDirectory, ResinNonAllowedOption, ResinNotAny, ResinRequestError, TypedError,
+var ResinApplicationNotFound, ResinDeviceNotFound, ResinDirectoryNotGitRepository, ResinInvalidApplication, ResinInvalidDataKey, ResinInvalidDeviceType, ResinInvalidOption, ResinInvalidParameter, ResinInvalidPath, ResinKeyNotFound, ResinMalformedToken, ResinMissingCredential, ResinMissingDataPrefix, ResinMissingOption, ResinMissingParameter, ResinNoInternetConnection, ResinNoSuchDirectory, ResinNonAllowedOption, ResinNotAny, ResinNotLoggedIn, ResinRequestError, TypedError,
   __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -333,5 +333,20 @@ exports.ResinNotAny = ResinNotAny = (function(_super) {
   ResinNotAny.prototype.exitCode = 1;
 
   return ResinNotAny;
+
+})(TypedError);
+
+exports.ResinNotLoggedIn = ResinNotLoggedIn = (function(_super) {
+  __extends(ResinNotLoggedIn, _super);
+
+  function ResinNotLoggedIn() {
+    ResinNotLoggedIn.__super__.constructor.call(this, 'You have to log in');
+  }
+
+  ResinNotLoggedIn.prototype.code = 'ResinNotLoggedIn';
+
+  ResinNotLoggedIn.prototype.exitCode = 1;
+
+  return ResinNotLoggedIn;
 
 })(TypedError);
