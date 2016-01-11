@@ -6,6 +6,8 @@ resin-errors
 [![Build Status](https://travis-ci.org/resin-io/resin-errors.svg?branch=master)](https://travis-ci.org/resin-io/resin-errors)
 [![Build status](https://ci.appveyor.com/api/projects/status/c7g2vsshixiw4xw9?svg=true)](https://ci.appveyor.com/project/jviotti/resin-errors)
 
+Join our online chat at [![Gitter chat](https://badges.gitter.im/resin-io/chat.png)](https://gitter.im/resin-io/chat)
+
 Resin.io error collection.
 
 Role
