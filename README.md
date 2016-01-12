@@ -41,6 +41,8 @@ Documentation
     * [new exports.ResinApplicationNotFound(application)](#new_module_errors.ResinApplicationNotFound_new)
   * [.ResinDeviceNotFound](#module_errors.ResinDeviceNotFound)
     * [new exports.ResinDeviceNotFound(device)](#new_module_errors.ResinDeviceNotFound_new)
+  * [.ResinAmbiguousDevice](#module_errors.ResinAmbiguousDevice)
+    * [new exports.ResinAmbiguousDevice(device)](#new_module_errors.ResinAmbiguousDevice_new)
   * [.ResinKeyNotFound](#module_errors.ResinKeyNotFound)
     * [new exports.ResinKeyNotFound(key)](#new_module_errors.ResinKeyNotFound_new)
   * [.ResinRequestError](#module_errors.ResinRequestError)
@@ -114,6 +116,23 @@ throw new errors.ResinApplicationNotFound('MyApp')
 **Example**  
 ```js
 throw new errors.ResinDeviceNotFound('MyDevice')
+```
+<a name="module_errors.ResinAmbiguousDevice"></a>
+### errors.ResinAmbiguousDevice
+**Kind**: static class of <code>[errors](#module_errors)</code>  
+**Summary**: Resin ambiguous device  
+**Access:** public  
+<a name="new_module_errors.ResinAmbiguousDevice_new"></a>
+#### new exports.ResinAmbiguousDevice(device)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| device | <code>String</code> &#124; <code>Number</code> | device name or id |
+
+**Example**  
+```js
+throw new errors.ResinAmbiguousDevice('MyDevice')
 ```
 <a name="module_errors.ResinKeyNotFound"></a>
 ### errors.ResinKeyNotFound

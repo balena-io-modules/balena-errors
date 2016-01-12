@@ -18,7 +18,7 @@ limitations under the License.
 /**
  * @module errors
  */
-var ResinApplicationNotFound, ResinDeviceNotFound, ResinInvalidDeviceType, ResinKeyNotFound, ResinMalformedToken, ResinNotLoggedIn, ResinRequestError, TypedError,
+var ResinAmbiguousDevice, ResinApplicationNotFound, ResinDeviceNotFound, ResinInvalidDeviceType, ResinKeyNotFound, ResinMalformedToken, ResinNotLoggedIn, ResinRequestError, TypedError,
   __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -137,6 +137,35 @@ exports.ResinDeviceNotFound = ResinDeviceNotFound = (function(_super) {
   ResinDeviceNotFound.prototype.exitCode = 1;
 
   return ResinDeviceNotFound;
+
+})(TypedError);
+
+
+/**
+ *	@summary Resin ambiguous device
+ * @class
+ * @public
+ *
+ * @param {(String|Number)} device - device name or id
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.ResinAmbiguousDevice('MyDevice')
+ */
+
+exports.ResinAmbiguousDevice = ResinAmbiguousDevice = (function(_super) {
+  __extends(ResinAmbiguousDevice, _super);
+
+  function ResinAmbiguousDevice(device) {
+    this.device = device;
+    ResinAmbiguousDevice.__super__.constructor.call(this, "Device is ambiguous: " + this.device);
+  }
+
+  ResinAmbiguousDevice.prototype.code = 'ResinAmbiguousDevice';
+
+  ResinAmbiguousDevice.prototype.exitCode = 1;
+
+  return ResinAmbiguousDevice;
 
 })(TypedError);
 

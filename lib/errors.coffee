@@ -93,6 +93,24 @@ exports.ResinDeviceNotFound = class ResinDeviceNotFound extends TypedError
 	exitCode: 1
 
 ###*
+#	@summary Resin ambiguous device
+# @class
+# @public
+#
+# @param {(String|Number)} device - device name or id
+# @return {Error} error instance
+#
+# @example
+# throw new errors.ResinAmbiguousDevice('MyDevice')
+###
+exports.ResinAmbiguousDevice = class ResinAmbiguousDevice extends TypedError
+	constructor: (@device) ->
+		super("Device is ambiguous: #{@device}")
+
+	code: 'ResinAmbiguousDevice'
+	exitCode: 1
+
+###*
 #	@summary Resin key not found
 # @class
 # @public
