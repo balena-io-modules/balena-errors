@@ -134,13 +134,14 @@ exports.ResinKeyNotFound = class ResinKeyNotFound extends TypedError
 # @public
 #
 # @param {String} body - response body
+# @param {Number} statusCode - http status code
 # @return {Error} error instance
 #
 # @example
 # throw new errors.ResinRequestError('Unauthorized')
 ###
 exports.ResinRequestError = class ResinRequestError extends TypedError
-	constructor: (@body) ->
+	constructor: (@body, @statusCode) ->
 		super("Request error: #{@body}")
 
 	code: 'ResinRequestError'

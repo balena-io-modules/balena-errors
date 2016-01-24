@@ -205,6 +205,7 @@ exports.ResinKeyNotFound = ResinKeyNotFound = (function(_super) {
  * @public
  *
  * @param {String} body - response body
+ * @param {Number} statusCode - http status code
  * @return {Error} error instance
  *
  * @example
@@ -214,8 +215,9 @@ exports.ResinKeyNotFound = ResinKeyNotFound = (function(_super) {
 exports.ResinRequestError = ResinRequestError = (function(_super) {
   __extends(ResinRequestError, _super);
 
-  function ResinRequestError(body) {
+  function ResinRequestError(body, statusCode) {
     this.body = body;
+    this.statusCode = statusCode;
     ResinRequestError.__super__.constructor.call(this, "Request error: " + this.body);
   }
 
