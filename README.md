@@ -46,7 +46,7 @@ Documentation
   * [.ResinKeyNotFound](#module_errors.ResinKeyNotFound)
     * [new exports.ResinKeyNotFound(key)](#new_module_errors.ResinKeyNotFound_new)
   * [.ResinRequestError](#module_errors.ResinRequestError)
-    * [new exports.ResinRequestError(body)](#new_module_errors.ResinRequestError_new)
+    * [new exports.ResinRequestError(body, statusCode)](#new_module_errors.ResinRequestError_new)
   * [.ResinNotLoggedIn](#module_errors.ResinNotLoggedIn)
 
 <a name="module_errors.ResinInvalidDeviceType"></a>
@@ -157,12 +157,13 @@ throw new errors.ResinKeyNotFound('MyKey')
 **Summary**: Resin request error  
 **Access:** public  
 <a name="new_module_errors.ResinRequestError_new"></a>
-#### new exports.ResinRequestError(body)
+#### new exports.ResinRequestError(body, statusCode)
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | body | <code>String</code> | response body |
+| statusCode | <code>Number</code> | http status code |
 
 **Example**  
 ```js
