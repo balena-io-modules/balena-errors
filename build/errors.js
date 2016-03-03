@@ -18,7 +18,7 @@ limitations under the License.
 /**
  * @module errors
  */
-var ResinAmbiguousDevice, ResinApplicationNotFound, ResinDeviceNotFound, ResinInvalidDeviceType, ResinKeyNotFound, ResinMalformedToken, ResinNotLoggedIn, ResinRequestError, TypedError,
+var ResinAmbiguousDevice, ResinApplicationNotFound, ResinDeviceNotFound, ResinExpiredToken, ResinInvalidDeviceType, ResinKeyNotFound, ResinMalformedToken, ResinNotLoggedIn, ResinRequestError, TypedError,
   __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -79,6 +79,35 @@ exports.ResinMalformedToken = ResinMalformedToken = (function(_super) {
   ResinMalformedToken.prototype.exitCode = 1;
 
   return ResinMalformedToken;
+
+})(TypedError);
+
+
+/**
+ * @summary Resin expired token
+ * @class
+ * @public
+ *
+ * @param {String} token - token
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.ResinExpiredToken('1234')
+ */
+
+exports.ResinExpiredToken = ResinExpiredToken = (function(_super) {
+  __extends(ResinExpiredToken, _super);
+
+  function ResinExpiredToken(token) {
+    this.token = token;
+    ResinExpiredToken.__super__.constructor.call(this, "The token expired: " + this.token);
+  }
+
+  ResinExpiredToken.prototype.code = 'ResinExpiredToken';
+
+  ResinExpiredToken.prototype.exitCode = 1;
+
+  return ResinExpiredToken;
 
 })(TypedError);
 

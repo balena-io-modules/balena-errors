@@ -57,6 +57,24 @@ exports.ResinMalformedToken = class ResinMalformedToken extends TypedError
 	exitCode: 1
 
 ###*
+# @summary Resin expired token
+# @class
+# @public
+#
+# @param {String} token - token
+# @return {Error} error instance
+#
+# @example
+# throw new errors.ResinExpiredToken('1234')
+###
+exports.ResinExpiredToken = class ResinExpiredToken extends TypedError
+	constructor: (@token) ->
+		super("The token expired: #{@token}")
+
+	code: 'ResinExpiredToken'
+	exitCode: 1
+
+###*
 #	@summary Resin application not found
 # @class
 # @public
