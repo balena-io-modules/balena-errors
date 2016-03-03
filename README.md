@@ -37,6 +37,8 @@ Documentation
     * [new exports.ResinInvalidDeviceType(type)](#new_module_errors.ResinInvalidDeviceType_new)
   * [.ResinMalformedToken](#module_errors.ResinMalformedToken)
     * [new exports.ResinMalformedToken(token)](#new_module_errors.ResinMalformedToken_new)
+  * [.ResinExpiredToken](#module_errors.ResinExpiredToken)
+    * [new exports.ResinExpiredToken(token)](#new_module_errors.ResinExpiredToken_new)
   * [.ResinApplicationNotFound](#module_errors.ResinApplicationNotFound)
     * [new exports.ResinApplicationNotFound(application)](#new_module_errors.ResinApplicationNotFound_new)
   * [.ResinDeviceNotFound](#module_errors.ResinDeviceNotFound)
@@ -82,6 +84,23 @@ throw new errors.ResinInvalidDeviceType('raspberry-pi')
 **Example**  
 ```js
 throw new errors.ResinMalformedToken('1234')
+```
+<a name="module_errors.ResinExpiredToken"></a>
+### errors.ResinExpiredToken
+**Kind**: static class of <code>[errors](#module_errors)</code>  
+**Summary**: Resin expired token  
+**Access:** public  
+<a name="new_module_errors.ResinExpiredToken_new"></a>
+#### new exports.ResinExpiredToken(token)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| token | <code>String</code> | token |
+
+**Example**  
+```js
+throw new errors.ResinExpiredToken('1234')
 ```
 <a name="module_errors.ResinApplicationNotFound"></a>
 ### errors.ResinApplicationNotFound
