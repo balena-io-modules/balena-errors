@@ -33,30 +33,34 @@ Documentation
 
 
 * [errors](#module_errors)
-  * [.ResinInvalidDeviceType](#module_errors.ResinInvalidDeviceType)
-    * [new exports.ResinInvalidDeviceType(type)](#new_module_errors.ResinInvalidDeviceType_new)
-  * [.ResinMalformedToken](#module_errors.ResinMalformedToken)
-    * [new exports.ResinMalformedToken(token)](#new_module_errors.ResinMalformedToken_new)
-  * [.ResinExpiredToken](#module_errors.ResinExpiredToken)
-    * [new exports.ResinExpiredToken(token)](#new_module_errors.ResinExpiredToken_new)
-  * [.ResinApplicationNotFound](#module_errors.ResinApplicationNotFound)
-    * [new exports.ResinApplicationNotFound(application)](#new_module_errors.ResinApplicationNotFound_new)
-  * [.ResinDeviceNotFound](#module_errors.ResinDeviceNotFound)
-    * [new exports.ResinDeviceNotFound(device)](#new_module_errors.ResinDeviceNotFound_new)
-  * [.ResinAmbiguousDevice](#module_errors.ResinAmbiguousDevice)
-    * [new exports.ResinAmbiguousDevice(device)](#new_module_errors.ResinAmbiguousDevice_new)
-  * [.ResinKeyNotFound](#module_errors.ResinKeyNotFound)
-    * [new exports.ResinKeyNotFound(key)](#new_module_errors.ResinKeyNotFound_new)
-  * [.ResinRequestError](#module_errors.ResinRequestError)
-    * [new exports.ResinRequestError(body, statusCode)](#new_module_errors.ResinRequestError_new)
-  * [.ResinNotLoggedIn](#module_errors.ResinNotLoggedIn)
+    * [.ResinInvalidDeviceType](#module_errors.ResinInvalidDeviceType)
+        * [new exports.ResinInvalidDeviceType(type)](#new_module_errors.ResinInvalidDeviceType_new)
+    * [.ResinMalformedToken](#module_errors.ResinMalformedToken)
+        * [new exports.ResinMalformedToken(token)](#new_module_errors.ResinMalformedToken_new)
+    * [.ResinExpiredToken](#module_errors.ResinExpiredToken)
+        * [new exports.ResinExpiredToken(token)](#new_module_errors.ResinExpiredToken_new)
+    * [.ResinApplicationNotFound](#module_errors.ResinApplicationNotFound)
+        * [new exports.ResinApplicationNotFound(application)](#new_module_errors.ResinApplicationNotFound_new)
+    * [.ResinDeviceNotFound](#module_errors.ResinDeviceNotFound)
+        * [new exports.ResinDeviceNotFound(device)](#new_module_errors.ResinDeviceNotFound_new)
+    * [.ResinAmbiguousDevice](#module_errors.ResinAmbiguousDevice)
+        * [new exports.ResinAmbiguousDevice(device)](#new_module_errors.ResinAmbiguousDevice_new)
+    * [.ResinAmbiguousApplication](#module_errors.ResinAmbiguousApplication)
+        * [new exports.ResinAmbiguousApplication(application)](#new_module_errors.ResinAmbiguousApplication_new)
+    * [.ResinKeyNotFound](#module_errors.ResinKeyNotFound)
+        * [new exports.ResinKeyNotFound(key)](#new_module_errors.ResinKeyNotFound_new)
+    * [.ResinRequestError](#module_errors.ResinRequestError)
+        * [new exports.ResinRequestError(body, statusCode)](#new_module_errors.ResinRequestError_new)
+    * [.ResinNotLoggedIn](#module_errors.ResinNotLoggedIn)
 
 <a name="module_errors.ResinInvalidDeviceType"></a>
+
 ### errors.ResinInvalidDeviceType
 **Kind**: static class of <code>[errors](#module_errors)</code>  
 **Summary**: Resin invalid device type  
 **Access:** public  
 <a name="new_module_errors.ResinInvalidDeviceType_new"></a>
+
 #### new exports.ResinInvalidDeviceType(type)
 **Returns**: <code>Error</code> - error instance  
 
@@ -69,11 +73,13 @@ Documentation
 throw new errors.ResinInvalidDeviceType('raspberry-pi')
 ```
 <a name="module_errors.ResinMalformedToken"></a>
+
 ### errors.ResinMalformedToken
 **Kind**: static class of <code>[errors](#module_errors)</code>  
 **Summary**: Resin malformed token  
 **Access:** public  
 <a name="new_module_errors.ResinMalformedToken_new"></a>
+
 #### new exports.ResinMalformedToken(token)
 **Returns**: <code>Error</code> - error instance  
 
@@ -86,11 +92,13 @@ throw new errors.ResinInvalidDeviceType('raspberry-pi')
 throw new errors.ResinMalformedToken('1234')
 ```
 <a name="module_errors.ResinExpiredToken"></a>
+
 ### errors.ResinExpiredToken
 **Kind**: static class of <code>[errors](#module_errors)</code>  
 **Summary**: Resin expired token  
 **Access:** public  
 <a name="new_module_errors.ResinExpiredToken_new"></a>
+
 #### new exports.ResinExpiredToken(token)
 **Returns**: <code>Error</code> - error instance  
 
@@ -103,11 +111,13 @@ throw new errors.ResinMalformedToken('1234')
 throw new errors.ResinExpiredToken('1234')
 ```
 <a name="module_errors.ResinApplicationNotFound"></a>
+
 ### errors.ResinApplicationNotFound
 **Kind**: static class of <code>[errors](#module_errors)</code>  
 **Summary**: Resin application not found  
 **Access:** public  
 <a name="new_module_errors.ResinApplicationNotFound_new"></a>
+
 #### new exports.ResinApplicationNotFound(application)
 **Returns**: <code>Error</code> - error instance  
 
@@ -120,11 +130,13 @@ throw new errors.ResinExpiredToken('1234')
 throw new errors.ResinApplicationNotFound('MyApp')
 ```
 <a name="module_errors.ResinDeviceNotFound"></a>
+
 ### errors.ResinDeviceNotFound
 **Kind**: static class of <code>[errors](#module_errors)</code>  
 **Summary**: Resin device not found  
 **Access:** public  
 <a name="new_module_errors.ResinDeviceNotFound_new"></a>
+
 #### new exports.ResinDeviceNotFound(device)
 **Returns**: <code>Error</code> - error instance  
 
@@ -137,11 +149,13 @@ throw new errors.ResinApplicationNotFound('MyApp')
 throw new errors.ResinDeviceNotFound('MyDevice')
 ```
 <a name="module_errors.ResinAmbiguousDevice"></a>
+
 ### errors.ResinAmbiguousDevice
 **Kind**: static class of <code>[errors](#module_errors)</code>  
 **Summary**: Resin ambiguous device  
 **Access:** public  
 <a name="new_module_errors.ResinAmbiguousDevice_new"></a>
+
 #### new exports.ResinAmbiguousDevice(device)
 **Returns**: <code>Error</code> - error instance  
 
@@ -153,12 +167,33 @@ throw new errors.ResinDeviceNotFound('MyDevice')
 ```js
 throw new errors.ResinAmbiguousDevice('MyDevice')
 ```
+<a name="module_errors.ResinAmbiguousApplication"></a>
+
+### errors.ResinAmbiguousApplication
+**Kind**: static class of <code>[errors](#module_errors)</code>  
+**Summary**: Resin ambiguous application  
+**Access:** public  
+<a name="new_module_errors.ResinAmbiguousApplication_new"></a>
+
+#### new exports.ResinAmbiguousApplication(application)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| application | <code>String</code> &#124; <code>Number</code> | application name or id |
+
+**Example**  
+```js
+throw new errors.ResinAmbiguousApplication('MyApp')
+```
 <a name="module_errors.ResinKeyNotFound"></a>
+
 ### errors.ResinKeyNotFound
 **Kind**: static class of <code>[errors](#module_errors)</code>  
 **Summary**: Resin key not found  
 **Access:** public  
 <a name="new_module_errors.ResinKeyNotFound_new"></a>
+
 #### new exports.ResinKeyNotFound(key)
 **Returns**: <code>Error</code> - error instance  
 
@@ -171,11 +206,13 @@ throw new errors.ResinAmbiguousDevice('MyDevice')
 throw new errors.ResinKeyNotFound('MyKey')
 ```
 <a name="module_errors.ResinRequestError"></a>
+
 ### errors.ResinRequestError
 **Kind**: static class of <code>[errors](#module_errors)</code>  
 **Summary**: Resin request error  
 **Access:** public  
 <a name="new_module_errors.ResinRequestError_new"></a>
+
 #### new exports.ResinRequestError(body, statusCode)
 **Returns**: <code>Error</code> - error instance  
 
@@ -189,6 +226,7 @@ throw new errors.ResinKeyNotFound('MyKey')
 throw new errors.ResinRequestError('Unauthorized')
 ```
 <a name="module_errors.ResinNotLoggedIn"></a>
+
 ### errors.ResinNotLoggedIn
 **Kind**: static class of <code>[errors](#module_errors)</code>  
 **Summary**: Resin not logged in  
