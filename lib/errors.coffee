@@ -129,6 +129,24 @@ exports.ResinAmbiguousDevice = class ResinAmbiguousDevice extends TypedError
 	exitCode: 1
 
 ###*
+# @summary Resin ambiguous application
+# @class
+# @public
+#
+# @param {(String|Number)} application - application name or id
+# @return {Error} error instance
+#
+# @example
+# throw new errors.ResinAmbiguousApplication('MyApp')
+###
+exports.ResinAmbiguousApplication = class ResinAmbiguousApplication extends TypedError
+	constructor: (@application) ->
+		super("Application is ambiguous: #{@application}")
+
+	code: 'ResinAmbiguousApplication'
+	exitCode: 1
+
+###*
 #	@summary Resin key not found
 # @class
 # @public

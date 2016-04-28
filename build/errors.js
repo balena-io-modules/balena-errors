@@ -18,7 +18,7 @@ limitations under the License.
 /**
  * @module errors
  */
-var ResinAmbiguousDevice, ResinApplicationNotFound, ResinDeviceNotFound, ResinExpiredToken, ResinInvalidDeviceType, ResinKeyNotFound, ResinMalformedToken, ResinNotLoggedIn, ResinRequestError, TypedError,
+var ResinAmbiguousApplication, ResinAmbiguousDevice, ResinApplicationNotFound, ResinDeviceNotFound, ResinExpiredToken, ResinInvalidDeviceType, ResinKeyNotFound, ResinMalformedToken, ResinNotLoggedIn, ResinRequestError, TypedError,
   __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -195,6 +195,35 @@ exports.ResinAmbiguousDevice = ResinAmbiguousDevice = (function(_super) {
   ResinAmbiguousDevice.prototype.exitCode = 1;
 
   return ResinAmbiguousDevice;
+
+})(TypedError);
+
+
+/**
+ * @summary Resin ambiguous application
+ * @class
+ * @public
+ *
+ * @param {(String|Number)} application - application name or id
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.ResinAmbiguousApplication('MyApp')
+ */
+
+exports.ResinAmbiguousApplication = ResinAmbiguousApplication = (function(_super) {
+  __extends(ResinAmbiguousApplication, _super);
+
+  function ResinAmbiguousApplication(application) {
+    this.application = application;
+    ResinAmbiguousApplication.__super__.constructor.call(this, "Application is ambiguous: " + this.application);
+  }
+
+  ResinAmbiguousApplication.prototype.code = 'ResinAmbiguousApplication';
+
+  ResinAmbiguousApplication.prototype.exitCode = 1;
+
+  return ResinAmbiguousApplication;
 
 })(TypedError);
 
