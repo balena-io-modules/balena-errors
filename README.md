@@ -4,8 +4,8 @@ resin-errors
 > Resin.io error collection
 
 [![npm version](https://badge.fury.io/js/resin-errors.svg)](http://badge.fury.io/js/resin-errors)
-[![dependencies](https://david-dm.org/resin-io/resin-errors.svg)](https://david-dm.org/resin-io/resin-errors.svg)
-[![Build Status](https://travis-ci.org/resin-io/resin-errors.svg?branch=master)](https://travis-ci.org/resin-io/resin-errors)
+[![dependencies](https://david-dm.org/resin-io-modules/resin-errors.svg)](https://david-dm.org/resin-io-modules/resin-errors.svg)
+[![Build Status](https://travis-ci.org/resin-io-modules/resin-errors.svg?branch=master)](https://travis-ci.org/resin-io-modules/resin-errors)
 [![Build status](https://ci.appveyor.com/api/projects/status/c7g2vsshixiw4xw9?svg=true)](https://ci.appveyor.com/project/jviotti/resin-errors)
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/resin-io/chat)
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/resin-errors.svg)](https://saucelabs.com/u/resin-errors)
@@ -235,7 +235,7 @@ throw new errors.ResinRequestError('Unauthorized')
 Support
 -------
 
-If you're having any problem, please [raise an issue](https://github.com/resin-io/resin-errors/issues/new) on GitHub and the Resin.io team will be happy to help.
+If you're having any problem, please [raise an issue](https://github.com/resin-io-modules/resin-errors/issues/new) on GitHub and the Resin.io team will be happy to help.
 
 Tests
 -----
@@ -249,8 +249,8 @@ $ gulp test
 Contribute
 ----------
 
-- Issue Tracker: [github.com/resin-io/resin-errors/issues](https://github.com/resin-io/resin-errors/issues)
-- Source Code: [github.com/resin-io/resin-errors](https://github.com/resin-io/resin-errors)
+- Issue Tracker: [github.com/resin-io-modules/resin-errors/issues](https://github.com/resin-io-modules/resin-errors/issues)
+- Source Code: [github.com/resin-io-modules/resin-errors](https://github.com/resin-io-modules/resin-errors)
 
 Before submitting a PR, please make sure that you include tests, and that [coffeelint](http://www.coffeelint.org/) runs without any warning:
 

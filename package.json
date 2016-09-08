@@ -3,10 +3,10 @@
   "version": "2.4.0",
   "description": "Collection of Resin.io JavaScript errors",
   "main": "build/errors.js",
-  "homepage": "https://github.com/resin-io/resin-errors",
+  "homepage": "https://github.com/resin-io-modules/resin-errors",
   "repository": {
     "type": "git",
-    "url": "git://github.com/resin-io/resin-errors.git"
+    "url": "git://github.com/resin-io-modules/resin-errors.git"
   },
   "keywords": [
     "resin",
