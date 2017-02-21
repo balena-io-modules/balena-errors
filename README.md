@@ -50,7 +50,7 @@ Documentation
     * [.ResinKeyNotFound](#module_errors.ResinKeyNotFound)
         * [new exports.ResinKeyNotFound(key)](#new_module_errors.ResinKeyNotFound_new)
     * [.ResinRequestError](#module_errors.ResinRequestError)
-        * [new exports.ResinRequestError(body, statusCode)](#new_module_errors.ResinRequestError_new)
+        * [new exports.ResinRequestError(body, statusCode, [requestOptions])](#new_module_errors.ResinRequestError_new)
     * [.ResinNotLoggedIn](#module_errors.ResinNotLoggedIn)
 
 <a name="module_errors.ResinInvalidDeviceType"></a>
@@ -213,13 +213,14 @@ throw new errors.ResinKeyNotFound('MyKey')
 **Access:** public  
 <a name="new_module_errors.ResinRequestError_new"></a>
 
-#### new exports.ResinRequestError(body, statusCode)
+#### new exports.ResinRequestError(body, statusCode, [requestOptions])
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | body | <code>String</code> | response body |
 | statusCode | <code>Number</code> | http status code |
+| [requestOptions] | <code>Object</code> | options used to make the request |
 
 **Example**  
 ```js
