@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.5.0] - 2017-02-21
+
 - Include request options in `ResinRequestError`
 
 ## [2.4.0] - 2016-04-28
