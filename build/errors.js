@@ -18,7 +18,7 @@ limitations under the License.
 /**
  * @module errors
  */
-var ResinAmbiguousApplication, ResinAmbiguousDevice, ResinApplicationNotFound, ResinDeviceNotFound, ResinExpiredToken, ResinInvalidDeviceType, ResinKeyNotFound, ResinMalformedToken, ResinNotLoggedIn, ResinRequestError, TypedError,
+var ResinAmbiguousApplication, ResinAmbiguousDevice, ResinApplicationNotFound, ResinBuildNotFound, ResinDeviceNotFound, ResinExpiredToken, ResinInvalidDeviceType, ResinKeyNotFound, ResinMalformedToken, ResinNotLoggedIn, ResinRequestError, TypedError,
   __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -137,6 +137,35 @@ exports.ResinApplicationNotFound = ResinApplicationNotFound = (function(_super) 
   ResinApplicationNotFound.prototype.exitCode = 1;
 
   return ResinApplicationNotFound;
+
+})(TypedError);
+
+
+/**
+ * @summary Resin build not found
+ * @class
+ * @public
+ *
+ * @param {(Number)} build - build id
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.ResinBuildNotFound(123)
+ */
+
+exports.ResinBuildNotFound = ResinBuildNotFound = (function(_super) {
+  __extends(ResinBuildNotFound, _super);
+
+  function ResinBuildNotFound(build) {
+    this.build = build;
+    ResinBuildNotFound.__super__.constructor.call(this, "Build not found: " + this.build);
+  }
+
+  ResinBuildNotFound.prototype.code = 'ResinBuildNotFound';
+
+  ResinBuildNotFound.prototype.exitCode = 1;
+
+  return ResinBuildNotFound;
 
 })(TypedError);
 
