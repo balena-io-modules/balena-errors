@@ -93,6 +93,24 @@ exports.ResinApplicationNotFound = class ResinApplicationNotFound extends TypedE
 	exitCode: 1
 
 ###*
+# @summary Resin build not found
+# @class
+# @public
+#
+# @param {(Number)} build - build id
+# @return {Error} error instance
+#
+# @example
+# throw new errors.ResinBuildNotFound(123)
+###
+exports.ResinBuildNotFound = class ResinBuildNotFound extends TypedError
+	constructor: (@build) ->
+		super("Build not found: #{@build}")
+
+	code: 'ResinBuildNotFound'
+	exitCode: 1
+
+###*
 #	@summary Resin device not found
 # @class
 # @public

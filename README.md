@@ -41,6 +41,8 @@ Documentation
         * [new exports.ResinExpiredToken(token)](#new_module_errors.ResinExpiredToken_new)
     * [.ResinApplicationNotFound](#module_errors.ResinApplicationNotFound)
         * [new exports.ResinApplicationNotFound(application)](#new_module_errors.ResinApplicationNotFound_new)
+    * [.ResinBuildNotFound](#module_errors.ResinBuildNotFound)
+        * [new exports.ResinBuildNotFound(build)](#new_module_errors.ResinBuildNotFound_new)
     * [.ResinDeviceNotFound](#module_errors.ResinDeviceNotFound)
         * [new exports.ResinDeviceNotFound(device)](#new_module_errors.ResinDeviceNotFound_new)
     * [.ResinAmbiguousDevice](#module_errors.ResinAmbiguousDevice)
@@ -128,6 +130,25 @@ throw new errors.ResinExpiredToken('1234')
 **Example**  
 ```js
 throw new errors.ResinApplicationNotFound('MyApp')
+```
+<a name="module_errors.ResinBuildNotFound"></a>
+
+### errors.ResinBuildNotFound
+**Kind**: static class of <code>[errors](#module_errors)</code>  
+**Summary**: Resin build not found  
+**Access:** public  
+<a name="new_module_errors.ResinBuildNotFound_new"></a>
+
+#### new exports.ResinBuildNotFound(build)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| build | <code>Number</code> | build id |
+
+**Example**  
+```js
+throw new errors.ResinBuildNotFound(123)
 ```
 <a name="module_errors.ResinDeviceNotFound"></a>
 

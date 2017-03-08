@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+- Stop running tests for Node < 4
+- Add `ResinBuildNotFound` error.
+
 ## [2.5.0] - 2017-02-21
 
 - Include request options in `ResinRequestError`
