@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+# [2.6.0] - 2017-03-09
+
 - Stop running tests for Node < 4
 - Add `ResinBuildNotFound` error.
 
@@ -34,6 +36,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Omit tests from NPM package.
 
+[2.6.0]: https://github.com/resin-io-modules/resin-errors/compare/v2.5.0...v2.6.0
+[2.5.0]: https://github.com/resin-io-modules/resin-errors/compare/v2.4.0...v2.5.0
 [2.4.0]: https://github.com/resin-io-modules/resin-errors/compare/v2.3.0...v2.4.0
 [2.3.0]: https://github.com/resin-io-modules/resin-errors/compare/v2.2.0...v2.3.0
 [2.2.0]: https://github.com/resin-io-modules/resin-errors/compare/v2.1.0...v2.2.0
