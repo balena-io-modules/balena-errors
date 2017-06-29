@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+- Add `ResinInvalidParameterError` error.
+
 # [2.6.0] - 2017-03-09
 
 - Stop running tests for Node < 4

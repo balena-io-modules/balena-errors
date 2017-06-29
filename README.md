@@ -54,6 +54,7 @@ Documentation
     * [.ResinRequestError](#module_errors.ResinRequestError)
         * [new exports.ResinRequestError(body, statusCode, [requestOptions])](#new_module_errors.ResinRequestError_new)
     * [.ResinNotLoggedIn](#module_errors.ResinNotLoggedIn)
+    * [.ResinInvalidParameterError](#module_errors.ResinInvalidParameterError)
 
 <a name="module_errors.ResinInvalidDeviceType"></a>
 
@@ -252,6 +253,12 @@ throw new errors.ResinRequestError('Unauthorized')
 ### errors.ResinNotLoggedIn
 **Kind**: static class of <code>[errors](#module_errors)</code>  
 **Summary**: Resin not logged in  
+**Access:** public  
+<a name="module_errors.ResinInvalidParameterError"></a>
+
+### errors.ResinInvalidParameterError
+**Kind**: static class of <code>[errors](#module_errors)</code>  
+**Summary**: Resin invalid parameter  
 **Access:** public  
 
 Support
