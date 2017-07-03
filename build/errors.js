@@ -19,7 +19,7 @@ limitations under the License.
 /**
  * @module errors
  */
-var ResinAmbiguousApplication, ResinAmbiguousDevice, ResinApplicationNotFound, ResinBuildNotFound, ResinDeviceNotFound, ResinExpiredToken, ResinInvalidDeviceType, ResinKeyNotFound, ResinMalformedToken, ResinNotLoggedIn, ResinRequestError, TypedError,
+var ResinAmbiguousApplication, ResinAmbiguousDevice, ResinApplicationNotFound, ResinBuildNotFound, ResinDeviceNotFound, ResinExpiredToken, ResinInvalidDeviceType, ResinInvalidParameterError, ResinKeyNotFound, ResinMalformedToken, ResinNotLoggedIn, ResinRequestError, TypedError,
   __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -27,7 +27,7 @@ TypedError = require('typed-error');
 
 
 /**
- *	@summary Resin invalid device type
+ * @summary Resin invalid device type
  * @class
  * @public
  *
@@ -56,7 +56,7 @@ exports.ResinInvalidDeviceType = ResinInvalidDeviceType = (function(_super) {
 
 
 /**
- *	@summary Resin malformed token
+ * @summary Resin malformed token
  * @class
  * @public
  *
@@ -114,7 +114,7 @@ exports.ResinExpiredToken = ResinExpiredToken = (function(_super) {
 
 
 /**
- *	@summary Resin application not found
+ * @summary Resin application not found
  * @class
  * @public
  *
@@ -172,7 +172,7 @@ exports.ResinBuildNotFound = ResinBuildNotFound = (function(_super) {
 
 
 /**
- *	@summary Resin device not found
+ * @summary Resin device not found
  * @class
  * @public
  *
@@ -201,7 +201,7 @@ exports.ResinDeviceNotFound = ResinDeviceNotFound = (function(_super) {
 
 
 /**
- *	@summary Resin ambiguous device
+ * @summary Resin ambiguous device
  * @class
  * @public
  *
@@ -259,7 +259,7 @@ exports.ResinAmbiguousApplication = ResinAmbiguousApplication = (function(_super
 
 
 /**
- *	@summary Resin key not found
+ * @summary Resin key not found
  * @class
  * @public
  *
@@ -288,7 +288,7 @@ exports.ResinKeyNotFound = ResinKeyNotFound = (function(_super) {
 
 
 /**
- *	@summary Resin request error
+ * @summary Resin request error
  * @class
  * @public
  *
@@ -321,7 +321,7 @@ exports.ResinRequestError = ResinRequestError = (function(_super) {
 
 
 /**
- *	@summary Resin not logged in
+ * @summary Resin not logged in
  * @class
  * @public
  *
@@ -343,5 +343,36 @@ exports.ResinNotLoggedIn = ResinNotLoggedIn = (function(_super) {
   ResinNotLoggedIn.prototype.exitCode = 1;
 
   return ResinNotLoggedIn;
+
+})(TypedError);
+
+
+/**
+ * @summary Resin invalid parameter
+ * @class
+ * @public
+ *
+ * @return {Error} error instance
+ *
+ * @example
+ * checkId = (id) ->
+ * 	if typeof id isnt 'number'
+ * 		throw new errors.ResinInvalidParameterError('id', id)
+ */
+
+exports.ResinInvalidParameterError = ResinInvalidParameterError = (function(_super) {
+  __extends(ResinInvalidParameterError, _super);
+
+  function ResinInvalidParameterError(parameterName, suppliedValue) {
+    this.parameterName = parameterName;
+    this.suppliedValue = suppliedValue;
+    ResinInvalidParameterError.__super__.constructor.call(this, "Invalid parameter: " + this.suppliedValue + " is not a valid value for parameter '" + this.parameterName + "'");
+  }
+
+  ResinInvalidParameterError.prototype.code = 'ResinInvalidParameterError';
+
+  ResinInvalidParameterError.prototype.exitCode = 1;
+
+  return ResinInvalidParameterError;
 
 })(TypedError);

@@ -21,7 +21,7 @@ limitations under the License.
 TypedError = require('typed-error')
 
 ###*
-#	@summary Resin invalid device type
+# @summary Resin invalid device type
 # @class
 # @public
 #
@@ -39,7 +39,7 @@ exports.ResinInvalidDeviceType = class ResinInvalidDeviceType extends TypedError
 	exitCode: 1
 
 ###*
-#	@summary Resin malformed token
+# @summary Resin malformed token
 # @class
 # @public
 #
@@ -75,7 +75,7 @@ exports.ResinExpiredToken = class ResinExpiredToken extends TypedError
 	exitCode: 1
 
 ###*
-#	@summary Resin application not found
+# @summary Resin application not found
 # @class
 # @public
 #
@@ -111,7 +111,7 @@ exports.ResinBuildNotFound = class ResinBuildNotFound extends TypedError
 	exitCode: 1
 
 ###*
-#	@summary Resin device not found
+# @summary Resin device not found
 # @class
 # @public
 #
@@ -129,7 +129,7 @@ exports.ResinDeviceNotFound = class ResinDeviceNotFound extends TypedError
 	exitCode: 1
 
 ###*
-#	@summary Resin ambiguous device
+# @summary Resin ambiguous device
 # @class
 # @public
 #
@@ -165,7 +165,7 @@ exports.ResinAmbiguousApplication = class ResinAmbiguousApplication extends Type
 	exitCode: 1
 
 ###*
-#	@summary Resin key not found
+# @summary Resin key not found
 # @class
 # @public
 #
@@ -183,7 +183,7 @@ exports.ResinKeyNotFound = class ResinKeyNotFound extends TypedError
 	exitCode: 1
 
 ###*
-#	@summary Resin request error
+# @summary Resin request error
 # @class
 # @public
 #
@@ -203,7 +203,7 @@ exports.ResinRequestError = class ResinRequestError extends TypedError
 	exitCode: 1
 
 ###*
-#	@summary Resin not logged in
+# @summary Resin not logged in
 # @class
 # @public
 #
@@ -218,3 +218,23 @@ exports.ResinNotLoggedIn = class ResinNotLoggedIn extends TypedError
 
 	code: 'ResinNotLoggedIn'
 	exitCode: 1
+
+###*
+# @summary Resin invalid parameter
+# @class
+# @public
+#
+# @return {Error} error instance
+#
+# @example
+# checkId = (id) ->
+# 	if typeof id isnt 'number'
+# 		throw new errors.ResinInvalidParameterError('id', id)
+###
+exports.ResinInvalidParameterError = class ResinInvalidParameterError extends TypedError
+	constructor: (@parameterName, @suppliedValue) ->
+		super("Invalid parameter: #{@suppliedValue} is not a valid value for parameter '#{@parameterName}'")
+
+	code: 'ResinInvalidParameterError'
+	exitCode: 1
+
