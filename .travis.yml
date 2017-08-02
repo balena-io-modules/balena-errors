@@ -1,22 +1,27 @@
+dist: trusty
+sudo: false
+addons:
+  chrome: stable
+
 language: node_js
+
 before_install:
-  - npm -g install npm@latest
+  - npm -g install npm@4
+
 matrix:
   include:
-
     # Only run tests in Sauce Labs for latest node
     # to avoid unnecessary running VMs
     - node_js: "node"
       env: SAUCE_LABS=true
       script:
         - npm test
-        - karma start
-
     - node_js: "6"
       script:
         - npm test
     - node_js: "4"
       script:
         - npm test
+
 notifications:
   email: false

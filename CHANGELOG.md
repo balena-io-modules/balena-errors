@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+# Unreleased
+
+- Converted to TypeScript
+- Switched to testing in Chrome Headless, updated the list of browsers used for testing in Sauce Labs
+
 # [2.7.0] - 2017-07-03
 
 - Add `ResinInvalidParameterError` error.
@@ -40,6 +45,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Omit tests from NPM package.
 
+[2.7.0]: https://github.com/resin-io-modules/resin-errors/compare/v2.6.0...v2.7.0
 [2.6.0]: https://github.com/resin-io-modules/resin-errors/compare/v2.5.0...v2.6.0
 [2.5.0]: https://github.com/resin-io-modules/resin-errors/compare/v2.4.0...v2.5.0
 [2.4.0]: https://github.com/resin-io-modules/resin-errors/compare/v2.3.0...v2.4.0
