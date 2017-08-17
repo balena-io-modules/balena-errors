@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+- Use the resin.io shared typings packages
+
 # [2.8.0] - 2017-08-02
 
 - Converted to TypeScript
