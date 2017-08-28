@@ -30,10 +30,9 @@
   "author": "Juan Cruz Viotti <juan@resin.io>",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@types/chai": "^4.0.1",
+    "@resin.io/types-mochainon": "^2.0.0",
     "@types/mocha": "^2.2.41",
     "@types/node": "^8.0.14",
-    "@types/sinon": "^2.3.3",
     "jsdoc-to-markdown": "^3.0.0",
     "karma": "^1.7.0",
     "mocha": "^3.4.0",
