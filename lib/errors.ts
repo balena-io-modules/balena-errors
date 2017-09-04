@@ -64,6 +64,24 @@ export class ResinMalformedToken extends ResinError {
 ResinMalformedToken.prototype.code = 'ResinMalformedToken';
 
 /**
+ * @summary The device supervisor is locked
+ * @class
+ * @public
+ *
+ * @param {String} token - token
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.ResinSupervisorLockedError()
+ */
+export class ResinSupervisorLockedError extends ResinError {
+	constructor(public token: string) {
+		super(`Supervisor Locked: ${token}`);
+	}
+}
+ResinSupervisorLockedError.prototype.code = 'ResinSupervisorLockedError';
+
+/**
  * @summary Resin expired token
  * @class
  * @public
