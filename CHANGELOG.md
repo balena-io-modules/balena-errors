@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+# [2.9.0] - 2017-09-05
+
+- Add `ResinSupervisorLockedError` error
 - Use the resin.io shared typings packages
 
 # [2.8.0] - 2017-08-02
