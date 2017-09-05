@@ -37,6 +37,8 @@ Documentation
         * [new ResinInvalidDeviceType(type)](#new_module_errors..ResinInvalidDeviceType_new)
     * [~ResinMalformedToken](#module_errors..ResinMalformedToken)
         * [new ResinMalformedToken(token)](#new_module_errors..ResinMalformedToken_new)
+    * [~ResinSupervisorLockedError](#module_errors..ResinSupervisorLockedError)
+        * [new ResinSupervisorLockedError(token)](#new_module_errors..ResinSupervisorLockedError_new)
     * [~ResinExpiredToken](#module_errors..ResinExpiredToken)
         * [new ResinExpiredToken(token)](#new_module_errors..ResinExpiredToken_new)
     * [~ResinApplicationNotFound](#module_errors..ResinApplicationNotFound)
@@ -93,6 +95,25 @@ throw new errors.ResinInvalidDeviceType('raspberry-pi')
 **Example**  
 ```js
 throw new errors.ResinMalformedToken('1234')
+```
+<a name="module_errors..ResinSupervisorLockedError"></a>
+
+### errors~ResinSupervisorLockedError
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: The device supervisor is locked  
+**Access**: public  
+<a name="new_module_errors..ResinSupervisorLockedError_new"></a>
+
+#### new ResinSupervisorLockedError(token)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| token | <code>String</code> | token |
+
+**Example**  
+```js
+throw new errors.ResinSupervisorLockedError()
 ```
 <a name="module_errors..ResinExpiredToken"></a>
 

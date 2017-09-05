@@ -75,6 +75,28 @@ var ResinMalformedToken = (function (_super) {
 exports.ResinMalformedToken = ResinMalformedToken;
 ResinMalformedToken.prototype.code = 'ResinMalformedToken';
 /**
+ * @summary The device supervisor is locked
+ * @class
+ * @public
+ *
+ * @param {String} token - token
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.ResinSupervisorLockedError()
+ */
+var ResinSupervisorLockedError = (function (_super) {
+    tslib_1.__extends(ResinSupervisorLockedError, _super);
+    function ResinSupervisorLockedError(token) {
+        var _this = _super.call(this, "Supervisor Locked: " + token) || this;
+        _this.token = token;
+        return _this;
+    }
+    return ResinSupervisorLockedError;
+}(ResinError));
+exports.ResinSupervisorLockedError = ResinSupervisorLockedError;
+ResinSupervisorLockedError.prototype.code = 'ResinSupervisorLockedError';
+/**
  * @summary Resin expired token
  * @class
  * @public
