@@ -35,6 +35,8 @@ Documentation
 * [errors](#module_errors)
     * [~ResinInvalidDeviceType](#module_errors..ResinInvalidDeviceType)
         * [new ResinInvalidDeviceType(type)](#new_module_errors..ResinInvalidDeviceType_new)
+    * [~ResinDiscontinuedDeviceType](#module_errors..ResinDiscontinuedDeviceType)
+        * [new ResinDiscontinuedDeviceType(type)](#new_module_errors..ResinDiscontinuedDeviceType_new)
     * [~ResinMalformedToken](#module_errors..ResinMalformedToken)
         * [new ResinMalformedToken(token)](#new_module_errors..ResinMalformedToken_new)
     * [~ResinSupervisorLockedError](#module_errors..ResinSupervisorLockedError)
@@ -76,6 +78,28 @@ Documentation
 **Example**  
 ```js
 throw new errors.ResinInvalidDeviceType('raspberry-pi')
+```
+<a name="module_errors..ResinDiscontinuedDeviceType"></a>
+
+### errors~ResinDiscontinuedDeviceType
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Resin discontinued device type  
+**Access**: public  
+<a name="new_module_errors..ResinDiscontinuedDeviceType_new"></a>
+
+#### new ResinDiscontinuedDeviceType(type)
+The device type that you specified is invalid because it is
+discontinued, and this operation is no longer supported.
+
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| type | <code>String</code> | device type |
+
+**Example**  
+```js
+throw new errors.ResinDiscontinuedDeviceType('edge')
 ```
 <a name="module_errors..ResinMalformedToken"></a>
 
