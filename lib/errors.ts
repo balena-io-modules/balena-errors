@@ -46,6 +46,28 @@ export class ResinInvalidDeviceType extends ResinError {
 ResinInvalidDeviceType.prototype.code = 'ResinInvalidDeviceType';
 
 /**
+ * @summary Resin discontinued device type
+ * @class
+ * @public
+ *
+ * @description
+ * The device type that you specified is invalid because it is
+ * discontinued, and this operation is no longer supported.
+ *
+ * @param {String} type - device type
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.ResinDiscontinuedDeviceType('edge')
+ */
+export class ResinDiscontinuedDeviceType extends ResinInvalidDeviceType {
+	constructor(public type: string) {
+		super(`Discontinued device type: ${type}`);
+	}
+}
+ResinDiscontinuedDeviceType.prototype.code = 'ResinDiscontinuedDeviceType';
+
+/**
  * @summary Resin malformed token
  * @class
  * @public
