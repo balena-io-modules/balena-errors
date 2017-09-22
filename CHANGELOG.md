@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+# [2.10.0] - 2017-09-22
+
+- Add `ResinDiscontinuedDeviceType` error
+
 # [2.9.0] - 2017-09-05
 
 - Add `ResinSupervisorLockedError` error
@@ -50,6 +54,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Omit tests from NPM package.
 
+[2.10.0]: https://github.com/resin-io-modules/resin-errors/compare/v2.9.0...v2.10.0
+[2.9.0]: https://github.com/resin-io-modules/resin-errors/compare/v2.8.0...v2.9.0
 [2.8.0]: https://github.com/resin-io-modules/resin-errors/compare/v2.7.0...v2.8.0
 [2.7.0]: https://github.com/resin-io-modules/resin-errors/compare/v2.6.0...v2.7.0
 [2.6.0]: https://github.com/resin-io-modules/resin-errors/compare/v2.5.0...v2.6.0
