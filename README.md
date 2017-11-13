@@ -49,6 +49,8 @@ Documentation
         * [new ResinBuildNotFound(build)](#new_module_errors..ResinBuildNotFound_new)
     * [~ResinReleaseNotFound](#module_errors..ResinReleaseNotFound)
         * [new ResinReleaseNotFound(release)](#new_module_errors..ResinReleaseNotFound_new)
+    * [~ResinImageNotFound](#module_errors..ResinImageNotFound)
+        * [new ResinImageNotFound(image)](#new_module_errors..ResinImageNotFound_new)
     * [~ResinDeviceNotFound](#module_errors..ResinDeviceNotFound)
         * [new ResinDeviceNotFound(device)](#new_module_errors..ResinDeviceNotFound_new)
     * [~ResinAmbiguousDevice](#module_errors..ResinAmbiguousDevice)
@@ -218,6 +220,25 @@ throw new errors.ResinBuildNotFound(123)
 **Example**  
 ```js
 throw new errors.ResinReleaseNotFound(123)
+```
+<a name="module_errors..ResinImageNotFound"></a>
+
+### errors~ResinImageNotFound
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Resin image not found  
+**Access**: public  
+<a name="new_module_errors..ResinImageNotFound_new"></a>
+
+#### new ResinImageNotFound(image)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| image | <code>Number</code> | image id |
+
+**Example**  
+```js
+throw new errors.ResinImageNotFound(123)
 ```
 <a name="module_errors..ResinDeviceNotFound"></a>
 

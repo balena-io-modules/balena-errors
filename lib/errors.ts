@@ -177,6 +177,24 @@ export class ResinReleaseNotFound extends ResinError {
 ResinReleaseNotFound.prototype.code = 'ResinReleaseNotFound';
 
 /**
+ * @summary Resin image not found
+ * @class
+ * @public
+ *
+ * @param {(Number)} image - image id
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.ResinImageNotFound(123)
+ */
+export class ResinImageNotFound extends ResinError {
+	constructor(public image: number) {
+		super(`Image not found: ${image}`);
+	}
+}
+ResinImageNotFound.prototype.code = 'ResinImageNotFound';
+
+/**
  * @summary Resin device not found
  * @class
  * @public
