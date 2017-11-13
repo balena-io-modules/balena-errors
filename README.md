@@ -45,8 +45,10 @@ Documentation
         * [new ResinExpiredToken(token)](#new_module_errors..ResinExpiredToken_new)
     * [~ResinApplicationNotFound](#module_errors..ResinApplicationNotFound)
         * [new ResinApplicationNotFound(application)](#new_module_errors..ResinApplicationNotFound_new)
-    * [~ResinBuildNotFound](#module_errors..ResinBuildNotFound)
+    * ~~[~ResinBuildNotFound](#module_errors..ResinBuildNotFound)~~
         * [new ResinBuildNotFound(build)](#new_module_errors..ResinBuildNotFound_new)
+    * [~ResinReleaseNotFound](#module_errors..ResinReleaseNotFound)
+        * [new ResinReleaseNotFound(release)](#new_module_errors..ResinReleaseNotFound_new)
     * [~ResinDeviceNotFound](#module_errors..ResinDeviceNotFound)
         * [new ResinDeviceNotFound(device)](#new_module_errors..ResinDeviceNotFound_new)
     * [~ResinAmbiguousDevice](#module_errors..ResinAmbiguousDevice)
@@ -179,7 +181,9 @@ throw new errors.ResinApplicationNotFound('MyApp')
 ```
 <a name="module_errors..ResinBuildNotFound"></a>
 
-### errors~ResinBuildNotFound
+### ~~errors~ResinBuildNotFound~~
+***Deprecated***
+
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
 **Summary**: Resin build not found  
 **Access**: public  
@@ -195,6 +199,25 @@ throw new errors.ResinApplicationNotFound('MyApp')
 **Example**  
 ```js
 throw new errors.ResinBuildNotFound(123)
+```
+<a name="module_errors..ResinReleaseNotFound"></a>
+
+### errors~ResinReleaseNotFound
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Resin release not found  
+**Access**: public  
+<a name="new_module_errors..ResinReleaseNotFound_new"></a>
+
+#### new ResinReleaseNotFound(release)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| release | <code>Number</code> | release id |
+
+**Example**  
+```js
+throw new errors.ResinReleaseNotFound(123)
 ```
 <a name="module_errors..ResinDeviceNotFound"></a>
 

@@ -143,6 +143,7 @@ ResinApplicationNotFound.prototype.code = 'ResinApplicationNotFound';
  * @summary Resin build not found
  * @class
  * @public
+ * @deprecated From the new v4 API, ResinReleaseNotFound should be used instead
  *
  * @param {(Number)} build - build id
  * @return {Error} error instance
@@ -156,6 +157,24 @@ export class ResinBuildNotFound extends ResinError {
 	}
 }
 ResinBuildNotFound.prototype.code = 'ResinBuildNotFound';
+
+/**
+ * @summary Resin release not found
+ * @class
+ * @public
+ *
+ * @param {(Number)} release - release id
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.ResinReleaseNotFound(123)
+ */
+export class ResinReleaseNotFound extends ResinError {
+	constructor(public release: number) {
+		super(`Release not found: ${release}`);
+	}
+}
+ResinReleaseNotFound.prototype.code = 'ResinReleaseNotFound';
 
 /**
  * @summary Resin device not found
