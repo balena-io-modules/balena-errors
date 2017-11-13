@@ -1,6 +1,6 @@
 {
   "name": "resin-errors",
-  "version": "2.10.0",
+  "version": "2.11.0",
   "description": "Collection of Resin.io JavaScript errors",
   "main": "build/errors.js",
   "types": "lib/errors.ts",
