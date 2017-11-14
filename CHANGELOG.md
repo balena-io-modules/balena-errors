@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+# 2.12.0 - 2017-11-14
+
+- Add ImageNotFound error, for multicontainer
+
 # 2.11.0 - 2017-11-13
 
 - Add ReleaseNotFound error, and deprecate BuildNotFound, for multicontainer
