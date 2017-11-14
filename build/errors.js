@@ -212,6 +212,28 @@ var ResinReleaseNotFound = (function (_super) {
 exports.ResinReleaseNotFound = ResinReleaseNotFound;
 ResinReleaseNotFound.prototype.code = 'ResinReleaseNotFound';
 /**
+ * @summary Resin image not found
+ * @class
+ * @public
+ *
+ * @param {(Number)} image - image id
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.ResinImageNotFound(123)
+ */
+var ResinImageNotFound = (function (_super) {
+    tslib_1.__extends(ResinImageNotFound, _super);
+    function ResinImageNotFound(image) {
+        var _this = _super.call(this, "Image not found: " + image) || this;
+        _this.image = image;
+        return _this;
+    }
+    return ResinImageNotFound;
+}(ResinError));
+exports.ResinImageNotFound = ResinImageNotFound;
+ResinImageNotFound.prototype.code = 'ResinImageNotFound';
+/**
  * @summary Resin device not found
  * @class
  * @public
