@@ -342,7 +342,9 @@ ResinNotLoggedIn.prototype.code = 'ResinNotLoggedIn';
 export class ResinInvalidParameterError extends ResinError {
 	constructor(public parameterName: string, public suppliedValue: any) {
 		super(
-			`Invalid parameter: ${suppliedValue} is not a valid value for parameter '${parameterName}'`
+			`Invalid parameter: ${
+				suppliedValue
+			} is not a valid value for parameter '${parameterName}'`
 		);
 	}
 }

@@ -51,6 +51,8 @@ Documentation
         * [new ResinReleaseNotFound(release)](#new_module_errors..ResinReleaseNotFound_new)
     * [~ResinImageNotFound](#module_errors..ResinImageNotFound)
         * [new ResinImageNotFound(image)](#new_module_errors..ResinImageNotFound_new)
+    * [~ResinServiceNotFound](#module_errors..ResinServiceNotFound)
+        * [new ResinServiceNotFound(service)](#new_module_errors..ResinServiceNotFound_new)
     * [~ResinDeviceNotFound](#module_errors..ResinDeviceNotFound)
         * [new ResinDeviceNotFound(device)](#new_module_errors..ResinDeviceNotFound_new)
     * [~ResinAmbiguousDevice](#module_errors..ResinAmbiguousDevice)
@@ -239,6 +241,25 @@ throw new errors.ResinReleaseNotFound(123)
 **Example**  
 ```js
 throw new errors.ResinImageNotFound(123)
+```
+<a name="module_errors..ResinServiceNotFound"></a>
+
+### errors~ResinServiceNotFound
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Resin service not found  
+**Access**: public  
+<a name="new_module_errors..ResinServiceNotFound_new"></a>
+
+#### new ResinServiceNotFound(service)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| service | <code>Number</code> | service id |
+
+**Example**  
+```js
+throw new errors.ResinServiceNotFound(123)
 ```
 <a name="module_errors..ResinDeviceNotFound"></a>
 

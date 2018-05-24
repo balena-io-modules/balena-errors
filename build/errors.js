@@ -234,6 +234,28 @@ var ResinImageNotFound = (function (_super) {
 exports.ResinImageNotFound = ResinImageNotFound;
 ResinImageNotFound.prototype.code = 'ResinImageNotFound';
 /**
+ * @summary Resin service not found
+ * @class
+ * @public
+ *
+ * @param {(Number)} service - service id
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.ResinServiceNotFound(123)
+ */
+var ResinServiceNotFound = (function (_super) {
+    tslib_1.__extends(ResinServiceNotFound, _super);
+    function ResinServiceNotFound(service) {
+        var _this = _super.call(this, "Service not found: " + service) || this;
+        _this.service = service;
+        return _this;
+    }
+    return ResinServiceNotFound;
+}(ResinError));
+exports.ResinServiceNotFound = ResinServiceNotFound;
+ResinServiceNotFound.prototype.code = 'ResinServiceNotFound';
+/**
  * @summary Resin device not found
  * @class
  * @public

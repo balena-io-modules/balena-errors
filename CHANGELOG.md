@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+# 2.13.0 - 2018-05-24
+
+* Add ResinServiceNotFound
+
 # 2.12.0 - 2017-11-14
 
 - Add ImageNotFound error, for multicontainer
