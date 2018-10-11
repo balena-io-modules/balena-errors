@@ -1,5 +1,5 @@
 /*
-Copyright 2016 Resin.io
+Copyright 2016 Balena
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -20,15 +20,15 @@ limitations under the License.
 
 import TypedError = require('typed-error');
 
-export class ResinError extends TypedError {
+export class BalenaError extends TypedError {
 	public code: string;
 	public exitCode: number;
 }
-ResinError.prototype.code = 'ResinError';
-ResinError.prototype.exitCode = 1;
+BalenaError.prototype.code = 'BalenaError';
+BalenaError.prototype.exitCode = 1;
 
 /**
- * @summary Resin invalid device type
+ * @summary Balena invalid device type
  * @class
  * @public
  *
@@ -36,17 +36,17 @@ ResinError.prototype.exitCode = 1;
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinInvalidDeviceType('raspberry-pi')
+ * throw new errors.BalenaInvalidDeviceType('raspberry-pi')
  */
-export class ResinInvalidDeviceType extends ResinError {
+export class BalenaInvalidDeviceType extends BalenaError {
 	constructor(public type: string) {
 		super(`Invalid device type: ${type}`);
 	}
 }
-ResinInvalidDeviceType.prototype.code = 'ResinInvalidDeviceType';
+BalenaInvalidDeviceType.prototype.code = 'BalenaInvalidDeviceType';
 
 /**
- * @summary Resin discontinued device type
+ * @summary Balena discontinued device type
  * @class
  * @public
  *
@@ -58,17 +58,17 @@ ResinInvalidDeviceType.prototype.code = 'ResinInvalidDeviceType';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinDiscontinuedDeviceType('edge')
+ * throw new errors.BalenaDiscontinuedDeviceType('edge')
  */
-export class ResinDiscontinuedDeviceType extends ResinInvalidDeviceType {
+export class BalenaDiscontinuedDeviceType extends BalenaInvalidDeviceType {
 	constructor(public type: string) {
 		super(`Discontinued device type: ${type}`);
 	}
 }
-ResinDiscontinuedDeviceType.prototype.code = 'ResinDiscontinuedDeviceType';
+BalenaDiscontinuedDeviceType.prototype.code = 'BalenaDiscontinuedDeviceType';
 
 /**
- * @summary Resin malformed token
+ * @summary Balena malformed token
  * @class
  * @public
  *
@@ -76,14 +76,14 @@ ResinDiscontinuedDeviceType.prototype.code = 'ResinDiscontinuedDeviceType';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinMalformedToken('1234')
+ * throw new errors.BalenaMalformedToken('1234')
  */
-export class ResinMalformedToken extends ResinError {
+export class BalenaMalformedToken extends BalenaError {
 	constructor(public token: string) {
 		super(`Malformed token: ${token}`);
 	}
 }
-ResinMalformedToken.prototype.code = 'ResinMalformedToken';
+BalenaMalformedToken.prototype.code = 'BalenaMalformedToken';
 
 /**
  * @summary The device supervisor is locked
@@ -94,17 +94,17 @@ ResinMalformedToken.prototype.code = 'ResinMalformedToken';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinSupervisorLockedError()
+ * throw new errors.BalenaSupervisorLockedError()
  */
-export class ResinSupervisorLockedError extends ResinError {
+export class BalenaSupervisorLockedError extends BalenaError {
 	constructor(public token: string) {
 		super(`Supervisor Locked: ${token}`);
 	}
 }
-ResinSupervisorLockedError.prototype.code = 'ResinSupervisorLockedError';
+BalenaSupervisorLockedError.prototype.code = 'BalenaSupervisorLockedError';
 
 /**
- * @summary Resin expired token
+ * @summary Balena expired token
  * @class
  * @public
  *
@@ -112,17 +112,17 @@ ResinSupervisorLockedError.prototype.code = 'ResinSupervisorLockedError';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinExpiredToken('1234')
+ * throw new errors.BalenaExpiredToken('1234')
  */
-export class ResinExpiredToken extends ResinError {
+export class BalenaExpiredToken extends BalenaError {
 	constructor(public token: string) {
 		super(`The token expired: ${token}`);
 	}
 }
-ResinExpiredToken.prototype.code = 'ResinExpiredToken';
+BalenaExpiredToken.prototype.code = 'BalenaExpiredToken';
 
 /**
- * @summary Resin application not found
+ * @summary Balena application not found
  * @class
  * @public
  *
@@ -130,36 +130,36 @@ ResinExpiredToken.prototype.code = 'ResinExpiredToken';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinApplicationNotFound('MyApp')
+ * throw new errors.BalenaApplicationNotFound('MyApp')
  */
-export class ResinApplicationNotFound extends ResinError {
+export class BalenaApplicationNotFound extends BalenaError {
 	constructor(public application: string | number) {
 		super(`Application not found: ${application}`);
 	}
 }
-ResinApplicationNotFound.prototype.code = 'ResinApplicationNotFound';
+BalenaApplicationNotFound.prototype.code = 'BalenaApplicationNotFound';
 
 /**
- * @summary Resin build not found
+ * @summary Balena build not found
  * @class
  * @public
- * @deprecated From the new v4 API, ResinReleaseNotFound should be used instead
+ * @deprecated From the new v4 API, BalenaReleaseNotFound should be used instead
  *
  * @param {(Number)} build - build id
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinBuildNotFound(123)
+ * throw new errors.BalenaBuildNotFound(123)
  */
-export class ResinBuildNotFound extends ResinError {
+export class BalenaBuildNotFound extends BalenaError {
 	constructor(public build: number) {
 		super(`Build not found: ${build}`);
 	}
 }
-ResinBuildNotFound.prototype.code = 'ResinBuildNotFound';
+BalenaBuildNotFound.prototype.code = 'BalenaBuildNotFound';
 
 /**
- * @summary Resin release not found
+ * @summary Balena release not found
  * @class
  * @public
  *
@@ -167,17 +167,17 @@ ResinBuildNotFound.prototype.code = 'ResinBuildNotFound';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinReleaseNotFound(123)
+ * throw new errors.BalenaReleaseNotFound(123)
  */
-export class ResinReleaseNotFound extends ResinError {
+export class BalenaReleaseNotFound extends BalenaError {
 	constructor(public release: number) {
 		super(`Release not found: ${release}`);
 	}
 }
-ResinReleaseNotFound.prototype.code = 'ResinReleaseNotFound';
+BalenaReleaseNotFound.prototype.code = 'BalenaReleaseNotFound';
 
 /**
- * @summary Resin image not found
+ * @summary Balena image not found
  * @class
  * @public
  *
@@ -185,17 +185,17 @@ ResinReleaseNotFound.prototype.code = 'ResinReleaseNotFound';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinImageNotFound(123)
+ * throw new errors.BalenaImageNotFound(123)
  */
-export class ResinImageNotFound extends ResinError {
+export class BalenaImageNotFound extends BalenaError {
 	constructor(public image: number) {
 		super(`Image not found: ${image}`);
 	}
 }
-ResinImageNotFound.prototype.code = 'ResinImageNotFound';
+BalenaImageNotFound.prototype.code = 'BalenaImageNotFound';
 
 /**
- * @summary Resin service not found
+ * @summary Balena service not found
  * @class
  * @public
  *
@@ -203,17 +203,17 @@ ResinImageNotFound.prototype.code = 'ResinImageNotFound';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinServiceNotFound(123)
+ * throw new errors.BalenaServiceNotFound(123)
  */
-export class ResinServiceNotFound extends ResinError {
+export class BalenaServiceNotFound extends BalenaError {
 	constructor(public service: number) {
 		super(`Service not found: ${service}`);
 	}
 }
-ResinServiceNotFound.prototype.code = 'ResinServiceNotFound';
+BalenaServiceNotFound.prototype.code = 'BalenaServiceNotFound';
 
 /**
- * @summary Resin device not found
+ * @summary Balena device not found
  * @class
  * @public
  *
@@ -221,17 +221,17 @@ ResinServiceNotFound.prototype.code = 'ResinServiceNotFound';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinDeviceNotFound('MyDevice')
+ * throw new errors.BalenaDeviceNotFound('MyDevice')
  */
-export class ResinDeviceNotFound extends ResinError {
+export class BalenaDeviceNotFound extends BalenaError {
 	constructor(public device: string | number) {
 		super(`Device not found: ${device}`);
 	}
 }
-ResinDeviceNotFound.prototype.code = 'ResinDeviceNotFound';
+BalenaDeviceNotFound.prototype.code = 'BalenaDeviceNotFound';
 
 /**
- * @summary Resin ambiguous device
+ * @summary Balena ambiguous device
  * @class
  * @public
  *
@@ -239,17 +239,17 @@ ResinDeviceNotFound.prototype.code = 'ResinDeviceNotFound';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinAmbiguousDevice('MyDevice')
+ * throw new errors.BalenaAmbiguousDevice('MyDevice')
  */
-export class ResinAmbiguousDevice extends ResinError {
+export class BalenaAmbiguousDevice extends BalenaError {
 	constructor(public device: string | number) {
 		super(`Device is ambiguous: ${device}`);
 	}
 }
-ResinAmbiguousDevice.prototype.code = 'ResinAmbiguousDevice';
+BalenaAmbiguousDevice.prototype.code = 'BalenaAmbiguousDevice';
 
 /**
- * @summary Resin ambiguous application
+ * @summary Balena ambiguous application
  * @class
  * @public
  *
@@ -257,17 +257,17 @@ ResinAmbiguousDevice.prototype.code = 'ResinAmbiguousDevice';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinAmbiguousApplication('MyApp')
+ * throw new errors.BalenaAmbiguousApplication('MyApp')
  */
-export class ResinAmbiguousApplication extends ResinError {
+export class BalenaAmbiguousApplication extends BalenaError {
 	constructor(public application: string | number) {
 		super(`Application is ambiguous: ${application}`);
 	}
 }
-ResinAmbiguousApplication.prototype.code = 'ResinAmbiguousApplication';
+BalenaAmbiguousApplication.prototype.code = 'BalenaAmbiguousApplication';
 
 /**
- * @summary Resin key not found
+ * @summary Balena key not found
  * @class
  * @public
  *
@@ -275,17 +275,17 @@ ResinAmbiguousApplication.prototype.code = 'ResinAmbiguousApplication';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinKeyNotFound('MyKey')
+ * throw new errors.BalenaKeyNotFound('MyKey')
  */
-export class ResinKeyNotFound extends ResinError {
+export class BalenaKeyNotFound extends BalenaError {
 	constructor(key: string | number) {
 		super(`Key not found: ${key}`);
 	}
 }
-ResinKeyNotFound.prototype.code = 'ResinKeyNotFound';
+BalenaKeyNotFound.prototype.code = 'BalenaKeyNotFound';
 
 /**
- * @summary Resin request error
+ * @summary Balena request error
  * @class
  * @public
  *
@@ -295,9 +295,9 @@ ResinKeyNotFound.prototype.code = 'ResinKeyNotFound';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinRequestError('Unauthorized')
+ * throw new errors.BalenaRequestError('Unauthorized')
  */
-export class ResinRequestError extends ResinError {
+export class BalenaRequestError extends BalenaError {
 	constructor(
 		public body: string,
 		public statusCode: number,
@@ -306,27 +306,27 @@ export class ResinRequestError extends ResinError {
 		super(`Request error: ${body}`);
 	}
 }
-ResinRequestError.prototype.code = 'ResinRequestError';
+BalenaRequestError.prototype.code = 'BalenaRequestError';
 
 /**
- * @summary Resin not logged in
+ * @summary Balena not logged in
  * @class
  * @public
  *
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinNotLoggedIn()
+ * throw new errors.BalenaNotLoggedIn()
  */
-export class ResinNotLoggedIn extends ResinError {
+export class BalenaNotLoggedIn extends BalenaError {
 	constructor() {
 		super('You have to log in');
 	}
 }
-ResinNotLoggedIn.prototype.code = 'ResinNotLoggedIn';
+BalenaNotLoggedIn.prototype.code = 'BalenaNotLoggedIn';
 
 /**
- * @summary Resin invalid parameter
+ * @summary Balena invalid parameter
  * @class
  * @public
  *
@@ -335,17 +335,15 @@ ResinNotLoggedIn.prototype.code = 'ResinNotLoggedIn';
  * @example
  * const checkId = (id) => {
  * 	if (typeof id !== 'number') {
- * 		throw new errors.ResinInvalidParameterError('id', id)
+ * 		throw new errors.BalenaInvalidParameterError('id', id)
  * 	}
  * }
  */
-export class ResinInvalidParameterError extends ResinError {
+export class BalenaInvalidParameterError extends BalenaError {
 	constructor(public parameterName: string, public suppliedValue: any) {
 		super(
-			`Invalid parameter: ${
-				suppliedValue
-			} is not a valid value for parameter '${parameterName}'`
+			`Invalid parameter: ${suppliedValue} is not a valid value for parameter '${parameterName}'`
 		);
 	}
 }
-ResinInvalidParameterError.prototype.code = 'ResinInvalidParameterError';
+BalenaInvalidParameterError.prototype.code = 'BalenaInvalidParameterError';

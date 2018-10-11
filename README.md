@@ -1,31 +1,31 @@
-resin-errors
+balena-errors
 ============
 
-> Resin.io error collection
+> Balena error collection
 
-[![npm version](https://badge.fury.io/js/resin-errors.svg)](http://badge.fury.io/js/resin-errors)
-[![dependencies](https://david-dm.org/resin-io-modules/resin-errors.svg)](https://david-dm.org/resin-io-modules/resin-errors.svg)
-[![Build Status](https://travis-ci.org/resin-io-modules/resin-errors.svg?branch=master)](https://travis-ci.org/resin-io-modules/resin-errors)
-[![Build status](https://ci.appveyor.com/api/projects/status/c7g2vsshixiw4xw9?svg=true)](https://ci.appveyor.com/project/jviotti/resin-errors)
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/resin-io/chat)
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/resin-errors.svg)](https://saucelabs.com/u/resin-errors)
+[![npm version](https://badge.fury.io/js/balena-errors.svg)](http://badge.fury.io/js/balena-errors)
+[![dependencies](https://david-dm.org/balena-io-modules/balena-errors.svg)](https://david-dm.org/balena-io-modules/balena-errors.svg)
+[![Build Status](https://travis-ci.org/balena-io-modules/balena-errors.svg?branch=master)](https://travis-ci.org/balena-io-modules/balena-errors)
+[![Build status](https://ci.appveyor.com/api/projects/status/c7g2vsshixiw4xw9?svg=true)](https://ci.appveyor.com/project/jviotti/balena-errors)
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/balena-io/chat)
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/balena-errors.svg)](https://saucelabs.com/u/balena-errors)
 
 Role
 ----
 
-The intention of this module is to provide a collection of `Error` instances to be used by the Resin SDK.
+The intention of this module is to provide a collection of `Error` instances to be used by the Balena SDK.
 
 **THIS MODULE IS LOW LEVEL AND IS NOT MEANT TO BE USED BY END USERS DIRECTLY**.
 
-Unless you know what you're doing, use the [Resin SDK](https://github.com/resin-io/resin-sdk) instead.
+Unless you know what you're doing, use the [Balena SDK](https://github.com/balena-io/balena-sdk) instead.
 
 Installation
 ------------
 
-Install `resin-errors` by running:
+Install `balena-errors` by running:
 
 ```sh
-$ npm install --save resin-errors
+$ npm install --save balena-errors
 ```
 
 Documentation
@@ -33,48 +33,48 @@ Documentation
 
 
 * [errors](#module_errors)
-    * [~ResinInvalidDeviceType](#module_errors..ResinInvalidDeviceType)
-        * [new ResinInvalidDeviceType(type)](#new_module_errors..ResinInvalidDeviceType_new)
-    * [~ResinDiscontinuedDeviceType](#module_errors..ResinDiscontinuedDeviceType)
-        * [new ResinDiscontinuedDeviceType(type)](#new_module_errors..ResinDiscontinuedDeviceType_new)
-    * [~ResinMalformedToken](#module_errors..ResinMalformedToken)
-        * [new ResinMalformedToken(token)](#new_module_errors..ResinMalformedToken_new)
-    * [~ResinSupervisorLockedError](#module_errors..ResinSupervisorLockedError)
-        * [new ResinSupervisorLockedError(token)](#new_module_errors..ResinSupervisorLockedError_new)
-    * [~ResinExpiredToken](#module_errors..ResinExpiredToken)
-        * [new ResinExpiredToken(token)](#new_module_errors..ResinExpiredToken_new)
-    * [~ResinApplicationNotFound](#module_errors..ResinApplicationNotFound)
-        * [new ResinApplicationNotFound(application)](#new_module_errors..ResinApplicationNotFound_new)
-    * ~~[~ResinBuildNotFound](#module_errors..ResinBuildNotFound)~~
-        * [new ResinBuildNotFound(build)](#new_module_errors..ResinBuildNotFound_new)
-    * [~ResinReleaseNotFound](#module_errors..ResinReleaseNotFound)
-        * [new ResinReleaseNotFound(release)](#new_module_errors..ResinReleaseNotFound_new)
-    * [~ResinImageNotFound](#module_errors..ResinImageNotFound)
-        * [new ResinImageNotFound(image)](#new_module_errors..ResinImageNotFound_new)
-    * [~ResinServiceNotFound](#module_errors..ResinServiceNotFound)
-        * [new ResinServiceNotFound(service)](#new_module_errors..ResinServiceNotFound_new)
-    * [~ResinDeviceNotFound](#module_errors..ResinDeviceNotFound)
-        * [new ResinDeviceNotFound(device)](#new_module_errors..ResinDeviceNotFound_new)
-    * [~ResinAmbiguousDevice](#module_errors..ResinAmbiguousDevice)
-        * [new ResinAmbiguousDevice(device)](#new_module_errors..ResinAmbiguousDevice_new)
-    * [~ResinAmbiguousApplication](#module_errors..ResinAmbiguousApplication)
-        * [new ResinAmbiguousApplication(application)](#new_module_errors..ResinAmbiguousApplication_new)
-    * [~ResinKeyNotFound](#module_errors..ResinKeyNotFound)
-        * [new ResinKeyNotFound(key)](#new_module_errors..ResinKeyNotFound_new)
-    * [~ResinRequestError](#module_errors..ResinRequestError)
-        * [new ResinRequestError(body, statusCode, [requestOptions])](#new_module_errors..ResinRequestError_new)
-    * [~ResinNotLoggedIn](#module_errors..ResinNotLoggedIn)
-    * [~ResinInvalidParameterError](#module_errors..ResinInvalidParameterError)
+    * [~BalenaInvalidDeviceType](#module_errors..BalenaInvalidDeviceType)
+        * [new BalenaInvalidDeviceType(type)](#new_module_errors..BalenaInvalidDeviceType_new)
+    * [~BalenaDiscontinuedDeviceType](#module_errors..BalenaDiscontinuedDeviceType)
+        * [new BalenaDiscontinuedDeviceType(type)](#new_module_errors..BalenaDiscontinuedDeviceType_new)
+    * [~BalenaMalformedToken](#module_errors..BalenaMalformedToken)
+        * [new BalenaMalformedToken(token)](#new_module_errors..BalenaMalformedToken_new)
+    * [~BalenaSupervisorLockedError](#module_errors..BalenaSupervisorLockedError)
+        * [new BalenaSupervisorLockedError(token)](#new_module_errors..BalenaSupervisorLockedError_new)
+    * [~BalenaExpiredToken](#module_errors..BalenaExpiredToken)
+        * [new BalenaExpiredToken(token)](#new_module_errors..BalenaExpiredToken_new)
+    * [~BalenaApplicationNotFound](#module_errors..BalenaApplicationNotFound)
+        * [new BalenaApplicationNotFound(application)](#new_module_errors..BalenaApplicationNotFound_new)
+    * ~~[~BalenaBuildNotFound](#module_errors..BalenaBuildNotFound)~~
+        * [new BalenaBuildNotFound(build)](#new_module_errors..BalenaBuildNotFound_new)
+    * [~BalenaReleaseNotFound](#module_errors..BalenaReleaseNotFound)
+        * [new BalenaReleaseNotFound(release)](#new_module_errors..BalenaReleaseNotFound_new)
+    * [~BalenaImageNotFound](#module_errors..BalenaImageNotFound)
+        * [new BalenaImageNotFound(image)](#new_module_errors..BalenaImageNotFound_new)
+    * [~BalenaServiceNotFound](#module_errors..BalenaServiceNotFound)
+        * [new BalenaServiceNotFound(service)](#new_module_errors..BalenaServiceNotFound_new)
+    * [~BalenaDeviceNotFound](#module_errors..BalenaDeviceNotFound)
+        * [new BalenaDeviceNotFound(device)](#new_module_errors..BalenaDeviceNotFound_new)
+    * [~BalenaAmbiguousDevice](#module_errors..BalenaAmbiguousDevice)
+        * [new BalenaAmbiguousDevice(device)](#new_module_errors..BalenaAmbiguousDevice_new)
+    * [~BalenaAmbiguousApplication](#module_errors..BalenaAmbiguousApplication)
+        * [new BalenaAmbiguousApplication(application)](#new_module_errors..BalenaAmbiguousApplication_new)
+    * [~BalenaKeyNotFound](#module_errors..BalenaKeyNotFound)
+        * [new BalenaKeyNotFound(key)](#new_module_errors..BalenaKeyNotFound_new)
+    * [~BalenaRequestError](#module_errors..BalenaRequestError)
+        * [new BalenaRequestError(body, statusCode, [requestOptions])](#new_module_errors..BalenaRequestError_new)
+    * [~BalenaNotLoggedIn](#module_errors..BalenaNotLoggedIn)
+    * [~BalenaInvalidParameterError](#module_errors..BalenaInvalidParameterError)
 
-<a name="module_errors..ResinInvalidDeviceType"></a>
+<a name="module_errors..BalenaInvalidDeviceType"></a>
 
-### errors~ResinInvalidDeviceType
+### errors~BalenaInvalidDeviceType
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin invalid device type  
+**Summary**: Balena invalid device type  
 **Access**: public  
-<a name="new_module_errors..ResinInvalidDeviceType_new"></a>
+<a name="new_module_errors..BalenaInvalidDeviceType_new"></a>
 
-#### new ResinInvalidDeviceType(type)
+#### new BalenaInvalidDeviceType(type)
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -83,17 +83,17 @@ Documentation
 
 **Example**  
 ```js
-throw new errors.ResinInvalidDeviceType('raspberry-pi')
+throw new errors.BalenaInvalidDeviceType('raspberry-pi')
 ```
-<a name="module_errors..ResinDiscontinuedDeviceType"></a>
+<a name="module_errors..BalenaDiscontinuedDeviceType"></a>
 
-### errors~ResinDiscontinuedDeviceType
+### errors~BalenaDiscontinuedDeviceType
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin discontinued device type  
+**Summary**: Balena discontinued device type  
 **Access**: public  
-<a name="new_module_errors..ResinDiscontinuedDeviceType_new"></a>
+<a name="new_module_errors..BalenaDiscontinuedDeviceType_new"></a>
 
-#### new ResinDiscontinuedDeviceType(type)
+#### new BalenaDiscontinuedDeviceType(type)
 The device type that you specified is invalid because it is
 discontinued, and this operation is no longer supported.
 
@@ -105,17 +105,17 @@ discontinued, and this operation is no longer supported.
 
 **Example**  
 ```js
-throw new errors.ResinDiscontinuedDeviceType('edge')
+throw new errors.BalenaDiscontinuedDeviceType('edge')
 ```
-<a name="module_errors..ResinMalformedToken"></a>
+<a name="module_errors..BalenaMalformedToken"></a>
 
-### errors~ResinMalformedToken
+### errors~BalenaMalformedToken
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin malformed token  
+**Summary**: Balena malformed token  
 **Access**: public  
-<a name="new_module_errors..ResinMalformedToken_new"></a>
+<a name="new_module_errors..BalenaMalformedToken_new"></a>
 
-#### new ResinMalformedToken(token)
+#### new BalenaMalformedToken(token)
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -124,17 +124,17 @@ throw new errors.ResinDiscontinuedDeviceType('edge')
 
 **Example**  
 ```js
-throw new errors.ResinMalformedToken('1234')
+throw new errors.BalenaMalformedToken('1234')
 ```
-<a name="module_errors..ResinSupervisorLockedError"></a>
+<a name="module_errors..BalenaSupervisorLockedError"></a>
 
-### errors~ResinSupervisorLockedError
+### errors~BalenaSupervisorLockedError
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
 **Summary**: The device supervisor is locked  
 **Access**: public  
-<a name="new_module_errors..ResinSupervisorLockedError_new"></a>
+<a name="new_module_errors..BalenaSupervisorLockedError_new"></a>
 
-#### new ResinSupervisorLockedError(token)
+#### new BalenaSupervisorLockedError(token)
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -143,17 +143,17 @@ throw new errors.ResinMalformedToken('1234')
 
 **Example**  
 ```js
-throw new errors.ResinSupervisorLockedError()
+throw new errors.BalenaSupervisorLockedError()
 ```
-<a name="module_errors..ResinExpiredToken"></a>
+<a name="module_errors..BalenaExpiredToken"></a>
 
-### errors~ResinExpiredToken
+### errors~BalenaExpiredToken
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin expired token  
+**Summary**: Balena expired token  
 **Access**: public  
-<a name="new_module_errors..ResinExpiredToken_new"></a>
+<a name="new_module_errors..BalenaExpiredToken_new"></a>
 
-#### new ResinExpiredToken(token)
+#### new BalenaExpiredToken(token)
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -162,17 +162,17 @@ throw new errors.ResinSupervisorLockedError()
 
 **Example**  
 ```js
-throw new errors.ResinExpiredToken('1234')
+throw new errors.BalenaExpiredToken('1234')
 ```
-<a name="module_errors..ResinApplicationNotFound"></a>
+<a name="module_errors..BalenaApplicationNotFound"></a>
 
-### errors~ResinApplicationNotFound
+### errors~BalenaApplicationNotFound
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin application not found  
+**Summary**: Balena application not found  
 **Access**: public  
-<a name="new_module_errors..ResinApplicationNotFound_new"></a>
+<a name="new_module_errors..BalenaApplicationNotFound_new"></a>
 
-#### new ResinApplicationNotFound(application)
+#### new BalenaApplicationNotFound(application)
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -181,19 +181,19 @@ throw new errors.ResinExpiredToken('1234')
 
 **Example**  
 ```js
-throw new errors.ResinApplicationNotFound('MyApp')
+throw new errors.BalenaApplicationNotFound('MyApp')
 ```
-<a name="module_errors..ResinBuildNotFound"></a>
+<a name="module_errors..BalenaBuildNotFound"></a>
 
-### ~~errors~ResinBuildNotFound~~
+### ~~errors~BalenaBuildNotFound~~
 ***Deprecated***
 
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin build not found  
+**Summary**: Balena build not found  
 **Access**: public  
-<a name="new_module_errors..ResinBuildNotFound_new"></a>
+<a name="new_module_errors..BalenaBuildNotFound_new"></a>
 
-#### new ResinBuildNotFound(build)
+#### new BalenaBuildNotFound(build)
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -202,17 +202,17 @@ throw new errors.ResinApplicationNotFound('MyApp')
 
 **Example**  
 ```js
-throw new errors.ResinBuildNotFound(123)
+throw new errors.BalenaBuildNotFound(123)
 ```
-<a name="module_errors..ResinReleaseNotFound"></a>
+<a name="module_errors..BalenaReleaseNotFound"></a>
 
-### errors~ResinReleaseNotFound
+### errors~BalenaReleaseNotFound
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin release not found  
+**Summary**: Balena release not found  
 **Access**: public  
-<a name="new_module_errors..ResinReleaseNotFound_new"></a>
+<a name="new_module_errors..BalenaReleaseNotFound_new"></a>
 
-#### new ResinReleaseNotFound(release)
+#### new BalenaReleaseNotFound(release)
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -221,17 +221,17 @@ throw new errors.ResinBuildNotFound(123)
 
 **Example**  
 ```js
-throw new errors.ResinReleaseNotFound(123)
+throw new errors.BalenaReleaseNotFound(123)
 ```
-<a name="module_errors..ResinImageNotFound"></a>
+<a name="module_errors..BalenaImageNotFound"></a>
 
-### errors~ResinImageNotFound
+### errors~BalenaImageNotFound
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin image not found  
+**Summary**: Balena image not found  
 **Access**: public  
-<a name="new_module_errors..ResinImageNotFound_new"></a>
+<a name="new_module_errors..BalenaImageNotFound_new"></a>
 
-#### new ResinImageNotFound(image)
+#### new BalenaImageNotFound(image)
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -240,17 +240,17 @@ throw new errors.ResinReleaseNotFound(123)
 
 **Example**  
 ```js
-throw new errors.ResinImageNotFound(123)
+throw new errors.BalenaImageNotFound(123)
 ```
-<a name="module_errors..ResinServiceNotFound"></a>
+<a name="module_errors..BalenaServiceNotFound"></a>
 
-### errors~ResinServiceNotFound
+### errors~BalenaServiceNotFound
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin service not found  
+**Summary**: Balena service not found  
 **Access**: public  
-<a name="new_module_errors..ResinServiceNotFound_new"></a>
+<a name="new_module_errors..BalenaServiceNotFound_new"></a>
 
-#### new ResinServiceNotFound(service)
+#### new BalenaServiceNotFound(service)
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -259,17 +259,17 @@ throw new errors.ResinImageNotFound(123)
 
 **Example**  
 ```js
-throw new errors.ResinServiceNotFound(123)
+throw new errors.BalenaServiceNotFound(123)
 ```
-<a name="module_errors..ResinDeviceNotFound"></a>
+<a name="module_errors..BalenaDeviceNotFound"></a>
 
-### errors~ResinDeviceNotFound
+### errors~BalenaDeviceNotFound
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin device not found  
+**Summary**: Balena device not found  
 **Access**: public  
-<a name="new_module_errors..ResinDeviceNotFound_new"></a>
+<a name="new_module_errors..BalenaDeviceNotFound_new"></a>
 
-#### new ResinDeviceNotFound(device)
+#### new BalenaDeviceNotFound(device)
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -278,17 +278,17 @@ throw new errors.ResinServiceNotFound(123)
 
 **Example**  
 ```js
-throw new errors.ResinDeviceNotFound('MyDevice')
+throw new errors.BalenaDeviceNotFound('MyDevice')
 ```
-<a name="module_errors..ResinAmbiguousDevice"></a>
+<a name="module_errors..BalenaAmbiguousDevice"></a>
 
-### errors~ResinAmbiguousDevice
+### errors~BalenaAmbiguousDevice
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin ambiguous device  
+**Summary**: Balena ambiguous device  
 **Access**: public  
-<a name="new_module_errors..ResinAmbiguousDevice_new"></a>
+<a name="new_module_errors..BalenaAmbiguousDevice_new"></a>
 
-#### new ResinAmbiguousDevice(device)
+#### new BalenaAmbiguousDevice(device)
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -297,17 +297,17 @@ throw new errors.ResinDeviceNotFound('MyDevice')
 
 **Example**  
 ```js
-throw new errors.ResinAmbiguousDevice('MyDevice')
+throw new errors.BalenaAmbiguousDevice('MyDevice')
 ```
-<a name="module_errors..ResinAmbiguousApplication"></a>
+<a name="module_errors..BalenaAmbiguousApplication"></a>
 
-### errors~ResinAmbiguousApplication
+### errors~BalenaAmbiguousApplication
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin ambiguous application  
+**Summary**: Balena ambiguous application  
 **Access**: public  
-<a name="new_module_errors..ResinAmbiguousApplication_new"></a>
+<a name="new_module_errors..BalenaAmbiguousApplication_new"></a>
 
-#### new ResinAmbiguousApplication(application)
+#### new BalenaAmbiguousApplication(application)
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -316,17 +316,17 @@ throw new errors.ResinAmbiguousDevice('MyDevice')
 
 **Example**  
 ```js
-throw new errors.ResinAmbiguousApplication('MyApp')
+throw new errors.BalenaAmbiguousApplication('MyApp')
 ```
-<a name="module_errors..ResinKeyNotFound"></a>
+<a name="module_errors..BalenaKeyNotFound"></a>
 
-### errors~ResinKeyNotFound
+### errors~BalenaKeyNotFound
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin key not found  
+**Summary**: Balena key not found  
 **Access**: public  
-<a name="new_module_errors..ResinKeyNotFound_new"></a>
+<a name="new_module_errors..BalenaKeyNotFound_new"></a>
 
-#### new ResinKeyNotFound(key)
+#### new BalenaKeyNotFound(key)
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -335,17 +335,17 @@ throw new errors.ResinAmbiguousApplication('MyApp')
 
 **Example**  
 ```js
-throw new errors.ResinKeyNotFound('MyKey')
+throw new errors.BalenaKeyNotFound('MyKey')
 ```
-<a name="module_errors..ResinRequestError"></a>
+<a name="module_errors..BalenaRequestError"></a>
 
-### errors~ResinRequestError
+### errors~BalenaRequestError
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin request error  
+**Summary**: Balena request error  
 **Access**: public  
-<a name="new_module_errors..ResinRequestError_new"></a>
+<a name="new_module_errors..BalenaRequestError_new"></a>
 
-#### new ResinRequestError(body, statusCode, [requestOptions])
+#### new BalenaRequestError(body, statusCode, [requestOptions])
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -356,25 +356,25 @@ throw new errors.ResinKeyNotFound('MyKey')
 
 **Example**  
 ```js
-throw new errors.ResinRequestError('Unauthorized')
+throw new errors.BalenaRequestError('Unauthorized')
 ```
-<a name="module_errors..ResinNotLoggedIn"></a>
+<a name="module_errors..BalenaNotLoggedIn"></a>
 
-### errors~ResinNotLoggedIn
+### errors~BalenaNotLoggedIn
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin not logged in  
+**Summary**: Balena not logged in  
 **Access**: public  
-<a name="module_errors..ResinInvalidParameterError"></a>
+<a name="module_errors..BalenaInvalidParameterError"></a>
 
-### errors~ResinInvalidParameterError
+### errors~BalenaInvalidParameterError
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Resin invalid parameter  
+**Summary**: Balena invalid parameter  
 **Access**: public  
 
 Support
 -------
 
-If you're having any problem, please [raise an issue](https://github.com/resin-io-modules/resin-errors/issues/new) on GitHub and the Resin.io team will be happy to help.
+If you're having any problem, please [raise an issue](https://github.com/balena-io-modules/balena-errors/issues/new) on GitHub and the Balena team will be happy to help.
 
 Tests
 -----
@@ -388,8 +388,8 @@ $ gulp test
 Contribute
 ----------
 
-- Issue Tracker: [github.com/resin-io-modules/resin-errors/issues](https://github.com/resin-io-modules/resin-errors/issues)
-- Source Code: [github.com/resin-io-modules/resin-errors](https://github.com/resin-io-modules/resin-errors)
+- Issue Tracker: [github.com/balena-io-modules/balena-errors/issues](https://github.com/balena-io-modules/balena-errors/issues)
+- Source Code: [github.com/balena-io-modules/balena-errors](https://github.com/balena-io-modules/balena-errors)
 
 Before submitting a PR, please make sure that you include tests, and that [coffeelint](http://www.coffeelint.org/) runs without any warning:
 
