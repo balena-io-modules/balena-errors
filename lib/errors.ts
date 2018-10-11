@@ -140,25 +140,6 @@ export class BalenaApplicationNotFound extends BalenaError {
 BalenaApplicationNotFound.prototype.code = 'BalenaApplicationNotFound';
 
 /**
- * @summary Balena build not found
- * @class
- * @public
- * @deprecated From the new v4 API, BalenaReleaseNotFound should be used instead
- *
- * @param {(Number)} build - build id
- * @return {Error} error instance
- *
- * @example
- * throw new errors.BalenaBuildNotFound(123)
- */
-export class BalenaBuildNotFound extends BalenaError {
-	constructor(public build: number) {
-		super(`Build not found: ${build}`);
-	}
-}
-BalenaBuildNotFound.prototype.code = 'BalenaBuildNotFound';
-
-/**
  * @summary Balena release not found
  * @class
  * @public

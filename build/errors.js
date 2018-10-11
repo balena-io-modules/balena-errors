@@ -167,29 +167,6 @@ var BalenaApplicationNotFound = (function (_super) {
 exports.BalenaApplicationNotFound = BalenaApplicationNotFound;
 BalenaApplicationNotFound.prototype.code = 'BalenaApplicationNotFound';
 /**
- * @summary Balena build not found
- * @class
- * @public
- * @deprecated From the new v4 API, BalenaReleaseNotFound should be used instead
- *
- * @param {(Number)} build - build id
- * @return {Error} error instance
- *
- * @example
- * throw new errors.BalenaBuildNotFound(123)
- */
-var BalenaBuildNotFound = (function (_super) {
-    tslib_1.__extends(BalenaBuildNotFound, _super);
-    function BalenaBuildNotFound(build) {
-        var _this = _super.call(this, "Build not found: " + build) || this;
-        _this.build = build;
-        return _this;
-    }
-    return BalenaBuildNotFound;
-}(BalenaError));
-exports.BalenaBuildNotFound = BalenaBuildNotFound;
-BalenaBuildNotFound.prototype.code = 'BalenaBuildNotFound';
-/**
  * @summary Balena release not found
  * @class
  * @public

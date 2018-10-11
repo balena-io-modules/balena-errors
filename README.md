@@ -45,8 +45,6 @@ Documentation
         * [new BalenaExpiredToken(token)](#new_module_errors..BalenaExpiredToken_new)
     * [~BalenaApplicationNotFound](#module_errors..BalenaApplicationNotFound)
         * [new BalenaApplicationNotFound(application)](#new_module_errors..BalenaApplicationNotFound_new)
-    * ~~[~BalenaBuildNotFound](#module_errors..BalenaBuildNotFound)~~
-        * [new BalenaBuildNotFound(build)](#new_module_errors..BalenaBuildNotFound_new)
     * [~BalenaReleaseNotFound](#module_errors..BalenaReleaseNotFound)
         * [new BalenaReleaseNotFound(release)](#new_module_errors..BalenaReleaseNotFound_new)
     * [~BalenaImageNotFound](#module_errors..BalenaImageNotFound)
@@ -182,27 +180,6 @@ throw new errors.BalenaExpiredToken('1234')
 **Example**  
 ```js
 throw new errors.BalenaApplicationNotFound('MyApp')
-```
-<a name="module_errors..BalenaBuildNotFound"></a>
-
-### ~~errors~BalenaBuildNotFound~~
-***Deprecated***
-
-**Kind**: inner class of [<code>errors</code>](#module_errors)  
-**Summary**: Balena build not found  
-**Access**: public  
-<a name="new_module_errors..BalenaBuildNotFound_new"></a>
-
-#### new BalenaBuildNotFound(build)
-**Returns**: <code>Error</code> - error instance  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| build | <code>Number</code> | build id |
-
-**Example**  
-```js
-throw new errors.BalenaBuildNotFound(123)
 ```
 <a name="module_errors..BalenaReleaseNotFound"></a>
 
