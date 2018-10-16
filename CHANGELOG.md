@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+## v3.0.0 - 2018-10-16
+
+* Remove the deprecated BuildNotFound error [Tim Perry]
+* Rename everything 'resin' to 'balena' [Tim Perry]
+
 * Add ResinServiceNotFound
 
 # 2.12.0 - 2017-11-14
