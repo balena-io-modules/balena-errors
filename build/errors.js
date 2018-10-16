@@ -1,6 +1,6 @@
 "use strict";
 /*
-Copyright 2016 Resin.io
+Copyright 2016 Balena
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -20,18 +20,18 @@ var tslib_1 = require("tslib");
  * @module errors
  */
 var TypedError = require("typed-error");
-var ResinError = (function (_super) {
-    tslib_1.__extends(ResinError, _super);
-    function ResinError() {
+var BalenaError = (function (_super) {
+    tslib_1.__extends(BalenaError, _super);
+    function BalenaError() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    return ResinError;
+    return BalenaError;
 }(TypedError));
-exports.ResinError = ResinError;
-ResinError.prototype.code = 'ResinError';
-ResinError.prototype.exitCode = 1;
+exports.BalenaError = BalenaError;
+BalenaError.prototype.code = 'BalenaError';
+BalenaError.prototype.exitCode = 1;
 /**
- * @summary Resin invalid device type
+ * @summary Balena invalid device type
  * @class
  * @public
  *
@@ -39,21 +39,21 @@ ResinError.prototype.exitCode = 1;
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinInvalidDeviceType('raspberry-pi')
+ * throw new errors.BalenaInvalidDeviceType('raspberry-pi')
  */
-var ResinInvalidDeviceType = (function (_super) {
-    tslib_1.__extends(ResinInvalidDeviceType, _super);
-    function ResinInvalidDeviceType(type) {
+var BalenaInvalidDeviceType = (function (_super) {
+    tslib_1.__extends(BalenaInvalidDeviceType, _super);
+    function BalenaInvalidDeviceType(type) {
         var _this = _super.call(this, "Invalid device type: " + type) || this;
         _this.type = type;
         return _this;
     }
-    return ResinInvalidDeviceType;
-}(ResinError));
-exports.ResinInvalidDeviceType = ResinInvalidDeviceType;
-ResinInvalidDeviceType.prototype.code = 'ResinInvalidDeviceType';
+    return BalenaInvalidDeviceType;
+}(BalenaError));
+exports.BalenaInvalidDeviceType = BalenaInvalidDeviceType;
+BalenaInvalidDeviceType.prototype.code = 'BalenaInvalidDeviceType';
 /**
- * @summary Resin discontinued device type
+ * @summary Balena discontinued device type
  * @class
  * @public
  *
@@ -65,21 +65,21 @@ ResinInvalidDeviceType.prototype.code = 'ResinInvalidDeviceType';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinDiscontinuedDeviceType('edge')
+ * throw new errors.BalenaDiscontinuedDeviceType('edge')
  */
-var ResinDiscontinuedDeviceType = (function (_super) {
-    tslib_1.__extends(ResinDiscontinuedDeviceType, _super);
-    function ResinDiscontinuedDeviceType(type) {
+var BalenaDiscontinuedDeviceType = (function (_super) {
+    tslib_1.__extends(BalenaDiscontinuedDeviceType, _super);
+    function BalenaDiscontinuedDeviceType(type) {
         var _this = _super.call(this, "Discontinued device type: " + type) || this;
         _this.type = type;
         return _this;
     }
-    return ResinDiscontinuedDeviceType;
-}(ResinInvalidDeviceType));
-exports.ResinDiscontinuedDeviceType = ResinDiscontinuedDeviceType;
-ResinDiscontinuedDeviceType.prototype.code = 'ResinDiscontinuedDeviceType';
+    return BalenaDiscontinuedDeviceType;
+}(BalenaInvalidDeviceType));
+exports.BalenaDiscontinuedDeviceType = BalenaDiscontinuedDeviceType;
+BalenaDiscontinuedDeviceType.prototype.code = 'BalenaDiscontinuedDeviceType';
 /**
- * @summary Resin malformed token
+ * @summary Balena malformed token
  * @class
  * @public
  *
@@ -87,19 +87,19 @@ ResinDiscontinuedDeviceType.prototype.code = 'ResinDiscontinuedDeviceType';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinMalformedToken('1234')
+ * throw new errors.BalenaMalformedToken('1234')
  */
-var ResinMalformedToken = (function (_super) {
-    tslib_1.__extends(ResinMalformedToken, _super);
-    function ResinMalformedToken(token) {
+var BalenaMalformedToken = (function (_super) {
+    tslib_1.__extends(BalenaMalformedToken, _super);
+    function BalenaMalformedToken(token) {
         var _this = _super.call(this, "Malformed token: " + token) || this;
         _this.token = token;
         return _this;
     }
-    return ResinMalformedToken;
-}(ResinError));
-exports.ResinMalformedToken = ResinMalformedToken;
-ResinMalformedToken.prototype.code = 'ResinMalformedToken';
+    return BalenaMalformedToken;
+}(BalenaError));
+exports.BalenaMalformedToken = BalenaMalformedToken;
+BalenaMalformedToken.prototype.code = 'BalenaMalformedToken';
 /**
  * @summary The device supervisor is locked
  * @class
@@ -109,21 +109,21 @@ ResinMalformedToken.prototype.code = 'ResinMalformedToken';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinSupervisorLockedError()
+ * throw new errors.BalenaSupervisorLockedError()
  */
-var ResinSupervisorLockedError = (function (_super) {
-    tslib_1.__extends(ResinSupervisorLockedError, _super);
-    function ResinSupervisorLockedError(token) {
+var BalenaSupervisorLockedError = (function (_super) {
+    tslib_1.__extends(BalenaSupervisorLockedError, _super);
+    function BalenaSupervisorLockedError(token) {
         var _this = _super.call(this, "Supervisor Locked: " + token) || this;
         _this.token = token;
         return _this;
     }
-    return ResinSupervisorLockedError;
-}(ResinError));
-exports.ResinSupervisorLockedError = ResinSupervisorLockedError;
-ResinSupervisorLockedError.prototype.code = 'ResinSupervisorLockedError';
+    return BalenaSupervisorLockedError;
+}(BalenaError));
+exports.BalenaSupervisorLockedError = BalenaSupervisorLockedError;
+BalenaSupervisorLockedError.prototype.code = 'BalenaSupervisorLockedError';
 /**
- * @summary Resin expired token
+ * @summary Balena expired token
  * @class
  * @public
  *
@@ -131,21 +131,21 @@ ResinSupervisorLockedError.prototype.code = 'ResinSupervisorLockedError';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinExpiredToken('1234')
+ * throw new errors.BalenaExpiredToken('1234')
  */
-var ResinExpiredToken = (function (_super) {
-    tslib_1.__extends(ResinExpiredToken, _super);
-    function ResinExpiredToken(token) {
+var BalenaExpiredToken = (function (_super) {
+    tslib_1.__extends(BalenaExpiredToken, _super);
+    function BalenaExpiredToken(token) {
         var _this = _super.call(this, "The token expired: " + token) || this;
         _this.token = token;
         return _this;
     }
-    return ResinExpiredToken;
-}(ResinError));
-exports.ResinExpiredToken = ResinExpiredToken;
-ResinExpiredToken.prototype.code = 'ResinExpiredToken';
+    return BalenaExpiredToken;
+}(BalenaError));
+exports.BalenaExpiredToken = BalenaExpiredToken;
+BalenaExpiredToken.prototype.code = 'BalenaExpiredToken';
 /**
- * @summary Resin application not found
+ * @summary Balena application not found
  * @class
  * @public
  *
@@ -153,44 +153,21 @@ ResinExpiredToken.prototype.code = 'ResinExpiredToken';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinApplicationNotFound('MyApp')
+ * throw new errors.BalenaApplicationNotFound('MyApp')
  */
-var ResinApplicationNotFound = (function (_super) {
-    tslib_1.__extends(ResinApplicationNotFound, _super);
-    function ResinApplicationNotFound(application) {
+var BalenaApplicationNotFound = (function (_super) {
+    tslib_1.__extends(BalenaApplicationNotFound, _super);
+    function BalenaApplicationNotFound(application) {
         var _this = _super.call(this, "Application not found: " + application) || this;
         _this.application = application;
         return _this;
     }
-    return ResinApplicationNotFound;
-}(ResinError));
-exports.ResinApplicationNotFound = ResinApplicationNotFound;
-ResinApplicationNotFound.prototype.code = 'ResinApplicationNotFound';
+    return BalenaApplicationNotFound;
+}(BalenaError));
+exports.BalenaApplicationNotFound = BalenaApplicationNotFound;
+BalenaApplicationNotFound.prototype.code = 'BalenaApplicationNotFound';
 /**
- * @summary Resin build not found
- * @class
- * @public
- * @deprecated From the new v4 API, ResinReleaseNotFound should be used instead
- *
- * @param {(Number)} build - build id
- * @return {Error} error instance
- *
- * @example
- * throw new errors.ResinBuildNotFound(123)
- */
-var ResinBuildNotFound = (function (_super) {
-    tslib_1.__extends(ResinBuildNotFound, _super);
-    function ResinBuildNotFound(build) {
-        var _this = _super.call(this, "Build not found: " + build) || this;
-        _this.build = build;
-        return _this;
-    }
-    return ResinBuildNotFound;
-}(ResinError));
-exports.ResinBuildNotFound = ResinBuildNotFound;
-ResinBuildNotFound.prototype.code = 'ResinBuildNotFound';
-/**
- * @summary Resin release not found
+ * @summary Balena release not found
  * @class
  * @public
  *
@@ -198,21 +175,21 @@ ResinBuildNotFound.prototype.code = 'ResinBuildNotFound';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinReleaseNotFound(123)
+ * throw new errors.BalenaReleaseNotFound(123)
  */
-var ResinReleaseNotFound = (function (_super) {
-    tslib_1.__extends(ResinReleaseNotFound, _super);
-    function ResinReleaseNotFound(release) {
+var BalenaReleaseNotFound = (function (_super) {
+    tslib_1.__extends(BalenaReleaseNotFound, _super);
+    function BalenaReleaseNotFound(release) {
         var _this = _super.call(this, "Release not found: " + release) || this;
         _this.release = release;
         return _this;
     }
-    return ResinReleaseNotFound;
-}(ResinError));
-exports.ResinReleaseNotFound = ResinReleaseNotFound;
-ResinReleaseNotFound.prototype.code = 'ResinReleaseNotFound';
+    return BalenaReleaseNotFound;
+}(BalenaError));
+exports.BalenaReleaseNotFound = BalenaReleaseNotFound;
+BalenaReleaseNotFound.prototype.code = 'BalenaReleaseNotFound';
 /**
- * @summary Resin image not found
+ * @summary Balena image not found
  * @class
  * @public
  *
@@ -220,21 +197,21 @@ ResinReleaseNotFound.prototype.code = 'ResinReleaseNotFound';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinImageNotFound(123)
+ * throw new errors.BalenaImageNotFound(123)
  */
-var ResinImageNotFound = (function (_super) {
-    tslib_1.__extends(ResinImageNotFound, _super);
-    function ResinImageNotFound(image) {
+var BalenaImageNotFound = (function (_super) {
+    tslib_1.__extends(BalenaImageNotFound, _super);
+    function BalenaImageNotFound(image) {
         var _this = _super.call(this, "Image not found: " + image) || this;
         _this.image = image;
         return _this;
     }
-    return ResinImageNotFound;
-}(ResinError));
-exports.ResinImageNotFound = ResinImageNotFound;
-ResinImageNotFound.prototype.code = 'ResinImageNotFound';
+    return BalenaImageNotFound;
+}(BalenaError));
+exports.BalenaImageNotFound = BalenaImageNotFound;
+BalenaImageNotFound.prototype.code = 'BalenaImageNotFound';
 /**
- * @summary Resin service not found
+ * @summary Balena service not found
  * @class
  * @public
  *
@@ -242,21 +219,21 @@ ResinImageNotFound.prototype.code = 'ResinImageNotFound';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinServiceNotFound(123)
+ * throw new errors.BalenaServiceNotFound(123)
  */
-var ResinServiceNotFound = (function (_super) {
-    tslib_1.__extends(ResinServiceNotFound, _super);
-    function ResinServiceNotFound(service) {
+var BalenaServiceNotFound = (function (_super) {
+    tslib_1.__extends(BalenaServiceNotFound, _super);
+    function BalenaServiceNotFound(service) {
         var _this = _super.call(this, "Service not found: " + service) || this;
         _this.service = service;
         return _this;
     }
-    return ResinServiceNotFound;
-}(ResinError));
-exports.ResinServiceNotFound = ResinServiceNotFound;
-ResinServiceNotFound.prototype.code = 'ResinServiceNotFound';
+    return BalenaServiceNotFound;
+}(BalenaError));
+exports.BalenaServiceNotFound = BalenaServiceNotFound;
+BalenaServiceNotFound.prototype.code = 'BalenaServiceNotFound';
 /**
- * @summary Resin device not found
+ * @summary Balena device not found
  * @class
  * @public
  *
@@ -264,21 +241,21 @@ ResinServiceNotFound.prototype.code = 'ResinServiceNotFound';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinDeviceNotFound('MyDevice')
+ * throw new errors.BalenaDeviceNotFound('MyDevice')
  */
-var ResinDeviceNotFound = (function (_super) {
-    tslib_1.__extends(ResinDeviceNotFound, _super);
-    function ResinDeviceNotFound(device) {
+var BalenaDeviceNotFound = (function (_super) {
+    tslib_1.__extends(BalenaDeviceNotFound, _super);
+    function BalenaDeviceNotFound(device) {
         var _this = _super.call(this, "Device not found: " + device) || this;
         _this.device = device;
         return _this;
     }
-    return ResinDeviceNotFound;
-}(ResinError));
-exports.ResinDeviceNotFound = ResinDeviceNotFound;
-ResinDeviceNotFound.prototype.code = 'ResinDeviceNotFound';
+    return BalenaDeviceNotFound;
+}(BalenaError));
+exports.BalenaDeviceNotFound = BalenaDeviceNotFound;
+BalenaDeviceNotFound.prototype.code = 'BalenaDeviceNotFound';
 /**
- * @summary Resin ambiguous device
+ * @summary Balena ambiguous device
  * @class
  * @public
  *
@@ -286,21 +263,21 @@ ResinDeviceNotFound.prototype.code = 'ResinDeviceNotFound';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinAmbiguousDevice('MyDevice')
+ * throw new errors.BalenaAmbiguousDevice('MyDevice')
  */
-var ResinAmbiguousDevice = (function (_super) {
-    tslib_1.__extends(ResinAmbiguousDevice, _super);
-    function ResinAmbiguousDevice(device) {
+var BalenaAmbiguousDevice = (function (_super) {
+    tslib_1.__extends(BalenaAmbiguousDevice, _super);
+    function BalenaAmbiguousDevice(device) {
         var _this = _super.call(this, "Device is ambiguous: " + device) || this;
         _this.device = device;
         return _this;
     }
-    return ResinAmbiguousDevice;
-}(ResinError));
-exports.ResinAmbiguousDevice = ResinAmbiguousDevice;
-ResinAmbiguousDevice.prototype.code = 'ResinAmbiguousDevice';
+    return BalenaAmbiguousDevice;
+}(BalenaError));
+exports.BalenaAmbiguousDevice = BalenaAmbiguousDevice;
+BalenaAmbiguousDevice.prototype.code = 'BalenaAmbiguousDevice';
 /**
- * @summary Resin ambiguous application
+ * @summary Balena ambiguous application
  * @class
  * @public
  *
@@ -308,21 +285,21 @@ ResinAmbiguousDevice.prototype.code = 'ResinAmbiguousDevice';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinAmbiguousApplication('MyApp')
+ * throw new errors.BalenaAmbiguousApplication('MyApp')
  */
-var ResinAmbiguousApplication = (function (_super) {
-    tslib_1.__extends(ResinAmbiguousApplication, _super);
-    function ResinAmbiguousApplication(application) {
+var BalenaAmbiguousApplication = (function (_super) {
+    tslib_1.__extends(BalenaAmbiguousApplication, _super);
+    function BalenaAmbiguousApplication(application) {
         var _this = _super.call(this, "Application is ambiguous: " + application) || this;
         _this.application = application;
         return _this;
     }
-    return ResinAmbiguousApplication;
-}(ResinError));
-exports.ResinAmbiguousApplication = ResinAmbiguousApplication;
-ResinAmbiguousApplication.prototype.code = 'ResinAmbiguousApplication';
+    return BalenaAmbiguousApplication;
+}(BalenaError));
+exports.BalenaAmbiguousApplication = BalenaAmbiguousApplication;
+BalenaAmbiguousApplication.prototype.code = 'BalenaAmbiguousApplication';
 /**
- * @summary Resin key not found
+ * @summary Balena key not found
  * @class
  * @public
  *
@@ -330,19 +307,19 @@ ResinAmbiguousApplication.prototype.code = 'ResinAmbiguousApplication';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinKeyNotFound('MyKey')
+ * throw new errors.BalenaKeyNotFound('MyKey')
  */
-var ResinKeyNotFound = (function (_super) {
-    tslib_1.__extends(ResinKeyNotFound, _super);
-    function ResinKeyNotFound(key) {
+var BalenaKeyNotFound = (function (_super) {
+    tslib_1.__extends(BalenaKeyNotFound, _super);
+    function BalenaKeyNotFound(key) {
         return _super.call(this, "Key not found: " + key) || this;
     }
-    return ResinKeyNotFound;
-}(ResinError));
-exports.ResinKeyNotFound = ResinKeyNotFound;
-ResinKeyNotFound.prototype.code = 'ResinKeyNotFound';
+    return BalenaKeyNotFound;
+}(BalenaError));
+exports.BalenaKeyNotFound = BalenaKeyNotFound;
+BalenaKeyNotFound.prototype.code = 'BalenaKeyNotFound';
 /**
- * @summary Resin request error
+ * @summary Balena request error
  * @class
  * @public
  *
@@ -352,42 +329,42 @@ ResinKeyNotFound.prototype.code = 'ResinKeyNotFound';
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinRequestError('Unauthorized')
+ * throw new errors.BalenaRequestError('Unauthorized')
  */
-var ResinRequestError = (function (_super) {
-    tslib_1.__extends(ResinRequestError, _super);
-    function ResinRequestError(body, statusCode, requestOptions) {
+var BalenaRequestError = (function (_super) {
+    tslib_1.__extends(BalenaRequestError, _super);
+    function BalenaRequestError(body, statusCode, requestOptions) {
         var _this = _super.call(this, "Request error: " + body) || this;
         _this.body = body;
         _this.statusCode = statusCode;
         _this.requestOptions = requestOptions;
         return _this;
     }
-    return ResinRequestError;
-}(ResinError));
-exports.ResinRequestError = ResinRequestError;
-ResinRequestError.prototype.code = 'ResinRequestError';
+    return BalenaRequestError;
+}(BalenaError));
+exports.BalenaRequestError = BalenaRequestError;
+BalenaRequestError.prototype.code = 'BalenaRequestError';
 /**
- * @summary Resin not logged in
+ * @summary Balena not logged in
  * @class
  * @public
  *
  * @return {Error} error instance
  *
  * @example
- * throw new errors.ResinNotLoggedIn()
+ * throw new errors.BalenaNotLoggedIn()
  */
-var ResinNotLoggedIn = (function (_super) {
-    tslib_1.__extends(ResinNotLoggedIn, _super);
-    function ResinNotLoggedIn() {
+var BalenaNotLoggedIn = (function (_super) {
+    tslib_1.__extends(BalenaNotLoggedIn, _super);
+    function BalenaNotLoggedIn() {
         return _super.call(this, 'You have to log in') || this;
     }
-    return ResinNotLoggedIn;
-}(ResinError));
-exports.ResinNotLoggedIn = ResinNotLoggedIn;
-ResinNotLoggedIn.prototype.code = 'ResinNotLoggedIn';
+    return BalenaNotLoggedIn;
+}(BalenaError));
+exports.BalenaNotLoggedIn = BalenaNotLoggedIn;
+BalenaNotLoggedIn.prototype.code = 'BalenaNotLoggedIn';
 /**
- * @summary Resin invalid parameter
+ * @summary Balena invalid parameter
  * @class
  * @public
  *
@@ -396,20 +373,20 @@ ResinNotLoggedIn.prototype.code = 'ResinNotLoggedIn';
  * @example
  * const checkId = (id) => {
  * 	if (typeof id !== 'number') {
- * 		throw new errors.ResinInvalidParameterError('id', id)
+ * 		throw new errors.BalenaInvalidParameterError('id', id)
  * 	}
  * }
  */
-var ResinInvalidParameterError = (function (_super) {
-    tslib_1.__extends(ResinInvalidParameterError, _super);
-    function ResinInvalidParameterError(parameterName, suppliedValue) {
+var BalenaInvalidParameterError = (function (_super) {
+    tslib_1.__extends(BalenaInvalidParameterError, _super);
+    function BalenaInvalidParameterError(parameterName, suppliedValue) {
         var _this = _super.call(this, "Invalid parameter: " + suppliedValue + " is not a valid value for parameter '" + parameterName + "'") || this;
         _this.parameterName = parameterName;
         _this.suppliedValue = suppliedValue;
         return _this;
     }
-    return ResinInvalidParameterError;
-}(ResinError));
-exports.ResinInvalidParameterError = ResinInvalidParameterError;
-ResinInvalidParameterError.prototype.code = 'ResinInvalidParameterError';
+    return BalenaInvalidParameterError;
+}(BalenaError));
+exports.BalenaInvalidParameterError = BalenaInvalidParameterError;
+BalenaInvalidParameterError.prototype.code = 'BalenaInvalidParameterError';
 //# sourceMappingURL=errors.js.map

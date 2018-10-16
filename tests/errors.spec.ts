@@ -1,12 +1,12 @@
 import * as m from 'mochainon';
 import * as errors from '..';
 
-interface ResinErrorClass {
-	prototype: typeof errors.ResinError.prototype;
+interface BalenaErrorClass {
+	prototype: typeof errors.BalenaError.prototype;
 }
 
 const runForAllErrors = (
-	fn: (errorName: string, ErrorClass: ResinErrorClass) => void
+	fn: (errorName: string, ErrorClass: BalenaErrorClass) => void
 ) => {
 	for (const errorName in errors) {
 		if (errors.hasOwnProperty(errorName)) {

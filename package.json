@@ -1,15 +1,16 @@
 {
-  "name": "resin-errors",
+  "name": "balena-errors",
   "version": "2.13.0",
-  "description": "Collection of Resin.io JavaScript errors",
+  "description": "Collection of Balena JavaScript errors",
   "main": "build/errors.js",
   "types": "lib/errors.ts",
-  "homepage": "https://github.com/resin-io-modules/resin-errors",
+  "homepage": "https://github.com/balena-io-modules/balena-errors",
   "repository": {
     "type": "git",
-    "url": "git://github.com/resin-io-modules/resin-errors.git"
+    "url": "git://github.com/balena-io-modules/balena-errors.git"
   },
   "keywords": [
+    "balena",
     "resin",
     "errors"
   ],
@@ -27,7 +28,7 @@
     "prettify": "prettier --use-tabs --single-quote --write lib/*.ts tests/**/*.spec.ts",
     "readme": "jsdoc2md --template doc/README.hbs build/errors.js > README.md"
   },
-  "author": "Juan Cruz Viotti <juan@resin.io>",
+  "author": "Juan Cruz Viotti <juan@balena.io>",
   "license": "Apache-2.0",
   "devDependencies": {
     "@resin.io/types-mochainon": "^2.0.0",
