@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "Collection of Balena JavaScript errors",
   "main": "build/errors.js",
-  "types": "lib/errors.ts",
+  "types": "build/errors.d.ts",
   "homepage": "https://github.com/balena-io-modules/balena-errors",
   "repository": {
     "type": "git",
@@ -30,6 +30,9 @@
   },
   "author": "Juan Cruz Viotti <juan@balena.io>",
   "license": "Apache-2.0",
+  "engines": {
+    "node": ">=6.0"
+  },
   "devDependencies": {
     "@resin.io/types-mochainon": "^2.0.0",
     "@types/mocha": "^2.2.41",
@@ -48,6 +51,6 @@
   },
   "dependencies": {
     "tslib": "^1.7.1",
-    "typed-error": "^2.0.0"
+    "typed-error": "^3.0.0"
   }
 }

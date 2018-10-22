@@ -18,7 +18,7 @@ limitations under the License.
  * @module errors
  */
 
-import TypedError = require('typed-error');
+import { TypedError } from 'typed-error';
 
 export class BalenaError extends TypedError {
 	public code: string;

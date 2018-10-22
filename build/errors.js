@@ -19,14 +19,14 @@ var tslib_1 = require("tslib");
 /**
  * @module errors
  */
-var TypedError = require("typed-error");
+var typed_error_1 = require("typed-error");
 var BalenaError = (function (_super) {
     tslib_1.__extends(BalenaError, _super);
     function BalenaError() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     return BalenaError;
-}(TypedError));
+}(typed_error_1.TypedError));
 exports.BalenaError = BalenaError;
 BalenaError.prototype.code = 'BalenaError';
 BalenaError.prototype.exitCode = 1;

@@ -12,6 +12,7 @@
     "sourceMap": true,
     "strictNullChecks": true,
     "lib": ["es5", "es6"],
+    "declaration": true,
     "typeRoots": [
       "node_modules/@types",
       "node_modules/@resin.io"
