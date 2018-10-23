@@ -3,6 +3,7 @@ import * as errors from '..';
 
 interface BalenaErrorClass {
 	prototype: typeof errors.BalenaError.prototype;
+	new (...params: any[]): errors.BalenaError;
 }
 
 const runForAllErrors = (
@@ -37,6 +38,16 @@ describe('Errors, TS:', function() {
 	it('should have exit codes not equal to zero', () => {
 		runForAllErrors((_errorName, ErrorClass) => {
 			m.chai.expect(ErrorClass.prototype.exitCode).to.not.equal(0);
+		});
+	});
+
+	it('should generate usable errors', () => {
+		runForAllErrors((_errorName, ErrorClass) => {
+			m.chai
+				.expect(() => {
+					throw new ErrorClass();
+				})
+				.to.throw(ErrorClass);
 		});
 	});
 });
