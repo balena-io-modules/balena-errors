@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+## v4.0.1 - 2018-10-23
+
+* Emit ES6 TS output [Tim Perry]
+
 ## v4.0.0 - 2018-10-22
 
 * Require Node 6+ [Tim Perry]
