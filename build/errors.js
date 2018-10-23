@@ -15,18 +15,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 Object.defineProperty(exports, "__esModule", { value: true });
-var tslib_1 = require("tslib");
 /**
  * @module errors
  */
-var typed_error_1 = require("typed-error");
-var BalenaError = (function (_super) {
-    tslib_1.__extends(BalenaError, _super);
-    function BalenaError() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return BalenaError;
-}(typed_error_1.TypedError));
+const typed_error_1 = require("typed-error");
+class BalenaError extends typed_error_1.TypedError {
+}
 exports.BalenaError = BalenaError;
 BalenaError.prototype.code = 'BalenaError';
 BalenaError.prototype.exitCode = 1;
@@ -41,15 +35,12 @@ BalenaError.prototype.exitCode = 1;
  * @example
  * throw new errors.BalenaInvalidDeviceType('raspberry-pi')
  */
-var BalenaInvalidDeviceType = (function (_super) {
-    tslib_1.__extends(BalenaInvalidDeviceType, _super);
-    function BalenaInvalidDeviceType(type) {
-        var _this = _super.call(this, "Invalid device type: " + type) || this;
-        _this.type = type;
-        return _this;
+class BalenaInvalidDeviceType extends BalenaError {
+    constructor(type) {
+        super(`Invalid device type: ${type}`);
+        this.type = type;
     }
-    return BalenaInvalidDeviceType;
-}(BalenaError));
+}
 exports.BalenaInvalidDeviceType = BalenaInvalidDeviceType;
 BalenaInvalidDeviceType.prototype.code = 'BalenaInvalidDeviceType';
 /**
@@ -67,15 +58,12 @@ BalenaInvalidDeviceType.prototype.code = 'BalenaInvalidDeviceType';
  * @example
  * throw new errors.BalenaDiscontinuedDeviceType('edge')
  */
-var BalenaDiscontinuedDeviceType = (function (_super) {
-    tslib_1.__extends(BalenaDiscontinuedDeviceType, _super);
-    function BalenaDiscontinuedDeviceType(type) {
-        var _this = _super.call(this, "Discontinued device type: " + type) || this;
-        _this.type = type;
-        return _this;
+class BalenaDiscontinuedDeviceType extends BalenaInvalidDeviceType {
+    constructor(type) {
+        super(`Discontinued device type: ${type}`);
+        this.type = type;
     }
-    return BalenaDiscontinuedDeviceType;
-}(BalenaInvalidDeviceType));
+}
 exports.BalenaDiscontinuedDeviceType = BalenaDiscontinuedDeviceType;
 BalenaDiscontinuedDeviceType.prototype.code = 'BalenaDiscontinuedDeviceType';
 /**
@@ -89,15 +77,12 @@ BalenaDiscontinuedDeviceType.prototype.code = 'BalenaDiscontinuedDeviceType';
  * @example
  * throw new errors.BalenaMalformedToken('1234')
  */
-var BalenaMalformedToken = (function (_super) {
-    tslib_1.__extends(BalenaMalformedToken, _super);
-    function BalenaMalformedToken(token) {
-        var _this = _super.call(this, "Malformed token: " + token) || this;
-        _this.token = token;
-        return _this;
+class BalenaMalformedToken extends BalenaError {
+    constructor(token) {
+        super(`Malformed token: ${token}`);
+        this.token = token;
     }
-    return BalenaMalformedToken;
-}(BalenaError));
+}
 exports.BalenaMalformedToken = BalenaMalformedToken;
 BalenaMalformedToken.prototype.code = 'BalenaMalformedToken';
 /**
@@ -111,15 +96,12 @@ BalenaMalformedToken.prototype.code = 'BalenaMalformedToken';
  * @example
  * throw new errors.BalenaSupervisorLockedError()
  */
-var BalenaSupervisorLockedError = (function (_super) {
-    tslib_1.__extends(BalenaSupervisorLockedError, _super);
-    function BalenaSupervisorLockedError(token) {
-        var _this = _super.call(this, "Supervisor Locked: " + token) || this;
-        _this.token = token;
-        return _this;
+class BalenaSupervisorLockedError extends BalenaError {
+    constructor(token) {
+        super(`Supervisor Locked: ${token}`);
+        this.token = token;
     }
-    return BalenaSupervisorLockedError;
-}(BalenaError));
+}
 exports.BalenaSupervisorLockedError = BalenaSupervisorLockedError;
 BalenaSupervisorLockedError.prototype.code = 'BalenaSupervisorLockedError';
 /**
@@ -133,15 +115,12 @@ BalenaSupervisorLockedError.prototype.code = 'BalenaSupervisorLockedError';
  * @example
  * throw new errors.BalenaExpiredToken('1234')
  */
-var BalenaExpiredToken = (function (_super) {
-    tslib_1.__extends(BalenaExpiredToken, _super);
-    function BalenaExpiredToken(token) {
-        var _this = _super.call(this, "The token expired: " + token) || this;
-        _this.token = token;
-        return _this;
+class BalenaExpiredToken extends BalenaError {
+    constructor(token) {
+        super(`The token expired: ${token}`);
+        this.token = token;
     }
-    return BalenaExpiredToken;
-}(BalenaError));
+}
 exports.BalenaExpiredToken = BalenaExpiredToken;
 BalenaExpiredToken.prototype.code = 'BalenaExpiredToken';
 /**
@@ -155,15 +134,12 @@ BalenaExpiredToken.prototype.code = 'BalenaExpiredToken';
  * @example
  * throw new errors.BalenaApplicationNotFound('MyApp')
  */
-var BalenaApplicationNotFound = (function (_super) {
-    tslib_1.__extends(BalenaApplicationNotFound, _super);
-    function BalenaApplicationNotFound(application) {
-        var _this = _super.call(this, "Application not found: " + application) || this;
-        _this.application = application;
-        return _this;
+class BalenaApplicationNotFound extends BalenaError {
+    constructor(application) {
+        super(`Application not found: ${application}`);
+        this.application = application;
     }
-    return BalenaApplicationNotFound;
-}(BalenaError));
+}
 exports.BalenaApplicationNotFound = BalenaApplicationNotFound;
 BalenaApplicationNotFound.prototype.code = 'BalenaApplicationNotFound';
 /**
@@ -177,15 +153,12 @@ BalenaApplicationNotFound.prototype.code = 'BalenaApplicationNotFound';
  * @example
  * throw new errors.BalenaReleaseNotFound(123)
  */
-var BalenaReleaseNotFound = (function (_super) {
-    tslib_1.__extends(BalenaReleaseNotFound, _super);
-    function BalenaReleaseNotFound(release) {
-        var _this = _super.call(this, "Release not found: " + release) || this;
-        _this.release = release;
-        return _this;
+class BalenaReleaseNotFound extends BalenaError {
+    constructor(release) {
+        super(`Release not found: ${release}`);
+        this.release = release;
     }
-    return BalenaReleaseNotFound;
-}(BalenaError));
+}
 exports.BalenaReleaseNotFound = BalenaReleaseNotFound;
 BalenaReleaseNotFound.prototype.code = 'BalenaReleaseNotFound';
 /**
@@ -199,15 +172,12 @@ BalenaReleaseNotFound.prototype.code = 'BalenaReleaseNotFound';
  * @example
  * throw new errors.BalenaImageNotFound(123)
  */
-var BalenaImageNotFound = (function (_super) {
-    tslib_1.__extends(BalenaImageNotFound, _super);
-    function BalenaImageNotFound(image) {
-        var _this = _super.call(this, "Image not found: " + image) || this;
-        _this.image = image;
-        return _this;
+class BalenaImageNotFound extends BalenaError {
+    constructor(image) {
+        super(`Image not found: ${image}`);
+        this.image = image;
     }
-    return BalenaImageNotFound;
-}(BalenaError));
+}
 exports.BalenaImageNotFound = BalenaImageNotFound;
 BalenaImageNotFound.prototype.code = 'BalenaImageNotFound';
 /**
@@ -221,15 +191,12 @@ BalenaImageNotFound.prototype.code = 'BalenaImageNotFound';
  * @example
  * throw new errors.BalenaServiceNotFound(123)
  */
-var BalenaServiceNotFound = (function (_super) {
-    tslib_1.__extends(BalenaServiceNotFound, _super);
-    function BalenaServiceNotFound(service) {
-        var _this = _super.call(this, "Service not found: " + service) || this;
-        _this.service = service;
-        return _this;
+class BalenaServiceNotFound extends BalenaError {
+    constructor(service) {
+        super(`Service not found: ${service}`);
+        this.service = service;
     }
-    return BalenaServiceNotFound;
-}(BalenaError));
+}
 exports.BalenaServiceNotFound = BalenaServiceNotFound;
 BalenaServiceNotFound.prototype.code = 'BalenaServiceNotFound';
 /**
@@ -243,15 +210,12 @@ BalenaServiceNotFound.prototype.code = 'BalenaServiceNotFound';
  * @example
  * throw new errors.BalenaDeviceNotFound('MyDevice')
  */
-var BalenaDeviceNotFound = (function (_super) {
-    tslib_1.__extends(BalenaDeviceNotFound, _super);
-    function BalenaDeviceNotFound(device) {
-        var _this = _super.call(this, "Device not found: " + device) || this;
-        _this.device = device;
-        return _this;
+class BalenaDeviceNotFound extends BalenaError {
+    constructor(device) {
+        super(`Device not found: ${device}`);
+        this.device = device;
     }
-    return BalenaDeviceNotFound;
-}(BalenaError));
+}
 exports.BalenaDeviceNotFound = BalenaDeviceNotFound;
 BalenaDeviceNotFound.prototype.code = 'BalenaDeviceNotFound';
 /**
@@ -265,15 +229,12 @@ BalenaDeviceNotFound.prototype.code = 'BalenaDeviceNotFound';
  * @example
  * throw new errors.BalenaAmbiguousDevice('MyDevice')
  */
-var BalenaAmbiguousDevice = (function (_super) {
-    tslib_1.__extends(BalenaAmbiguousDevice, _super);
-    function BalenaAmbiguousDevice(device) {
-        var _this = _super.call(this, "Device is ambiguous: " + device) || this;
-        _this.device = device;
-        return _this;
+class BalenaAmbiguousDevice extends BalenaError {
+    constructor(device) {
+        super(`Device is ambiguous: ${device}`);
+        this.device = device;
     }
-    return BalenaAmbiguousDevice;
-}(BalenaError));
+}
 exports.BalenaAmbiguousDevice = BalenaAmbiguousDevice;
 BalenaAmbiguousDevice.prototype.code = 'BalenaAmbiguousDevice';
 /**
@@ -287,15 +248,12 @@ BalenaAmbiguousDevice.prototype.code = 'BalenaAmbiguousDevice';
  * @example
  * throw new errors.BalenaAmbiguousApplication('MyApp')
  */
-var BalenaAmbiguousApplication = (function (_super) {
-    tslib_1.__extends(BalenaAmbiguousApplication, _super);
-    function BalenaAmbiguousApplication(application) {
-        var _this = _super.call(this, "Application is ambiguous: " + application) || this;
-        _this.application = application;
-        return _this;
+class BalenaAmbiguousApplication extends BalenaError {
+    constructor(application) {
+        super(`Application is ambiguous: ${application}`);
+        this.application = application;
     }
-    return BalenaAmbiguousApplication;
-}(BalenaError));
+}
 exports.BalenaAmbiguousApplication = BalenaAmbiguousApplication;
 BalenaAmbiguousApplication.prototype.code = 'BalenaAmbiguousApplication';
 /**
@@ -309,13 +267,11 @@ BalenaAmbiguousApplication.prototype.code = 'BalenaAmbiguousApplication';
  * @example
  * throw new errors.BalenaKeyNotFound('MyKey')
  */
-var BalenaKeyNotFound = (function (_super) {
-    tslib_1.__extends(BalenaKeyNotFound, _super);
-    function BalenaKeyNotFound(key) {
-        return _super.call(this, "Key not found: " + key) || this;
+class BalenaKeyNotFound extends BalenaError {
+    constructor(key) {
+        super(`Key not found: ${key}`);
     }
-    return BalenaKeyNotFound;
-}(BalenaError));
+}
 exports.BalenaKeyNotFound = BalenaKeyNotFound;
 BalenaKeyNotFound.prototype.code = 'BalenaKeyNotFound';
 /**
@@ -331,17 +287,14 @@ BalenaKeyNotFound.prototype.code = 'BalenaKeyNotFound';
  * @example
  * throw new errors.BalenaRequestError('Unauthorized')
  */
-var BalenaRequestError = (function (_super) {
-    tslib_1.__extends(BalenaRequestError, _super);
-    function BalenaRequestError(body, statusCode, requestOptions) {
-        var _this = _super.call(this, "Request error: " + body) || this;
-        _this.body = body;
-        _this.statusCode = statusCode;
-        _this.requestOptions = requestOptions;
-        return _this;
+class BalenaRequestError extends BalenaError {
+    constructor(body, statusCode, requestOptions) {
+        super(`Request error: ${body}`);
+        this.body = body;
+        this.statusCode = statusCode;
+        this.requestOptions = requestOptions;
     }
-    return BalenaRequestError;
-}(BalenaError));
+}
 exports.BalenaRequestError = BalenaRequestError;
 BalenaRequestError.prototype.code = 'BalenaRequestError';
 /**
@@ -354,13 +307,11 @@ BalenaRequestError.prototype.code = 'BalenaRequestError';
  * @example
  * throw new errors.BalenaNotLoggedIn()
  */
-var BalenaNotLoggedIn = (function (_super) {
-    tslib_1.__extends(BalenaNotLoggedIn, _super);
-    function BalenaNotLoggedIn() {
-        return _super.call(this, 'You have to log in') || this;
+class BalenaNotLoggedIn extends BalenaError {
+    constructor() {
+        super('You have to log in');
     }
-    return BalenaNotLoggedIn;
-}(BalenaError));
+}
 exports.BalenaNotLoggedIn = BalenaNotLoggedIn;
 BalenaNotLoggedIn.prototype.code = 'BalenaNotLoggedIn';
 /**
@@ -377,16 +328,13 @@ BalenaNotLoggedIn.prototype.code = 'BalenaNotLoggedIn';
  * 	}
  * }
  */
-var BalenaInvalidParameterError = (function (_super) {
-    tslib_1.__extends(BalenaInvalidParameterError, _super);
-    function BalenaInvalidParameterError(parameterName, suppliedValue) {
-        var _this = _super.call(this, "Invalid parameter: " + suppliedValue + " is not a valid value for parameter '" + parameterName + "'") || this;
-        _this.parameterName = parameterName;
-        _this.suppliedValue = suppliedValue;
-        return _this;
+class BalenaInvalidParameterError extends BalenaError {
+    constructor(parameterName, suppliedValue) {
+        super(`Invalid parameter: ${suppliedValue} is not a valid value for parameter '${parameterName}'`);
+        this.parameterName = parameterName;
+        this.suppliedValue = suppliedValue;
     }
-    return BalenaInvalidParameterError;
-}(BalenaError));
+}
 exports.BalenaInvalidParameterError = BalenaInvalidParameterError;
 BalenaInvalidParameterError.prototype.code = 'BalenaInvalidParameterError';
 //# sourceMappingURL=errors.js.map
