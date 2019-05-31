@@ -260,7 +260,7 @@ BalenaAmbiguousApplication.prototype.code = 'BalenaAmbiguousApplication';
  */
 export class BalenaAmbiguousRelease extends BalenaError {
 	constructor(public release: string) {
-		super(`Release is ambiguous: ${release}`);
+		super(`Release is ambiguous: There are multiple releases matching the release hash '${release}'`);
 	}
 }
 BalenaAmbiguousRelease.prototype.code = 'BalenaAmbiguousRelease';
