@@ -248,6 +248,24 @@ export class BalenaAmbiguousApplication extends BalenaError {
 BalenaAmbiguousApplication.prototype.code = 'BalenaAmbiguousApplication';
 
 /**
+ * @summary Balena ambiguous release
+ * @class
+ * @public
+ *
+ * @param {(String)} release - release hash
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.BalenaAmbiguousRelease('7cf02a6')
+ */
+export class BalenaAmbiguousRelease extends BalenaError {
+	constructor(public release: string) {
+		super(`Release is ambiguous: There are multiple releases matching the release hash '${release}'`);
+	}
+}
+BalenaAmbiguousRelease.prototype.code = 'BalenaAmbiguousRelease';
+
+/**
  * @summary Balena key not found
  * @class
  * @public
