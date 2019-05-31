@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+## 4.1.0 - 2019-05-31
+
+* Add BalenaAmbiguousRelease error [Thodoris Greasidis]
+
 ## v4.0.1 - 2018-10-23
 
 * Emit ES6 TS output [Tim Perry]
