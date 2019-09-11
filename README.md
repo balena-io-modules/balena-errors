@@ -57,6 +57,8 @@ Documentation
         * [new BalenaAmbiguousDevice(device)](#new_module_errors..BalenaAmbiguousDevice_new)
     * [~BalenaAmbiguousApplication](#module_errors..BalenaAmbiguousApplication)
         * [new BalenaAmbiguousApplication(application)](#new_module_errors..BalenaAmbiguousApplication_new)
+    * [~BalenaAmbiguousRelease](#module_errors..BalenaAmbiguousRelease)
+        * [new BalenaAmbiguousRelease(release)](#new_module_errors..BalenaAmbiguousRelease_new)
     * [~BalenaKeyNotFound](#module_errors..BalenaKeyNotFound)
         * [new BalenaKeyNotFound(key)](#new_module_errors..BalenaKeyNotFound_new)
     * [~BalenaRequestError](#module_errors..BalenaRequestError)
@@ -294,6 +296,25 @@ throw new errors.BalenaAmbiguousDevice('MyDevice')
 **Example**  
 ```js
 throw new errors.BalenaAmbiguousApplication('MyApp')
+```
+<a name="module_errors..BalenaAmbiguousRelease"></a>
+
+### errors~BalenaAmbiguousRelease
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Balena ambiguous release  
+**Access**: public  
+<a name="new_module_errors..BalenaAmbiguousRelease_new"></a>
+
+#### new BalenaAmbiguousRelease(release)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| release | <code>String</code> | release hash |
+
+**Example**  
+```js
+throw new errors.BalenaAmbiguousRelease('7cf02a6')
 ```
 <a name="module_errors..BalenaKeyNotFound"></a>
 

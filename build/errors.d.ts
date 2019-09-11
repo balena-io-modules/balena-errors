@@ -191,6 +191,21 @@ export declare class BalenaAmbiguousApplication extends BalenaError {
     constructor(application: string | number);
 }
 /**
+ * @summary Balena ambiguous release
+ * @class
+ * @public
+ *
+ * @param {(String)} release - release hash
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.BalenaAmbiguousRelease('7cf02a6')
+ */
+export declare class BalenaAmbiguousRelease extends BalenaError {
+    release: string;
+    constructor(release: string);
+}
+/**
  * @summary Balena key not found
  * @class
  * @public
