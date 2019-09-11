@@ -212,6 +212,24 @@ export class BalenaDeviceNotFound extends BalenaError {
 BalenaDeviceNotFound.prototype.code = 'BalenaDeviceNotFound';
 
 /**
+ * @summary Balena organization not found
+ * @class
+ * @public
+ *
+ * @param {(String|Number)} organization - organization name or id
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.BalenaOrganizationNotFound('MyOrg')
+ */
+export class BalenaOrganizationNotFound extends BalenaError {
+	constructor(public organization: string | number) {
+		super(`Organization not found: ${organization}`);
+	}
+}
+BalenaOrganizationNotFound.prototype.code = 'BalenaOrganizationNotFound';
+
+/**
  * @summary Balena ambiguous device
  * @class
  * @public
