@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "typeRoots": []
+  },
+  "include": [
+    "build/**/*.d.ts",
+    "lib/**/*.ts"
+  ]
+}
