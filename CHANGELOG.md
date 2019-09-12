@@ -5,6 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+## 4.1.2 - 2019-09-12
+
+* Explicitly include build output in packaged releases [Thodoris Greasidis]
+* Test that the non-ignored emitted output is committed [Thodoris Greasidis]
+* Use a prepare step that doesn't run tests, to be balenaCI compliant [Thodoris Greasidis]
+* Exclude the build output from the repo [Thodoris Greasidis]
+* Add missing build & README output [Thodoris Greasidis]
+
 ## 4.1.1 - 2019-09-11
 
 * Bump TS version for tests & test typings against the previous version [Thodoris Greasidis]
