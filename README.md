@@ -53,6 +53,8 @@ Documentation
         * [new BalenaServiceNotFound(service)](#new_module_errors..BalenaServiceNotFound_new)
     * [~BalenaDeviceNotFound](#module_errors..BalenaDeviceNotFound)
         * [new BalenaDeviceNotFound(device)](#new_module_errors..BalenaDeviceNotFound_new)
+    * [~BalenaOrganizationNotFound](#module_errors..BalenaOrganizationNotFound)
+        * [new BalenaOrganizationNotFound(organization)](#new_module_errors..BalenaOrganizationNotFound_new)
     * [~BalenaAmbiguousDevice](#module_errors..BalenaAmbiguousDevice)
         * [new BalenaAmbiguousDevice(device)](#new_module_errors..BalenaAmbiguousDevice_new)
     * [~BalenaAmbiguousApplication](#module_errors..BalenaAmbiguousApplication)
@@ -258,6 +260,25 @@ throw new errors.BalenaServiceNotFound(123)
 **Example**  
 ```js
 throw new errors.BalenaDeviceNotFound('MyDevice')
+```
+<a name="module_errors..BalenaOrganizationNotFound"></a>
+
+### errors~BalenaOrganizationNotFound
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Balena organization not found  
+**Access**: public  
+<a name="new_module_errors..BalenaOrganizationNotFound_new"></a>
+
+#### new BalenaOrganizationNotFound(organization)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| organization | <code>String</code> \| <code>Number</code> | organization name or id |
+
+**Example**  
+```js
+throw new errors.BalenaOrganizationNotFound('MyOrg')
 ```
 <a name="module_errors..BalenaAmbiguousDevice"></a>
 
