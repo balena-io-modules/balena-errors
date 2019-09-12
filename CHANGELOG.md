@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+## 4.2.0 - 2019-09-12
+
+* Add BalenaOrganizationNotFound [Thodoris Greasidis]
+
 ## 4.1.2 - 2019-09-12
 
 * Explicitly include build output in packaged releases [Thodoris Greasidis]
