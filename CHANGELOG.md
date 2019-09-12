@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+## 4.1.1 - 2019-09-11
+
+* Bump TS version for tests & test typings against the previous version [Thodoris Greasidis]
+
 ## 4.1.0 - 2019-05-31
 
 * Add BalenaAmbiguousRelease error [Thodoris Greasidis]
