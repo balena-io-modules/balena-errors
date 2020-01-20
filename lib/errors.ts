@@ -80,7 +80,7 @@ BalenaDiscontinuedDeviceType.prototype.code = 'BalenaDiscontinuedDeviceType';
  */
 export class BalenaMalformedToken extends BalenaError {
 	constructor(public token: string) {
-		super(`Malformed token: ${token}`);
+		super(`Malformed token`);
 	}
 }
 BalenaMalformedToken.prototype.code = 'BalenaMalformedToken';
@@ -98,7 +98,7 @@ BalenaMalformedToken.prototype.code = 'BalenaMalformedToken';
  */
 export class BalenaSupervisorLockedError extends BalenaError {
 	constructor(public token: string) {
-		super(`Supervisor Locked: ${token}`);
+		super(`Supervisor locked`);
 	}
 }
 BalenaSupervisorLockedError.prototype.code = 'BalenaSupervisorLockedError';
@@ -116,7 +116,7 @@ BalenaSupervisorLockedError.prototype.code = 'BalenaSupervisorLockedError';
  */
 export class BalenaExpiredToken extends BalenaError {
 	constructor(public token: string) {
-		super(`The token expired: ${token}`);
+		super(`The token expired`);
 	}
 }
 BalenaExpiredToken.prototype.code = 'BalenaExpiredToken';
