@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+## 4.2.1 - 2020-01-20
+
+* Remove the token from the error message to avoid leaking [Pagan Gazzard]
+
 ## 4.2.0 - 2019-09-12
 
 * Add BalenaOrganizationNotFound [Thodoris Greasidis]
