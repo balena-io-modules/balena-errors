@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+# v4.3.0
+## (2020-03-25)
+
+* Allow string argument in the BalenaReleaseNotFound constructor [Thodoris Greasidis]
+
 ## 4.2.1 - 2020-01-20
 
 * Remove the token from the error message to avoid leaking [Pagan Gazzard]
