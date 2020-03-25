@@ -144,14 +144,14 @@ BalenaApplicationNotFound.prototype.code = 'BalenaApplicationNotFound';
  * @class
  * @public
  *
- * @param {(Number)} release - release id
+ * @param {(String|Number)} release - release commit or id
  * @return {Error} error instance
  *
  * @example
  * throw new errors.BalenaReleaseNotFound(123)
  */
 export class BalenaReleaseNotFound extends BalenaError {
-	constructor(public release: number) {
+	constructor(public release: string | number) {
 		super(`Release not found: ${release}`);
 	}
 }
