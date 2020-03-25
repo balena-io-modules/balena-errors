@@ -96,7 +96,8 @@ throw new errors.BalenaInvalidDeviceType('raspberry-pi')
 <a name="new_module_errors..BalenaDiscontinuedDeviceType_new"></a>
 
 #### new BalenaDiscontinuedDeviceType(type)
-The device type that you specified is invalid because it isdiscontinued, and this operation is no longer supported.
+The device type that you specified is invalid because it is
+discontinued, and this operation is no longer supported.
 
 **Returns**: <code>Error</code> - error instance  
 
@@ -197,7 +198,7 @@ throw new errors.BalenaApplicationNotFound('MyApp')
 
 | Param | Type | Description |
 | --- | --- | --- |
-| release | <code>Number</code> | release id |
+| release | <code>String</code> \| <code>Number</code> | release commit or id |
 
 **Example**  
 ```js
