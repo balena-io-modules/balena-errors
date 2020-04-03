@@ -97,7 +97,7 @@ BalenaMalformedToken.prototype.code = 'BalenaMalformedToken';
  * throw new errors.BalenaSupervisorLockedError()
  */
 export class BalenaSupervisorLockedError extends BalenaError {
-	constructor(public token: string) {
+	constructor(public token?: string) {
 		super(`Supervisor locked`);
 	}
 }
