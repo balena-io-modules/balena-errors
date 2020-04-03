@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+# v4.3.2
+## (2020-04-03)
+
+* Mark BalenaSupervisorLockedError token parameter as optional [Pagan Gazzard]
+
 # v4.3.1
 ## (2020-04-03)
 
