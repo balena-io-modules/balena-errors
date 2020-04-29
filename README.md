@@ -47,6 +47,8 @@ Documentation
         * [new BalenaApplicationNotFound(application)](#new_module_errors..BalenaApplicationNotFound_new)
     * [~BalenaReleaseNotFound](#module_errors..BalenaReleaseNotFound)
         * [new BalenaReleaseNotFound(release)](#new_module_errors..BalenaReleaseNotFound_new)
+    * [~BalenaApplicationMembershipRoleNotFound](#module_errors..BalenaApplicationMembershipRoleNotFound)
+        * [new BalenaApplicationMembershipRoleNotFound(applicationMembershipRole)](#new_module_errors..BalenaApplicationMembershipRoleNotFound_new)
     * [~BalenaImageNotFound](#module_errors..BalenaImageNotFound)
         * [new BalenaImageNotFound(image)](#new_module_errors..BalenaImageNotFound_new)
     * [~BalenaServiceNotFound](#module_errors..BalenaServiceNotFound)
@@ -203,6 +205,25 @@ throw new errors.BalenaApplicationNotFound('MyApp')
 **Example**  
 ```js
 throw new errors.BalenaReleaseNotFound(123)
+```
+<a name="module_errors..BalenaApplicationMembershipRoleNotFound"></a>
+
+### errors~BalenaApplicationMembershipRoleNotFound
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Balena application membership role not found  
+**Access**: public  
+<a name="new_module_errors..BalenaApplicationMembershipRoleNotFound_new"></a>
+
+#### new BalenaApplicationMembershipRoleNotFound(applicationMembershipRole)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| applicationMembershipRole | <code>String</code> \| <code>Number</code> | application membership role name or id |
+
+**Example**  
+```js
+throw new errors.BalenaApplicationMembershipRoleNotFound(123)
 ```
 <a name="module_errors..BalenaImageNotFound"></a>
 
