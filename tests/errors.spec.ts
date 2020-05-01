@@ -7,7 +7,7 @@ interface BalenaErrorClass {
 }
 
 const runForAllErrors = (
-	fn: (errorName: string, ErrorClass: BalenaErrorClass) => void,
+	fn: (errorName: string, ErrorClass: BalenaErrorClass) => void
 ) => {
 	for (const errorName in errors) {
 		if (errors.hasOwnProperty(errorName)) {
@@ -16,7 +16,7 @@ const runForAllErrors = (
 	}
 };
 
-describe('Errors, TS:', function () {
+describe('Errors, TS:', function() {
 	it('should expose only Error instances', () => {
 		runForAllErrors((_errorName, ErrorClass) => {
 			m.chai.expect(ErrorClass.prototype).to.be.an.instanceof(Error);
