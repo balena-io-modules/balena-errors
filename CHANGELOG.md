@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+# v4.4.0
+## (2020-05-01)
+
+* Add Application membership role not found error [Amit Solanki]
+
 # v4.3.2
 ## (2020-04-03)
 
