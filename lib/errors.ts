@@ -171,7 +171,7 @@ BalenaReleaseNotFound.prototype.code = 'BalenaReleaseNotFound';
 export class BalenaApplicationMembershipRoleNotFound extends BalenaError {
 	constructor(public applicationMembershipRole: string | number) {
 		super(
-			`Application membership role not found: ${applicationMembershipRole}`
+			`Application membership role not found: ${applicationMembershipRole}`,
 		);
 	}
 }
@@ -300,7 +300,7 @@ BalenaAmbiguousApplication.prototype.code = 'BalenaAmbiguousApplication';
 export class BalenaAmbiguousRelease extends BalenaError {
 	constructor(public release: string) {
 		super(
-			`Release is ambiguous: There are multiple releases matching the release hash '${release}'`
+			`Release is ambiguous: There are multiple releases matching the release hash '${release}'`,
 		);
 	}
 }
@@ -341,7 +341,7 @@ export class BalenaRequestError extends BalenaError {
 	constructor(
 		public body: string,
 		public statusCode: number,
-		public requestOptions: object
+		public requestOptions: object,
 	) {
 		super(`Request error: ${body}`);
 	}
@@ -382,7 +382,7 @@ BalenaNotLoggedIn.prototype.code = 'BalenaNotLoggedIn';
 export class BalenaInvalidParameterError extends BalenaError {
 	constructor(public parameterName: string, public suppliedValue: any) {
 		super(
-			`Invalid parameter: ${suppliedValue} is not a valid value for parameter '${parameterName}'`
+			`Invalid parameter: ${suppliedValue} is not a valid value for parameter '${parameterName}'`,
 		);
 	}
 }
