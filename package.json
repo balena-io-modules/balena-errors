@@ -26,9 +26,8 @@
     "test:ts-compatibility": "npx typescript@~2.4.2 --noEmit --project ./tsconfig.dist.json",
     "lint": "balena-lint --typescript --fix lib tests",
     "test": "npm run lint && npm run build && npm run test:ts-compatibility && npm run test:node && npm run test:browser && catch-uncommitted",
-    "build": "rimraf ./build && npm run prettify && tsc && npm run readme",
+    "build": "rimraf ./build && npm run lint && tsc && npm run readme",
     "prepare": "npm run build",
-    "prettify": "prettier --use-tabs --single-quote --write lib/*.ts tests/**/*.spec.ts",
     "readme": "jsdoc2md --template doc/README.hbs build/errors.js > README.md"
   },
   "author": "Juan Cruz Viotti <juan@balena.io>",
@@ -37,23 +36,22 @@
     "node": ">=6.0"
   },
   "devDependencies": {
-    "@balena/lint": "^5.0.2",
+    "@balena/lint": "^5.1.0",
     "@resin.io/types-mochainon": "^2.0.0",
     "@types/mocha": "^2.2.41",
-    "@types/node": "^8.0.14",
+    "@types/node": "^8.10.61",
     "balena-config-karma": "^2.0.0",
-    "catch-uncommitted": "^1.6.1",
+    "catch-uncommitted": "^1.6.2",
     "jsdoc-to-markdown": "^3.0.0",
     "karma": "^1.7.0",
     "mocha": "^3.4.0",
     "mochainon": "^2.0.0",
-    "prettier": "^1.5.3",
     "rimraf": "^2.6.1",
     "ts-node": "^3.3.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.6"
   },
   "dependencies": {
-    "tslib": "^1.11.1",
+    "tslib": "^2.0.0",
     "typed-error": "^3.0.0"
   }
 }
