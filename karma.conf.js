@@ -1,14 +1,8 @@
-const packageJSON = require('./package.json')
-const getKarmaConfig = require('balena-config-karma')
+var getKarmaConfig = require('balena-config-karma');
+var packageJSON = require('./package.json');
 
-module.exports = (config) => {
-	const karmaConfig = getKarmaConfig(packageJSON)
-
-	const webpackModuleConfig = karmaConfig.webpack.module;
-	webpackModuleConfig.rules = webpackModuleConfig.rules.filter((rule) =>
-		// Interfers with TS here, breaking the browser tests
-		rule.loader !== 'babel-loader'
-	);
-
-	config.set(karmaConfig)
-}
+module.exports = function(config) {
+  var karmaConfig;
+  karmaConfig = getKarmaConfig(packageJSON);
+  return config.set(karmaConfig);
+};
