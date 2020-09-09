@@ -33,6 +33,9 @@ Documentation
 
 
 * [errors](#module_errors)
+    * [~BalenaTooManyRequests](#module_errors..BalenaTooManyRequests)
+        * [new BalenaTooManyRequests(nextValidRequestDate)](#new_module_errors..BalenaTooManyRequests_new)
+    * [~BalenaInvalidLoginCredentials](#module_errors..BalenaInvalidLoginCredentials)
     * [~BalenaInvalidDeviceType](#module_errors..BalenaInvalidDeviceType)
         * [new BalenaInvalidDeviceType(type)](#new_module_errors..BalenaInvalidDeviceType_new)
     * [~BalenaDiscontinuedDeviceType](#module_errors..BalenaDiscontinuedDeviceType)
@@ -70,6 +73,31 @@ Documentation
     * [~BalenaNotLoggedIn](#module_errors..BalenaNotLoggedIn)
     * [~BalenaInvalidParameterError](#module_errors..BalenaInvalidParameterError)
 
+<a name="module_errors..BalenaTooManyRequests"></a>
+
+### errors~BalenaTooManyRequests
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Balena too many requests  
+**Access**: public  
+<a name="new_module_errors..BalenaTooManyRequests_new"></a>
+
+#### new BalenaTooManyRequests(nextValidRequestDate)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| nextValidRequestDate | <code>String</code> | next valid request string date |
+
+**Example**  
+```js
+throw new errors.BalenaTooManyRequests()
+```
+<a name="module_errors..BalenaInvalidLoginCredentials"></a>
+
+### errors~BalenaInvalidLoginCredentials
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Balena invalid login credentials  
+**Access**: public  
 <a name="module_errors..BalenaInvalidDeviceType"></a>
 
 ### errors~BalenaInvalidDeviceType

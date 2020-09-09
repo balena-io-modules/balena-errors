@@ -28,6 +28,41 @@ BalenaError.prototype.code = 'BalenaError';
 BalenaError.prototype.exitCode = 1;
 
 /**
+ * @summary Balena too many requests
+ * @class
+ * @public
+ *
+ * @param {String} nextValidRequestDate - next valid request string date
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.BalenaTooManyRequests()
+ */
+export class BalenaTooManyRequests extends BalenaError {
+	constructor(public nextValidRequestDate?: string) {
+		super(`Too Many Requests. Try again ${nextValidRequestDate || 'later'}`);
+	}
+}
+BalenaTooManyRequests.prototype.code = 'BalenaTooManyRequests';
+
+/**
+ * @summary Balena invalid login credentials
+ * @class
+ * @public
+ *
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.BalenaInvalidLoginCredentials()
+ */
+export class BalenaInvalidLoginCredentials extends BalenaError {
+	constructor() {
+		super('Invalid login credentials');
+	}
+}
+BalenaInvalidLoginCredentials.prototype.code = 'BalenaInvalidLoginCredentials';
+
+/**
  * @summary Balena invalid device type
  * @class
  * @public
