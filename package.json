@@ -44,6 +44,7 @@
     "catch-uncommitted": "^1.6.2",
     "jsdoc-to-markdown": "^3.0.0",
     "karma": "^3.1.4",
+    "karma-chrome-launcher": "^2.2.0",
     "mocha": "^5.2.0",
     "mochainon": "^2.0.0",
     "rimraf": "^2.6.1",
