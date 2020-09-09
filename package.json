@@ -25,7 +25,7 @@
     "test:browser": "karma start",
     "test:ts-compatibility": "npx typescript@~2.4.2 --noEmit --project ./tsconfig.dist.json",
     "lint": "balena-lint --typescript --fix lib tests",
-    "test": "npm run lint && npm run build && npm run test:ts-compatibility && npm run test:node && npm run test:browser && catch-uncommitted",
+    "test": "npm run lint && npm run build && npm run test:ts-compatibility && npm run test:node && npm run test:browser && catch-uncommitted --skip-node-versionbot-changes",
     "build": "rimraf ./build && npm run lint && tsc && npm run readme",
     "prepare": "npm run build",
     "readme": "jsdoc2md --template doc/README.hbs build/errors.js > README.md"
