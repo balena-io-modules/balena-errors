@@ -1,6 +1,6 @@
 {
   "name": "balena-errors",
-  "version": "4.4.1",
+  "version": "4.5.0",
   "description": "Collection of Balena JavaScript errors",
   "main": "build/errors.js",
   "types": "build/errors.d.ts",
