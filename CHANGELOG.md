@@ -5,6 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+# v4.5.1
+## (2020-09-10)
+
+* karmaConfig: fix tests against node 10 [JSReds]
+* Fix catch-uncommited check on newer balenaCI [Thodoris Greasidis]
+* Test on travis against more modern node versions [Thodoris Greasidis]
+* balena-config-karma: update to v3.0.0 [JSReds]
+
 # v4.5.0
 ## (2020-09-08)
 
