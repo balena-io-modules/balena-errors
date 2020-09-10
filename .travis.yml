@@ -17,7 +17,10 @@ matrix:
     - node_js: "node"
       script:
         - npm test
-    - node_js: "6"
+    - node_js: "12"
+      script:
+        - npm test
+    - node_js: "10"
       script:
         - npm test
 
