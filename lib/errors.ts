@@ -193,6 +193,27 @@ export class BalenaReleaseNotFound extends BalenaError {
 BalenaReleaseNotFound.prototype.code = 'BalenaReleaseNotFound';
 
 /**
+ * @summary Balena organization membership role not found
+ * @class
+ * @public
+ *
+ * @param {(String|Number)} organizationMembershipRole - organization membership role name or id
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.BalenaOrganizationMembershipRoleNotFound(123)
+ */
+export class BalenaOrganizationMembershipRoleNotFound extends BalenaError {
+	constructor(public organizationMembershipRole: string | number) {
+		super(
+			`Organization membership role not found: ${organizationMembershipRole}`,
+		);
+	}
+}
+BalenaOrganizationMembershipRoleNotFound.prototype.code =
+	'BalenaOrganizationMembershipRoleNotFound';
+
+/**
  * @summary Balena application membership role not found
  * @class
  * @public
