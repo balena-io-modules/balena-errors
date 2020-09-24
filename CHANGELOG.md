@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+# v4.6.0
+## (2020-09-24)
+
+* Add Organization membership role not found error [Amit Solanki]
+
 # v4.5.1
 ## (2020-09-10)
 
