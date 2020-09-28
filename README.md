@@ -42,6 +42,8 @@ Documentation
         * [new BalenaDiscontinuedDeviceType(type)](#new_module_errors..BalenaDiscontinuedDeviceType_new)
     * [~BalenaMalformedToken](#module_errors..BalenaMalformedToken)
         * [new BalenaMalformedToken(token)](#new_module_errors..BalenaMalformedToken_new)
+    * [~BalenaSettingsPermissionError](#module_errors..BalenaSettingsPermissionError)
+        * [new BalenaSettingsPermissionError(error)](#new_module_errors..BalenaSettingsPermissionError_new)
     * [~BalenaSupervisorLockedError](#module_errors..BalenaSupervisorLockedError)
         * [new BalenaSupervisorLockedError(token)](#new_module_errors..BalenaSupervisorLockedError_new)
     * [~BalenaExpiredToken](#module_errors..BalenaExpiredToken)
@@ -159,6 +161,25 @@ throw new errors.BalenaDiscontinuedDeviceType('edge')
 **Example**  
 ```js
 throw new errors.BalenaMalformedToken('1234')
+```
+<a name="module_errors..BalenaSettingsPermissionError"></a>
+
+### errors~BalenaSettingsPermissionError
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Balena settings permission error  
+**Access**: public  
+<a name="new_module_errors..BalenaSettingsPermissionError_new"></a>
+
+#### new BalenaSettingsPermissionError(error)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| error | <code>Error</code> | usually an EACCESS error |
+
+**Example**  
+```js
+throw new errors.BalenaSettingsPermissionError()
 ```
 <a name="module_errors..BalenaSupervisorLockedError"></a>
 
