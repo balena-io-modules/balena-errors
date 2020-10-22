@@ -121,6 +121,20 @@ export class BalenaMalformedToken extends BalenaError {
 BalenaMalformedToken.prototype.code = 'BalenaMalformedToken';
 
 /**
+ * @summary Balena settings permission error
+ * @class
+ * @public
+ *
+ * @param {Error} error - usually an EACCESS error
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.BalenaSettingsPermissionError()
+ */
+export class BalenaSettingsPermissionError extends BalenaError {}
+BalenaSettingsPermissionError.prototype.code = 'BalenaSettingsPermissionError';
+
+/**
  * @summary The device supervisor is locked
  * @class
  * @public
