@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+# v4.7.0
+## (2020-09-29)
+
+* Add BalenaSettingsPermissionError [josecoelho]
+
 # v4.6.0
 ## (2020-09-24)
 
