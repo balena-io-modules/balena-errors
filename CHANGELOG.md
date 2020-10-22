@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+# v4.7.1
+## (2020-10-22)
+
+* Add deprecation note to Readme [Paulo Castro]
+
 # v4.7.0
 ## (2020-09-29)
 
