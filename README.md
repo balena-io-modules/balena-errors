@@ -19,6 +19,20 @@ The intention of this module is to provide a collection of `Error` instances to 
 
 Unless you know what you're doing, use the [Balena SDK](https://github.com/balena-io/balena-sdk) instead.
 
+Deprecation - note to developers / contributors
+-----------------------------------------------
+
+While this module has not been [formally deprecated](https://docs.npmjs.com/cli/deprecate),
+we now believe that it is not good practice to add error classes to a separate module like
+`balena-errors`. Instead, error classes should be added to the same module that throws the
+errors. The reason is that downstream applications (like the balena CLI) may end up with
+multiple versions of `balena-errors` in the `node_modules` folder, in order to satisfy
+dependencies' own dependencies (e.g. a dependency module requires `balena-errors` v4, and
+another dependency module requires `balena-errors` v3). When this happens, testing error
+instances with `instanceof` fails: For example, an error class like `BalenaExpiredToken`
+loaded from `balena-errors` v4 would be considered incompatible (not the same class) as
+`BalenaExpiredToken` loaded from `balena-errors` v3. And this leads to bugs...
+
 Installation
 ------------
 
