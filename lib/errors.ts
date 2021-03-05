@@ -207,6 +207,24 @@ export class BalenaReleaseNotFound extends BalenaError {
 BalenaReleaseNotFound.prototype.code = 'BalenaReleaseNotFound';
 
 /**
+ * @summary Balena device type not found
+ * @class
+ * @public
+ *
+ * @param {(String|Number)} deviceType - device type name, slug or id
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.BalenaDeviceTypeNotFound('raspberrypi3')
+ */
+export class BalenaDeviceTypeNotFound extends BalenaError {
+	constructor(public deviceType: string | number) {
+		super(`Device type not found: ${deviceType}`);
+	}
+}
+BalenaDeviceTypeNotFound.prototype.code = 'BalenaDeviceTypeNotFound';
+
+/**
  * @summary Balena organization membership role not found
  * @class
  * @public

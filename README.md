@@ -66,6 +66,8 @@ Documentation
         * [new BalenaApplicationNotFound(application)](#new_module_errors..BalenaApplicationNotFound_new)
     * [~BalenaReleaseNotFound](#module_errors..BalenaReleaseNotFound)
         * [new BalenaReleaseNotFound(release)](#new_module_errors..BalenaReleaseNotFound_new)
+    * [~BalenaDeviceTypeNotFound](#module_errors..BalenaDeviceTypeNotFound)
+        * [new BalenaDeviceTypeNotFound(deviceType)](#new_module_errors..BalenaDeviceTypeNotFound_new)
     * [~BalenaOrganizationMembershipRoleNotFound](#module_errors..BalenaOrganizationMembershipRoleNotFound)
         * [new BalenaOrganizationMembershipRoleNotFound(organizationMembershipRole)](#new_module_errors..BalenaOrganizationMembershipRoleNotFound_new)
     * [~BalenaApplicationMembershipRoleNotFound](#module_errors..BalenaApplicationMembershipRoleNotFound)
@@ -270,6 +272,25 @@ throw new errors.BalenaApplicationNotFound('MyApp')
 **Example**  
 ```js
 throw new errors.BalenaReleaseNotFound(123)
+```
+<a name="module_errors..BalenaDeviceTypeNotFound"></a>
+
+### errors~BalenaDeviceTypeNotFound
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Balena device type not found  
+**Access**: public  
+<a name="new_module_errors..BalenaDeviceTypeNotFound_new"></a>
+
+#### new BalenaDeviceTypeNotFound(deviceType)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| deviceType | <code>String</code> \| <code>Number</code> | device type name, slug or id |
+
+**Example**  
+```js
+throw new errors.BalenaDeviceTypeNotFound('raspberrypi3')
 ```
 <a name="module_errors..BalenaOrganizationMembershipRoleNotFound"></a>
 
