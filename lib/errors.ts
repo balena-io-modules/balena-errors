@@ -189,6 +189,24 @@ export class BalenaApplicationNotFound extends BalenaError {
 BalenaApplicationNotFound.prototype.code = 'BalenaApplicationNotFound';
 
 /**
+ * @summary Balena fleet not found
+ * @class
+ * @public
+ *
+ * @param {(String|Number)} fleet - fleet name or id
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.BalenaFleetNotFound('MyFleet')
+ */
+export class BalenaFleetNotFound extends BalenaError {
+	constructor(public fleet: string | number) {
+		super(`Fleet not found: ${fleet}`);
+	}
+}
+BalenaFleetNotFound.prototype.code = 'BalenaFleetNotFound';
+
+/**
  * @summary Balena release not found
  * @class
  * @public
@@ -247,6 +265,25 @@ export class BalenaApplicationMembershipRoleNotFound extends BalenaError {
 }
 BalenaApplicationMembershipRoleNotFound.prototype.code =
 	'BalenaApplicationMembershipRoleNotFound';
+
+/**
+ * @summary Balena fleet membership role not found
+ * @class
+ * @public
+ *
+ * @param {(String|Number)} fleetMembershipRole - fleet membership role name or id
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.BalenaApplicationMembershipRoleNotFound(123)
+ */
+export class BalenaFleetMembershipRoleNotFound extends BalenaError {
+	constructor(public fleetMembershipRole: string | number) {
+		super(`Fleet membership role not found: ${fleetMembershipRole}`);
+	}
+}
+BalenaFleetMembershipRoleNotFound.prototype.code =
+	'BalenaFleetMembershipRoleNotFound';
 
 /**
  * @summary Balena image not found
