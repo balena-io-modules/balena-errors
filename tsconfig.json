@@ -9,7 +9,7 @@
     "noUnusedParameters": true,
     "preserveConstEnums": true,
     "pretty": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "strictNullChecks": true,
     "lib": ["es5", "es6"],
     "declaration": true,
