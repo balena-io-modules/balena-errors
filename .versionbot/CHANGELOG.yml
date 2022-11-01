@@ -1,4 +1,21 @@
 - commits:
+    - subject: Disable source maps since they do not work
+      hash: 6c2acaa085ccdf468e1249d08d3e09dba67a3f01
+      body: |
+        The emitted files atm include path:
+        `"sources":["../../lib/errors.ts"]`
+        which webpack can't load (and prints a warnings about)
+        since we do not include the lib files in the package.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 4.7.3
+  title: ""
+  date: 2022-11-01T13:44:34.170Z
+- commits:
     - subject: Replace balenaCI with flowzone
       hash: 55e02bdadab01c2dabb122abdaf3226163ef07e1
       body: ""
