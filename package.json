@@ -1,6 +1,6 @@
 {
   "name": "balena-errors",
-  "version": "4.7.1",
+  "version": "4.7.2",
   "description": "Collection of Balena JavaScript errors",
   "main": "build/errors.js",
   "types": "build/errors.d.ts",
@@ -57,5 +57,8 @@
   "dependencies": {
     "tslib": "^2.0.0",
     "typed-error": "^3.0.0"
+  },
+  "versionist": {
+    "publishedAt": "2022-11-01T13:39:26.152Z"
   }
 }

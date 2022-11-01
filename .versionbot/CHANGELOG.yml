@@ -1,0 +1,618 @@
+- commits:
+    - subject: Replace balenaCI with flowzone
+      hash: 55e02bdadab01c2dabb122abdaf3226163ef07e1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Thodoris Greasidis
+  version: 4.7.2
+  title: ""
+  date: 2022-11-01T13:39:26.014Z
+- version: 4.7.1
+  date: 2020-10-22T14:50:11Z
+  commits:
+    - hash: 5d847df6d47f99a7ace08c8ea7eee5632d331a07
+      author: Paulo Castro
+      footers:
+        change-type: patch
+      subject: Add deprecation note to Readme
+      body: null
+- version: 4.7.0
+- date: 2020-10-22T13:00:36Z
+- commits:
+    - hash: 2ac583eaf42292de27880855fc5d6263e02b04f1
+- commits:
+    - author: josecoelho
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - subject: Add BalenaSettingsPermissionError
+- commits:
+    - body: |-
+        This is error is to identify when there are permissions problems
+        related to the node js balena settings folder.
+        Related to https://github.com/balena-io/balena-cli/issues/1667
+- version: 4.6.0
+- date: 2020-09-24T12:30:03Z
+- commits:
+    - hash: b709b51005f202a21b17a481d0f7e1547523e827
+- commits:
+    - author: Amit Solanki
+- commits:
+    - footers:
+        change-type: Minor
+- commits:
+    - footers:
+        signed-off-by: Amit Solanki <amit@balena.io>
+- commits:
+    - subject: Add Organization membership role not found error
+- commits:
+    - body: null
+- commits:
+    - hash: 89c74f5792432019eb0177516140367503fa716d
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+- commits:
+    - subject: Generate docs for the BalenaOrganizationMembershipRoleNotFound error
+- commits:
+    - body: null
+- version: 4.5.1
+- date: 2020-09-10T12:59:36Z
+- commits:
+    - hash: 78dac3215fe9b34970d2f388fc839c43e539424b
+- commits:
+    - author: JSReds
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+- commits:
+    - subject: "balena-config-karma: update to v3.0.0"
+- commits:
+    - body: update balena-config-karma to v3.0.0
+- commits:
+    - hash: 23e8e65d327d907714b6e9fb120e70abea8f47cd
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+- commits:
+    - subject: Add karma-chrome-launcher as an explicit devDependency
+- commits:
+    - body: null
+- commits:
+    - hash: 39e2afbf0d94ea0b015891a8a02a53fb4d600f47
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: Test on travis against more modern node versions
+- commits:
+    - body: null
+- commits:
+    - hash: 30433c5924c8fa9b01192239da83f9cf3f30c319
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: Fix catch-uncommited check on newer balenaCI
+- commits:
+    - body: null
+- commits:
+    - hash: 357f994f7c9eaef9f7c9eb1f28ea6192c89e74c6
+- commits:
+    - author: JSReds
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+- commits:
+    - subject: "karmaConfig: fix tests against node 10"
+- commits:
+    - body: fix tests against node 10
+- version: 4.5.0
+- date: 2020-09-09T07:18:40Z
+- commits:
+    - hash: 5191f5e6a83e6cf208c814fcbb5534759bd6ac98
+- commits:
+    - author: JSReds
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+- commits:
+    - subject: "Errors: add authentication errors"
+- commits:
+    - body: add invalid credentials and a more generic too many requests
+- version: 4.4.1
+- date: 2020-07-03T18:03:43Z
+- commits:
+    - hash: 1e9ff70c669d928c1a40ec95747c643c14142a3e
+- commits:
+    - author: Pagan Gazzard
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: Update dependencies
+- commits:
+    - body: null
+- version: 4.4.0
+- date: 2020-05-01T14:29:07Z
+- commits:
+    - hash: 66b56821257fe8e510aa30a3b17c37d4458abecb
+- commits:
+    - author: Amit Solanki
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Amit Solanki <amit@balena.io>
+- commits:
+    - subject: Add Application membership role not found error
+- commits:
+    - body: null
+- version: 4.3.2
+- date: 2020-04-03T12:20:56Z
+- commits:
+    - hash: 89ac073bc44cb6c7ea1df32a8d32dac725e2c8af
+- commits:
+    - author: Pagan Gazzard
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: Mark BalenaSupervisorLockedError token parameter as optional
+- commits:
+    - body: This matches current usage in the wild
+- version: 4.3.1
+- date: 2020-04-03T12:03:09Z
+- commits:
+    - hash: af69b88608facb30aadddb940aac0d81737ee25e
+- commits:
+    - author: Pagan Gazzard
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: Use balena-lint for linting
+- commits:
+    - body: null
+- version: 4.3.0
+- date: 2020-03-25T19:23:26Z
+- commits:
+    - hash: 14f56c67afbec95270881fe6ddf8efe60ca52ed2
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+- commits:
+    - subject: Allow string argument in the BalenaReleaseNotFound constructor
+- commits:
+    - body: |-
+        The SDK has a method for retrieving a Release by
+        commit and the typings here block me from
+        converting it to TypeScript.
+- version: 4.2.1
+- date: 2020-01-20T15:28:40Z
+- commits:
+    - hash: 816515eaf54339362051d01370a68262addb75c6
+- commits:
+    - author: Pagan Gazzard
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: Remove the token from the error message to avoid leaking
+- commits:
+    - body: null
+- version: 4.2.0
+- date: 2019-09-12T10:52:36Z
+- commits:
+    - hash: 4513de07f52990698ab7bba69746957da95c99aa
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+- commits:
+    - subject: Add BalenaOrganizationNotFound
+- commits:
+    - body: null
+- version: 4.1.2
+- date: 2019-09-12T10:27:53Z
+- commits:
+    - hash: f05ff262f8be6c8be8d813592696eb188870723a
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+- commits:
+    - subject: Add missing build & README output
+- commits:
+    - body: null
+- commits:
+    - hash: 7495a1aa03c5c0b861341187f346b47dcc69ad4a
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+- commits:
+    - subject: Exclude the build output from the repo
+- commits:
+    - body: null
+- commits:
+    - hash: ce39d5d52e64882e295daea0c28a63cfa12df363
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+- commits:
+    - subject: Use a prepare step that doesn't run tests, to be balenaCI compliant
+- commits:
+    - body: null
+- commits:
+    - hash: 90f5f8eaa30a81bf2adfb5b0f56d42ea667629a8
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+- commits:
+    - subject: Test that the non-ignored emitted output is committed
+- commits:
+    - body: null
+- commits:
+    - hash: a1c4d41b41687104dd817e293ea0d6d277beff93
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+- commits:
+    - subject: Explicitly include build output in packaged releases
+- commits:
+    - body: null
+- version: 4.1.1
+- date: 2019-09-12T10:18:43Z
+- commits:
+    - hash: 3016e4b43c6911886a8e0aef44625aef6162890c
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        see: https://github.com/balena-io/balena-sdk/pull/706
+- commits:
+    - footers:
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+- commits:
+    - subject: Bump TS version for tests & test typings against the previous version
+- commits:
+    - body: Similarly to how we do it in the balena-sdk.
+- commits:
+    - hash: 4a3c8d343207ad8ef37414c59c52605c13cdbd96
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+- commits:
+    - subject: ".travis.yml: Bump to npm 6 to make npx available"
+- commits:
+    - body: null
+- version: 4.1.0
+- date: 2019-05-31T12:34:56Z
+- commits:
+    - hash: 70aaad79f3c61be1b8b15d900913e7262fe91568
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        connects-to: "#33"
+- commits:
+    - footers:
+        see: https://github.com/balena-io/balena-cli/issues/1064
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+- commits:
+    - subject: Add BalenaAmbiguousRelease error
+- commits:
+    - body: null
+- commits:
+    - hash: 90fad4b860e9769a11dca74b57dd6e56a5ce0905
+- commits:
+    - author: Thodoris Greasidis
+- commits:
+    - footers:
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+- commits:
+    - subject: "BalenaAmbiguousRelease: Make the  error message more descriptive."
+- commits:
+    - body: null
+- version: 4.0.1
+- date: 2018-10-23T14:06:41Z
+- commits:
+    - hash: 03b7e0715e0aa0d987f0fd22d69c7e4d740b70f2
+- commits:
+    - author: Tim Perry
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: Emit ES6 TS output
+- commits:
+    - body: null
+- version: 4.0.0
+- date: 2018-10-22T14:50:01Z
+- commits:
+    - hash: 64f17018e05a12a8b05d0198429aeb21bf461552
+- commits:
+    - author: Tim Perry
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - subject: Generate type definitions & update typed-error
+- commits:
+    - body: null
+- commits:
+    - hash: 2e569819da7f818d0a08bd64f5b9edec1cea7143
+- commits:
+    - author: Tim Perry
+- commits:
+    - footers:
+        change-type: major
+- commits:
+    - subject: Require Node 6+
+- commits:
+    - body: null
+- version: 3.0.0
+- date: 2018-10-16T10:18:34Z
+- commits:
+    - hash: 781d9c80b4de29686a8399887aabaf24c1d646b2
+- commits:
+    - author: Tim Perry
+- commits:
+    - footers:
+        change-type: major
+- commits:
+    - footers:
+        signed-off-by: Tim Perry <tim@resin.io>
+- commits:
+    - subject: Rename everything 'resin' to 'balena'
+- commits:
+    - body: null
+- commits:
+    - hash: 820a49d820ee29df717b4679a95cee52ff8bc4f1
+- commits:
+    - author: Tim Perry
+- commits:
+    - footers:
+        change-type: major
+- commits:
+    - footers:
+        signed-off-by: Tim Perry <tim@resin.io>
+- commits:
+    - subject: Remove the deprecated BuildNotFound error
+- commits:
+    - body: null
+- version: 2.13.0
+- date: 2018-05-24T08:57:29Z
+- commits:
+    - hash: 87adf0eba6d0ad00ec27d356b632dca1daf743d2
+- commits:
+    - author: Tim Perry
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - subject: Add ResinServiceNotFound
+- commits:
+    - body: null
+- commits:
+    - hash: 960c8ecb189d6ee64b56aa3437a60d25e1f40794
+- commits:
+    - author: Tim Perry
+- commits:
+    - subject: Fix & remove saucelabs from travis build
+- commits:
+    - body: null
+- version: 2.12.0
+- date: 2017-11-14T10:27:49Z
+- commits:
+    - hash: a5046f909408d191854f30d815ab0c04b9f95322
+- commits:
+    - author: Tim Perry
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - subject: Add ResinImageNotFound
+- commits:
+    - body: null
+- version: 2.11.0
+- date: 2017-11-13T09:29:39Z
+- commits:
+    - hash: e039fd0e57a059971fffdc67946691ae9401650b
+- commits:
+    - author: Tim Perry
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - subject: Add ReleaseNotFound error, and deprecate BuildNotFound, for
+        multicontainer
+- commits:
+    - body: null
+- version: 2.10.0
+- date: 2017-09-22T07:57:01Z
+- commits:
+    - hash: b496cb3103e99a6414aca01d2a5eb3564e647574
+- commits:
+    - author: Tim Perry
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - subject: Add DiscontinuedDeviceTypeError
+- commits:
+    - body: null
+- version: 2.9.0
+- date: 2017-09-05T08:50:38Z
+- commits:
+    - hash: 0333589a12be01bad8fcd2442b36253bfa800f0f
+- commits:
+    - author: MoranF
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: add supervisorLockedError
+- commits:
+    - body: "Connects-To: #20"
+- commits:
+    - hash: 808bad5b4bc4de869af40107aede2818f0c7eed5
+- commits:
+    - author: Eugene Mirotin
+- commits:
+    - subject: make use of the new @resin.io/types-*
+- commits:
+    - body: null
+- version: 2.8.0
+- date: 2017-08-02T14:56:30Z
+- commits:
+    - hash: 8f6e6d306431ba0ec66daee2bbab7da2dfe373a9
+- commits:
+    - author: Eugene Mirotin
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - subject: convert to typescript
+- commits:
+    - body: null
+- version: 2.7.0
+- date: 2017-07-03T10:36:10Z
+- commits:
+    - hash: 52e86e62a93d51c1955a027ce0ea4256f339ab48
+- commits:
+    - author: Lucian Buzzo
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - subject: Add an error for invalid parameters
+- commits:
+    - body: |-
+        Connects to #16
+        Also remove older sauce labs tests that aren't available on this repo.
+- version: 2.6.0
+- date: 2017-03-08T19:57:03Z
+- commits:
+    - hash: 0958f2b0a4f965dc081639e28fc26b2440f242e8
+- commits:
+    - author: Tim Perry
+- commits:
+    - subject: Add ResinBuildNotFound error
+- commits:
+    - body: null
+- commits:
+    - hash: d50271e2dbdb55af0ffdae8ea0365c68975bd466
+- commits:
+    - author: Tim Perry
+- commits:
+    - subject: Stop testing in Node < 4
+- commits:
+    - body: null
+- commits:
+    - hash: 6e8d2a859067628d2872dbce425a957839f20db0
+- commits:
+    - author: Tim Perry
+- commits:
+    - subject: Add CS headers to hide build output from github diffs
+- commits:
+    - body: null
+- version: 2.5.0
+- date: 2017-02-21T16:50:06Z
+- commits:
+    - hash: ece6beaf5c969541ed915f1718fed7036ba00380
+- commits:
+    - author: Tim Perry
+- commits:
+    - subject: Allow the used request options to be included in ResinRequestErrors
+- commits:
+    - body: null
+- commits:
+    - hash: 181c4b51292a13b28e99c102bf3f1b0c3ed7d12b
+- commits:
+    - author: Juan Cruz Viotti
+- commits:
+    - footers:
+        fixes: https://github.com/resin-io/resin-errors/issues/12
+- commits:
+    - footers:
+        signed-off-by: Juan Cruz Viotti <jviotti@openmailbox.org>
+- commits:
+    - subject: Move to resin-io-modules organisation
+- commits:
+    - body: null
+- commits:
+    - hash: f9fb253355f1ae850f37d6ed6cce535738788b53
+- commits:
+    - author: Juan Cruz Viotti
+- commits:
+    - footers:
+        signed-off-by: Juan Cruz Viotti <jviottidc@gmail.com>
+- commits:
+    - subject: Implement ResinAmbiguousApplication error
+- commits:
+    - body: null
