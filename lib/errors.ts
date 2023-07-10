@@ -271,14 +271,14 @@ BalenaImageNotFound.prototype.code = 'BalenaImageNotFound';
  * @class
  * @public
  *
- * @param {(Number)} service - service id
+ * @param {(String|Number)} service - service name or id
  * @return {Error} error instance
  *
  * @example
  * throw new errors.BalenaServiceNotFound(123)
  */
 export class BalenaServiceNotFound extends BalenaError {
-	constructor(public service: number) {
+	constructor(public service: string | number) {
 		super(`Service not found: ${service}`);
 	}
 }
