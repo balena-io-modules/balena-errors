@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+# v4.8.0
+## (2023-07-10)
+
+* Overload BalenaServiceNotFound error to also accept a service name [Thodoris Greasidis]
+
 # v4.7.3
 ## (2022-11-01)
 

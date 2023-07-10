@@ -1,4 +1,15 @@
 - commits:
+    - subject: Overload BalenaServiceNotFound error to also accept a service name
+      hash: 4a942010b92bd5cd51e2aa3c7dd2759b4f1adec1
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Thodoris Greasidis
+  version: 4.8.0
+  title: ""
+  date: 2023-07-10T21:38:25.080Z
+- commits:
     - subject: Disable source maps since they do not work
       hash: 6c2acaa085ccdf468e1249d08d3e09dba67a3f01
       body: |
