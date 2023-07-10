@@ -341,7 +341,7 @@ throw new errors.BalenaImageNotFound(123)
 
 | Param | Type | Description |
 | --- | --- | --- |
-| service | <code>Number</code> | service id |
+| service | <code>String</code> \| <code>Number</code> | service name or id |
 
 **Example**  
 ```js
