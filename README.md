@@ -64,12 +64,16 @@ Documentation
         * [new BalenaExpiredToken(token)](#new_module_errors..BalenaExpiredToken_new)
     * [~BalenaApplicationNotFound](#module_errors..BalenaApplicationNotFound)
         * [new BalenaApplicationNotFound(application)](#new_module_errors..BalenaApplicationNotFound_new)
+    * [~BalenaFleetNotFound](#module_errors..BalenaFleetNotFound)
+        * [new BalenaFleetNotFound(fleet)](#new_module_errors..BalenaFleetNotFound_new)
     * [~BalenaReleaseNotFound](#module_errors..BalenaReleaseNotFound)
         * [new BalenaReleaseNotFound(release)](#new_module_errors..BalenaReleaseNotFound_new)
     * [~BalenaOrganizationMembershipRoleNotFound](#module_errors..BalenaOrganizationMembershipRoleNotFound)
         * [new BalenaOrganizationMembershipRoleNotFound(organizationMembershipRole)](#new_module_errors..BalenaOrganizationMembershipRoleNotFound_new)
     * [~BalenaApplicationMembershipRoleNotFound](#module_errors..BalenaApplicationMembershipRoleNotFound)
         * [new BalenaApplicationMembershipRoleNotFound(applicationMembershipRole)](#new_module_errors..BalenaApplicationMembershipRoleNotFound_new)
+    * [~BalenaFleetMembershipRoleNotFound](#module_errors..BalenaFleetMembershipRoleNotFound)
+        * [new BalenaFleetMembershipRoleNotFound(fleetMembershipRole)](#new_module_errors..BalenaFleetMembershipRoleNotFound_new)
     * [~BalenaImageNotFound](#module_errors..BalenaImageNotFound)
         * [new BalenaImageNotFound(image)](#new_module_errors..BalenaImageNotFound_new)
     * [~BalenaServiceNotFound](#module_errors..BalenaServiceNotFound)
@@ -82,6 +86,8 @@ Documentation
         * [new BalenaAmbiguousDevice(device)](#new_module_errors..BalenaAmbiguousDevice_new)
     * [~BalenaAmbiguousApplication](#module_errors..BalenaAmbiguousApplication)
         * [new BalenaAmbiguousApplication(application)](#new_module_errors..BalenaAmbiguousApplication_new)
+    * [~BalenaAmbiguousFleet](#module_errors..BalenaAmbiguousFleet)
+        * [new BalenaAmbiguousFleet(fleet)](#new_module_errors..BalenaAmbiguousFleet_new)
     * [~BalenaAmbiguousRelease](#module_errors..BalenaAmbiguousRelease)
         * [new BalenaAmbiguousRelease(release)](#new_module_errors..BalenaAmbiguousRelease_new)
     * [~BalenaKeyNotFound](#module_errors..BalenaKeyNotFound)
@@ -252,6 +258,25 @@ throw new errors.BalenaExpiredToken('1234')
 ```js
 throw new errors.BalenaApplicationNotFound('MyApp')
 ```
+<a name="module_errors..BalenaFleetNotFound"></a>
+
+### errors~BalenaFleetNotFound
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Balena fleet not found  
+**Access**: public  
+<a name="new_module_errors..BalenaFleetNotFound_new"></a>
+
+#### new BalenaFleetNotFound(fleet)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| fleet | <code>String</code> \| <code>Number</code> | fleet name or id |
+
+**Example**  
+```js
+throw new errors.BalenaFleetNotFound('MyFleet')
+```
 <a name="module_errors..BalenaReleaseNotFound"></a>
 
 ### errors~BalenaReleaseNotFound
@@ -304,6 +329,25 @@ throw new errors.BalenaOrganizationMembershipRoleNotFound(123)
 | Param | Type | Description |
 | --- | --- | --- |
 | applicationMembershipRole | <code>String</code> \| <code>Number</code> | application membership role name or id |
+
+**Example**  
+```js
+throw new errors.BalenaApplicationMembershipRoleNotFound(123)
+```
+<a name="module_errors..BalenaFleetMembershipRoleNotFound"></a>
+
+### errors~BalenaFleetMembershipRoleNotFound
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Balena fleet membership role not found  
+**Access**: public  
+<a name="new_module_errors..BalenaFleetMembershipRoleNotFound_new"></a>
+
+#### new BalenaFleetMembershipRoleNotFound(fleetMembershipRole)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| fleetMembershipRole | <code>String</code> \| <code>Number</code> | fleet membership role name or id |
 
 **Example**  
 ```js
@@ -422,6 +466,25 @@ throw new errors.BalenaAmbiguousDevice('MyDevice')
 **Example**  
 ```js
 throw new errors.BalenaAmbiguousApplication('MyApp')
+```
+<a name="module_errors..BalenaAmbiguousFleet"></a>
+
+### errors~BalenaAmbiguousFleet
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Balena ambiguous fleet  
+**Access**: public  
+<a name="new_module_errors..BalenaAmbiguousFleet_new"></a>
+
+#### new BalenaAmbiguousFleet(fleet)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| fleet | <code>String</code> \| <code>Number</code> | fleet name or id |
+
+**Example**  
+```js
+throw new errors.BalenaAmbiguousFleet('MyFleet')
 ```
 <a name="module_errors..BalenaAmbiguousRelease"></a>
 
