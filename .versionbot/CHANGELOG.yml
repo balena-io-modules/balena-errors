@@ -1,4 +1,15 @@
 - commits:
+    - subject: Add an optional responseHeaders property to BalenaRequestError
+      hash: c9e4a8e2124c4e4a95ca6b5eff929cadae860463
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Thodoris Greasidis
+  version: 4.9.0
+  title: ""
+  date: 2023-11-01T13:23:06.886Z
+- commits:
     - subject: Drop mochainon
       hash: 0ac1bb548d59a4e293070918932da30c664e975e
       body: ""

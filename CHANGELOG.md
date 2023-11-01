@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+# v4.9.0
+## (2023-11-01)
+
+* Add an optional responseHeaders property to BalenaRequestError [Thodoris Greasidis]
+
 # v4.8.1
 ## (2023-11-01)
 
