@@ -10,7 +10,7 @@ const runForAllErrors = (
 	fn: (errorName: string, ErrorClass: BalenaErrorClass) => void,
 ) => {
 	for (const errorName in errors) {
-		if (errors.hasOwnProperty(errorName)) {
+		if (Object.prototype.hasOwnProperty.call(errors, errorName)) {
 			fn(errorName, errors[errorName as keyof typeof errors]);
 		}
 	}

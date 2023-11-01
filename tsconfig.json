@@ -12,8 +12,7 @@
     "sourceMap": false,
     "strictNullChecks": true,
     "lib": ["es2019"],
-    "declaration": true,
-    "skipLibCheck": true
+    "declaration": true
   },
   "include": [
     "lib/**/*.ts"
