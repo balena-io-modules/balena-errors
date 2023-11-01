@@ -24,7 +24,7 @@
     "test:node": "mocha -r ts-node/register --reporter spec tests/**/*.spec.ts",
     "test:browser": "karma start",
     "test:ts-compatibility": "npx -p typescript@~5.2.2 tsc --noEmit --project ./tsconfig.dist.json",
-    "lint": "balena-lint --fix lib tests",
+    "lint": "balena-lint --fix src tests",
     "test": "npm run lint && npm run build && npm run test:ts-compatibility && npm run test:node && npm run test:browser && catch-uncommitted --skip-node-versionbot-changes",
     "build": "rimraf ./build && npm run lint && tsc && npm run readme",
     "prepare": "npm run build",

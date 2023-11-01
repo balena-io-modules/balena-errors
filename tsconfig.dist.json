@@ -6,6 +6,6 @@
   },
   "include": [
     "build/**/*.d.ts",
-    "lib/**/*.ts"
+    "src/**/*.ts"
   ]
 }
