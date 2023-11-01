@@ -11,7 +11,7 @@
     "pretty": true,
     "sourceMap": false,
     "strictNullChecks": true,
-    "lib": ["es5", "es6"],
+    "lib": ["es2019"],
     "declaration": true,
     "skipLibCheck": true
   },
