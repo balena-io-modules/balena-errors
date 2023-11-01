@@ -87,7 +87,7 @@ Documentation
     * [~BalenaKeyNotFound](#module_errors..BalenaKeyNotFound)
         * [new BalenaKeyNotFound(key)](#new_module_errors..BalenaKeyNotFound_new)
     * [~BalenaRequestError](#module_errors..BalenaRequestError)
-        * [new BalenaRequestError(body, statusCode, [requestOptions])](#new_module_errors..BalenaRequestError_new)
+        * [new BalenaRequestError(body, statusCode, [requestOptions], [responseHeaders])](#new_module_errors..BalenaRequestError_new)
     * [~BalenaNotLoggedIn](#module_errors..BalenaNotLoggedIn)
     * [~BalenaInvalidParameterError](#module_errors..BalenaInvalidParameterError)
 
@@ -469,7 +469,7 @@ throw new errors.BalenaKeyNotFound('MyKey')
 **Access**: public  
 <a name="new_module_errors..BalenaRequestError_new"></a>
 
-#### new BalenaRequestError(body, statusCode, [requestOptions])
+#### new BalenaRequestError(body, statusCode, [requestOptions], [responseHeaders])
 **Returns**: <code>Error</code> - error instance  
 
 | Param | Type | Description |
@@ -477,6 +477,7 @@ throw new errors.BalenaKeyNotFound('MyKey')
 | body | <code>String</code> | response body |
 | statusCode | <code>Number</code> | http status code |
 | [requestOptions] | <code>Object</code> | options used to make the request |
+| [responseHeaders] | <code>Object</code> | the Headers that were included in the response |
 
 **Example**  
 ```js
