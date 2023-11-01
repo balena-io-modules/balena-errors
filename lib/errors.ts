@@ -402,6 +402,7 @@ BalenaKeyNotFound.prototype.code = 'BalenaKeyNotFound';
  * @param {String} body - response body
  * @param {Number} statusCode - http status code
  * @param {Object} [requestOptions] - options used to make the request
+ * @param {Object} [responseHeaders] - the Headers that were included in the response
  * @return {Error} error instance
  *
  * @example
@@ -412,6 +413,14 @@ export class BalenaRequestError extends BalenaError {
 		public body: string,
 		public statusCode: number,
 		public requestOptions: object,
+		public responseHeaders?: {
+			get(name: string): string | null;
+			has(name: string): boolean;
+			forEach(callbackfn: (value: string, key: string) => void): void;
+			entries(): IterableIterator<[string, string]>;
+			keys(): IterableIterator<string>;
+			values(): IterableIterator<string>;
+		},
 	) {
 		super(`Request error: ${body}`);
 	}
