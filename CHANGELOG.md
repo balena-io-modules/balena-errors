@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+# v4.8.1
+## (2023-11-01)
+
+* Drop mochainon [Thodoris Greasidis]
+* tsconfig: Enable skipLibCheck to avoid @types/glib issue [Thodoris Greasidis]
+
 # v4.8.0
 ## (2023-07-10)
 

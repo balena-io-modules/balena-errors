@@ -1,4 +1,22 @@
 - commits:
+    - subject: Drop mochainon
+      hash: 0ac1bb548d59a4e293070918932da30c664e975e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Thodoris Greasidis
+    - subject: "tsconfig: Enable skipLibCheck to avoid @types/glib issue"
+      hash: a8f1f18c4d3b06e2bd4f6f7e7f831c446ed2115d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Thodoris Greasidis
+  version: 4.8.1
+  title: ""
+  date: 2023-11-01T08:51:25.306Z
+- commits:
     - subject: Overload BalenaServiceNotFound error to also accept a service name
       hash: 4a942010b92bd5cd51e2aa3c7dd2759b4f1adec1
       body: ""
