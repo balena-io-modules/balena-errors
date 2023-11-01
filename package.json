@@ -33,14 +33,14 @@
   "author": "Juan Cruz Viotti <juan@balena.io>",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=6.0"
+    "node": ">=18.0.0"
   },
   "devDependencies": {
     "@balena/lint": "^6.2.0",
     "@types/chai": "^4.3.3",
     "@types/chai-as-promised": "^7.1.5",
     "@types/mocha": "^9.1.1",
-    "@types/node": "^8.10.61",
+    "@types/node": "^18.18.8",
     "balena-config-karma": "^4.0.0",
     "catch-uncommitted": "^1.6.2",
     "chai": "^4.3.6",
