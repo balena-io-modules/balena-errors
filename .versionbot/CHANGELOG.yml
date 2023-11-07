@@ -1,4 +1,43 @@
 - commits:
+    - subject: Move the sources from lib to src
+      hash: ad8311fa4813f786292b0e24b1972671d8537769
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Thodoris Greasidis
+    - subject: Update dependencies
+      hash: 492b6ba4a03167bdb457e566c757907fd716d10e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Thodoris Greasidis
+    - subject: Update TypeScript to 5.2.2
+      hash: 498474d4b2c1a7573e90ea24295ba8f39c1a7587
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Thodoris Greasidis
+    - subject: Target es2019 runtimes
+      hash: 4998a92c071323de2aea02e15439dbf756127f09
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: Thodoris Greasidis
+    - subject: Drop support for node < 18
+      hash: 32b1642ad2ba1fa5ff67bf305b2cec32e8dac133
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: Thodoris Greasidis
+  version: 5.0.0
+  title: ""
+  date: 2023-11-07T16:34:42.026Z
+- commits:
     - subject: Add an optional responseHeaders property to BalenaRequestError
       hash: c9e4a8e2124c4e4a95ca6b5eff929cadae860463
       body: ""

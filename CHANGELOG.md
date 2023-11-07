@@ -5,6 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+# v5.0.0
+## (2023-11-07)
+
+* Move the sources from lib to src [Thodoris Greasidis]
+* Update dependencies [Thodoris Greasidis]
+* Update TypeScript to 5.2.2 [Thodoris Greasidis]
+* Target es2019 runtimes [Thodoris Greasidis]
+* Drop support for node < 18 [Thodoris Greasidis]
+
 # v4.9.0
 ## (2023-11-01)
 
