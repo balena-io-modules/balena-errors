@@ -459,7 +459,10 @@ BalenaNotLoggedIn.prototype.code = 'BalenaNotLoggedIn';
  * }
  */
 export class BalenaInvalidParameterError extends BalenaError {
-	constructor(public parameterName: string, public suppliedValue: any) {
+	constructor(
+		public parameterName: string,
+		public suppliedValue: any,
+	) {
 		super(
 			`Invalid parameter: ${suppliedValue} is not a valid value for parameter '${parameterName}'`,
 		);

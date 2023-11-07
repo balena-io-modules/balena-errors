@@ -23,8 +23,8 @@
   "scripts": {
     "test:node": "mocha -r ts-node/register --reporter spec tests/**/*.spec.ts",
     "test:browser": "karma start",
-    "test:ts-compatibility": "npx -p typescript@~2.4.2 tsc --noEmit --project ./tsconfig.dist.json",
-    "lint": "balena-lint --typescript --fix lib tests",
+    "test:ts-compatibility": "npx -p typescript@~5.2.2 tsc --noEmit --project ./tsconfig.dist.json",
+    "lint": "balena-lint --fix src tests",
     "test": "npm run lint && npm run build && npm run test:ts-compatibility && npm run test:node && npm run test:browser && catch-uncommitted --skip-node-versionbot-changes",
     "build": "rimraf ./build && npm run lint && tsc && npm run readme",
     "prepare": "npm run build",
@@ -33,28 +33,28 @@
   "author": "Juan Cruz Viotti <juan@balena.io>",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=6.0"
+    "node": ">=18.0.0"
   },
   "devDependencies": {
-    "@balena/lint": "^6.2.0",
-    "@types/chai": "^4.3.3",
-    "@types/chai-as-promised": "^7.1.5",
-    "@types/mocha": "^9.1.1",
-    "@types/node": "^8.10.61",
-    "balena-config-karma": "^4.0.0",
-    "catch-uncommitted": "^1.6.2",
-    "chai": "^4.3.6",
-    "jsdoc-to-markdown": "^3.0.0",
-    "karma": "^5.2.3",
-    "karma-chrome-launcher": "^2.2.0",
-    "mocha": "^10.1.0",
-    "rimraf": "^2.6.1",
+    "@balena/lint": "^7.2.1",
+    "@types/chai": "^4.3.9",
+    "@types/chai-as-promised": "^7.1.7",
+    "@types/mocha": "^10.0.3",
+    "@types/node": "^18.18.8",
+    "balena-config-karma": "^4.0.2",
+    "catch-uncommitted": "^2.0.0",
+    "chai": "^4.3.10",
+    "jsdoc-to-markdown": "^8.0.0",
+    "karma": "^6.4.2",
+    "karma-chrome-launcher": "^3.2.0",
+    "mocha": "^10.2.0",
+    "rimraf": "^5.0.5",
     "ts-node": "^10.9.1",
-    "typescript": "^4.8.4"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
-    "tslib": "^2.0.0",
-    "typed-error": "^3.0.0"
+    "tslib": "^2.6.2",
+    "typed-error": "^3.2.2"
   },
   "versionist": {
     "publishedAt": "2023-11-01T13:23:07.027Z"
