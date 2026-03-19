@@ -207,6 +207,30 @@ export class BalenaReleaseNotFound extends BalenaError {
 BalenaReleaseNotFound.prototype.code = 'BalenaReleaseNotFound';
 
 /**
+ * @summary Balena OS image not found for given version and device type
+ * @class
+ * @public
+ *
+ * @param {String} deviceType - device type slug
+ * @param {String} version - balenaOS version
+ * @return {Error} error instance
+ *
+ * @example
+ * throw new errors.BalenaOSImageNotFound('raspberry-pi', '2.85.0')
+ */
+export class BalenaOSImageNotFound extends BalenaError {
+	constructor(
+		public deviceType: string,
+		public version: string,
+	) {
+		super(
+			`Version ${version} is not available for the device type ${deviceType}`,
+		);
+	}
+}
+BalenaOSImageNotFound.prototype.code = 'BalenaOSImageNotFound';
+
+/**
  * @summary Balena organization membership role not found
  * @class
  * @public

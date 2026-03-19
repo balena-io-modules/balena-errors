@@ -67,6 +67,8 @@ Documentation
         * [new BalenaApplicationNotFound(application)](#new_module_errors..BalenaApplicationNotFound_new)
     * [~BalenaReleaseNotFound](#module_errors..BalenaReleaseNotFound)
         * [new BalenaReleaseNotFound(release)](#new_module_errors..BalenaReleaseNotFound_new)
+    * [~BalenaOSImageNotFound](#module_errors..BalenaOSImageNotFound)
+        * [new BalenaOSImageNotFound(deviceType, version)](#new_module_errors..BalenaOSImageNotFound_new)
     * [~BalenaOrganizationMembershipRoleNotFound](#module_errors..BalenaOrganizationMembershipRoleNotFound)
         * [new BalenaOrganizationMembershipRoleNotFound(organizationMembershipRole)](#new_module_errors..BalenaOrganizationMembershipRoleNotFound_new)
     * [~BalenaApplicationMembershipRoleNotFound](#module_errors..BalenaApplicationMembershipRoleNotFound)
@@ -281,6 +283,26 @@ throw new errors.BalenaApplicationNotFound('MyApp')
 **Example**  
 ```js
 throw new errors.BalenaReleaseNotFound(123)
+```
+<a name="module_errors..BalenaOSImageNotFound"></a>
+
+### errors~BalenaOSImageNotFound
+**Kind**: inner class of [<code>errors</code>](#module_errors)  
+**Summary**: Balena OS image not found for given version and device type  
+**Access**: public  
+<a name="new_module_errors..BalenaOSImageNotFound_new"></a>
+
+#### new BalenaOSImageNotFound(deviceType, version)
+**Returns**: <code>Error</code> - error instance  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| deviceType | <code>String</code> | device type slug |
+| version | <code>String</code> | balenaOS version |
+
+**Example**  
+```js
+throw new errors.BalenaOSImageNotFound('raspberry-pi', '2.85.0')
 ```
 <a name="module_errors..BalenaOrganizationMembershipRoleNotFound"></a>
 
