@@ -50,6 +50,7 @@ Documentation
     * [~BalenaTooManyRequests](#module_errors..BalenaTooManyRequests)
         * [new BalenaTooManyRequests(nextValidRequestDate)](#new_module_errors..BalenaTooManyRequests_new)
     * [~BalenaInvalidLoginCredentials](#module_errors..BalenaInvalidLoginCredentials)
+        * [new BalenaInvalidLoginCredentials()](#new_module_errors..BalenaInvalidLoginCredentials_new)
     * [~BalenaInvalidDeviceType](#module_errors..BalenaInvalidDeviceType)
         * [new BalenaInvalidDeviceType(type)](#new_module_errors..BalenaInvalidDeviceType_new)
     * [~BalenaDiscontinuedDeviceType](#module_errors..BalenaDiscontinuedDeviceType)
@@ -89,7 +90,9 @@ Documentation
     * [~BalenaRequestError](#module_errors..BalenaRequestError)
         * [new BalenaRequestError(body, statusCode, [requestOptions], [responseHeaders])](#new_module_errors..BalenaRequestError_new)
     * [~BalenaNotLoggedIn](#module_errors..BalenaNotLoggedIn)
+        * [new BalenaNotLoggedIn()](#new_module_errors..BalenaNotLoggedIn_new)
     * [~BalenaInvalidParameterError](#module_errors..BalenaInvalidParameterError)
+        * [new BalenaInvalidParameterError()](#new_module_errors..BalenaInvalidParameterError_new)
 
 <a name="module_errors..BalenaTooManyRequests"></a>
 
@@ -116,6 +119,14 @@ throw new errors.BalenaTooManyRequests()
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
 **Summary**: Balena invalid login credentials  
 **Access**: public  
+<a name="new_module_errors..BalenaInvalidLoginCredentials_new"></a>
+
+#### new BalenaInvalidLoginCredentials()
+**Returns**: <code>Error</code> - error instance  
+**Example**  
+```js
+throw new errors.BalenaInvalidLoginCredentials()
+```
 <a name="module_errors..BalenaInvalidDeviceType"></a>
 
 ### errors~BalenaInvalidDeviceType
@@ -489,12 +500,32 @@ throw new errors.BalenaRequestError('Unauthorized')
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
 **Summary**: Balena not logged in  
 **Access**: public  
+<a name="new_module_errors..BalenaNotLoggedIn_new"></a>
+
+#### new BalenaNotLoggedIn()
+**Returns**: <code>Error</code> - error instance  
+**Example**  
+```js
+throw new errors.BalenaNotLoggedIn()
+```
 <a name="module_errors..BalenaInvalidParameterError"></a>
 
 ### errors~BalenaInvalidParameterError
 **Kind**: inner class of [<code>errors</code>](#module_errors)  
 **Summary**: Balena invalid parameter  
 **Access**: public  
+<a name="new_module_errors..BalenaInvalidParameterError_new"></a>
+
+#### new BalenaInvalidParameterError()
+**Returns**: <code>Error</code> - error instance  
+**Example**  
+```js
+const checkId = (id) => {
+	if (typeof id !== 'number') {
+		throw new errors.BalenaInvalidParameterError('id', id)
+	}
+}
+```
 
 Support
 -------
