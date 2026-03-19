@@ -1,4 +1,22 @@
 - commits:
+    - subject: Fix docs regenerating missing fns
+      hash: 7d403dc8c82b07b600674c6319eb153537db0e8b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Otavio Jacobi
+    - subject: "Add id-token: write permission for NPM OIDC publishing"
+      hash: eacc792d3d5db805666acfadc735f7f9e01fcd8a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Otavio Jacobi
+  version: 5.0.1
+  title: ""
+  date: 2026-03-19T17:44:36.002Z
+- commits:
     - subject: Move the sources from lib to src
       hash: ad8311fa4813f786292b0e24b1972671d8537769
       body: ""

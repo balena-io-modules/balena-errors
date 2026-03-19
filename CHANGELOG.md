@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # 2.13.0 - 2018-05-24
 
+# v5.0.1
+## (2026-03-19)
+
+* Fix docs regenerating missing fns [Otavio Jacobi]
+* Add id-token: write permission for NPM OIDC publishing [Otavio Jacobi]
+
 # v5.0.0
 ## (2023-11-07)
 
