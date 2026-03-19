@@ -30,7 +30,7 @@
     "prepare": "npm run build",
     "readme": "jsdoc2md --template doc/README.hbs build/errors.js > README.md"
   },
-  "author": "Juan Cruz Viotti <juan@balena.io>",
+  "author": "Balena Ltd. <hello@balena.io>",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=18.0.0"
